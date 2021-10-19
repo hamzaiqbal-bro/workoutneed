@@ -31,7 +31,22 @@ class _DashBoardState extends State<DashBoard> with SingleTickerProviderStateMix
     return Scaffold(
       drawer: DrawerWidget(),
       appBar: AppBar(
-        backgroundColor: AppColors.kPrimaryTwo,
+        //backgroundColor: AppColors.kPrimaryTwo,
+        flexibleSpace: Container(
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+                begin: FractionalOffset.topCenter,
+                end: FractionalOffset.bottomCenter,
+                colors: [
+                  AppColors.kPrimaryOne.withOpacity(0.8),
+                  AppColors.kPrimaryTwo,
+                ],
+                stops: [
+                  0.0,
+                  0.7
+                ]),
+          ),
+        ),
         elevation: 0,
         actions: [
           IconButton(

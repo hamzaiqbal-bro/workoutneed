@@ -20,7 +20,7 @@ class _DownloadsState extends State<Downloads> {
       appBar: AppBar(
         backgroundColor: Colors.white,
         elevation: 1.0,
-        title: Text("Downloads", style: TextStyle(color: AppColors.kPrimaryTwo),),
+        title: Text("Downloads", style: TextStyle(color: AppColors.kPrimaryTwo, fontWeight: FontWeight.bold),),
         centerTitle: true,
         leading: IconButton(
           icon: IconWidgets.customIcon(Icons.arrow_back, AppColors.kPrimaryTwo),
@@ -41,7 +41,7 @@ class _DownloadsState extends State<Downloads> {
               ),
               Container(
                 child: FutureBuilder(
-                  future: readJSONData(),
+                  future: readDownloadsJSONData(),
                   builder: (BuildContext context, AsyncSnapshot<dynamic> snapshot) {
                     if (snapshot.hasData){
                       return ListView.builder(

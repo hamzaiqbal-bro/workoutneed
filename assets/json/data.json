@@ -78,5 +78,37 @@
       "channel_name": "Fitness Club",
       "views": "148K Views . 5 hours ago"
     }
+  ],
+  "Notes": [
+    {
+      "label": "Recipe Lorem Dasol",
+      "icon": "assets/icons/notes.svg",
+      "date": "19/10/2021"
+    },
+    {
+      "label": "Recipe Lorem Dasol",
+      "icon": "assets/icons/notes.svg",
+      "date": "19/10/2021"
+    },
+    {
+      "label": "Recipe Lorem Dasol",
+      "icon": "assets/icons/notes.svg",
+      "date": "19/10/2021"
+    },
+    {
+      "label": "Recipe Lorem Dasol",
+      "icon": "assets/icons/notes.svg",
+      "date": "19/10/2021"
+    },
+    {
+      "label": "Recipe Lorem Dasol",
+      "icon": "assets/icons/notes.svg",
+      "date": "19/10/2021"
+    },
+    {
+      "label": "Recipe Lorem Dasol",
+      "icon": "assets/icons/notes.svg",
+      "date": "19/10/2021"
+    }
   ]
 }

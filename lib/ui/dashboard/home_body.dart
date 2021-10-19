@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:workour/constants/app_colors.dart';
+import 'package:workour/constants/imageAssets.dart';
 import 'package:workour/ui/dashboard/downloads.dart';
+import 'package:workour/ui/dashboard/notes.dart';
+import 'package:workour/ui/dashboard/profile.dart';
 import 'package:workour/widgets/cardWidgets.dart';
 import 'package:workour/widgets/coustomTextWidgets.dart';
 import 'package:workour/widgets/imageWidgets.dart';
@@ -23,12 +26,25 @@ class _HomeBodyState extends State<HomeBody> {
               Container(
                 width: MediaQuery.of(context).size.width,
                 height: 250.0,
-                color: AppColors.kPrimaryTwo,
+                //color: AppColors.kPrimaryTwo,
+                decoration: BoxDecoration(
+                  gradient: LinearGradient(
+                      begin: FractionalOffset.topCenter,
+                      end: FractionalOffset.bottomCenter,
+                      colors: [
+                        AppColors.kPrimaryOne.withOpacity(0.8),
+                        AppColors.kPrimaryTwo,
+                      ],
+                      stops: [
+                        0.0,
+                        0.7
+                      ]),
+                ),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    imageWidgets.circularImage("assets/images/profile.png", 120.0, 120.0),
+                    imageWidgets.circularImage(imageAssets.profileImage, 120.0, 120.0),
                     const SizedBox(
                       height: 10.0,
                     ),
@@ -69,8 +85,19 @@ class _HomeBodyState extends State<HomeBody> {
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
-                        CardWidgets.customCardWidget(context, "Notes", Icons.date_range),
-                        CardWidgets.customCardWidget(context, "Profile", Icons.person),
+                        InkWell(
+                          child: CardWidgets.customCardWidget(context, "Notes", Icons.date_range),
+                          onTap: () {
+                            Navigator.push(context, MaterialPageRoute(builder: (context) =>
+                                Notes()));
+                          },
+                        ),
+                        InkWell(
+                          child: CardWidgets.customCardWidget(context, "Profile", Icons.person),
+                          onTap: () {
+                            Navigator.push(context, MaterialPageRoute(builder: (context) => Profile()));
+                            },
+                        ),
                       ],
                     )
                   ],
