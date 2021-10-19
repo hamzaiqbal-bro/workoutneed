@@ -3,6 +3,7 @@ import 'package:workour/constants/app_colors.dart';
 import 'package:workour/constants/app_styles.dart';
 import 'package:workour/constants/imageAssets.dart';
 import 'package:workour/constants/stringAssets.dart';
+import 'package:workour/ui/dashboard/dash_board.dart';
 import 'package:workour/widgets/bnuttonWidgets.dart';
 import 'package:workour/widgets/formFieldWidget.dart';
 import 'package:workour/widgets/imageWidgets.dart';
@@ -142,7 +143,13 @@ class _loginSignUpState extends State<loginSignUp> {
                         SizedBox(height: AppStyles.fivenumber,),
                         coustomTextWidgets.coustomText( 'Forget Password',16.0,AppColors.backgroubdGrye,FontWeight.bold),
                         SizedBox(height: AppStyles.teennumber,),
-                        buttonWidgets.coustomButton('Login',16.0,FontWeight.bold,context),
+                        InkWell(
+                            child: buttonWidgets.coustomButton('Login',16.0,FontWeight.bold,context),
+                          onTap: () {
+                            Navigator.push(context, MaterialPageRoute(builder: (context) =>
+                                DashBoard()));
+                          },
+                        ),
                       ],
                     ),
                   ),
