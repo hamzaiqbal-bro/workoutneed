@@ -1,12 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:workour/constants/app_colors.dart';
 import 'package:workour/constants/app_styles.dart';
-import 'package:workour/constants/imageAssets.dart';
-import 'package:workour/constants/stringAssets.dart';
-import 'package:workour/ui/dashboard/dash_board.dart';
-import 'package:workour/widgets/bnuttonWidgets.dart';
-import 'package:workour/widgets/formFieldWidget.dart';
-import 'package:workour/widgets/imageWidgets.dart';
+import 'package:workour/ui/loginSignUp/loginWidget.dart';
+import 'package:workour/ui/loginSignUp/signUpWidget.dart';
 import 'package:workour/widgets/coustomTextWidgets.dart';
 
 class loginSignUp extends StatefulWidget {
@@ -18,17 +14,18 @@ class loginSignUp extends StatefulWidget {
 
 class _loginSignUpState extends State<loginSignUp> {
   bool signUpLoginCheck = true;
-  TextEditingController emial = TextEditingController();
+
 
   @override
   Widget build(BuildContext context) {
      double width = MediaQuery.of(context).size.width;
     return Scaffold(
       body: SafeArea(
-        child: SingleChildScrollView(
-          child: Container(
-              color: AppColors.backgroubdGrye,
-              child:  Padding(
+        child: Container(
+            color: AppColors.backgroubdGrye,
+            alignment: Alignment.center,
+            child:  SingleChildScrollView(
+              child: Padding(
                 padding: EdgeInsets.all(AppStyles.teennumber),
                 child: Container(
                   decoration: BoxDecoration(
@@ -116,46 +113,14 @@ class _loginSignUpState extends State<loginSignUp> {
                             ],
                           ),
                         ),
-                        SizedBox(height: AppStyles.fifteennumber,),
-                        imageWidgets.coustomImageWidgets(imageAssets.loginLogo),
-                        SizedBox(height: AppStyles.fifteennumber,),
-                        InputField(
-                          'next',
-                          'Enter Email',
-                          'Email',
-                          Icons.email,
-                            emial,
-                          TextInputType.emailAddress,
-                          true
-                        ),
-
-                        SizedBox(height: AppStyles.teennumber,),
-
-                        InputField(
-                            'next',
-                            'Enter Password',
-                            'Password',
-                            Icons.lock,
-                            emial,
-                            TextInputType.visiblePassword,
-                            true
-                        ),
-                        SizedBox(height: AppStyles.fivenumber,),
-                        coustomTextWidgets.coustomText( 'Forget Password',16.0,AppColors.backgroubdGrye,FontWeight.bold),
-                        SizedBox(height: AppStyles.teennumber,),
-                        InkWell(
-                            child: buttonWidgets.coustomButton('Login',16.0,FontWeight.bold,context),
-                          onTap: () {
-                            Navigator.push(context, MaterialPageRoute(builder: (context) =>
-                                DashBoard()));
-                          },
-                        ),
+                        SizedBox(height: AppStyles.fourtynumber,),
+                        signUpLoginCheck  ?  loginWidget() : signUpWidget(),
                       ],
                     ),
                   ),
                 ),
-              )
-          ),
+              ),
+            )
         ),
       ),
     );
