@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 class AppColors {
   AppColors._();
-
+  
   static const Color kPrimaryOne = Color(0xffff4b2b);
   static const Color kPrimaryTwo = Color(0xffd4145a);
   static const Color backgroubdGrye = Color(0xffcfcfcf);
@@ -18,5 +18,5 @@ class AppColors {
     400:Colors.black12,
     500:Colors.black26
   };
-  
+
 }
