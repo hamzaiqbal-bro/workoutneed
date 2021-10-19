@@ -1,29 +1,38 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 import 'package:workour/constants/app_colors.dart';
 import 'package:workour/constants/app_styles.dart';
 import 'package:workour/constants/imageAssets.dart';
-import 'package:workour/ui/dashboard/recentlyWatched.dart';
-import 'package:workour/ui/loginSignUp/forgetScreen.dart';
 import 'package:workour/widgets/bnuttonWidgets.dart';
 import 'package:workour/widgets/formFieldWidget.dart';
 import 'package:workour/widgets/imageWidgets.dart';
 import 'package:workour/widgets/coustomTextWidgets.dart';
 
-class loginWidget extends StatefulWidget {
-  const loginWidget({Key? key}) : super(key: key);
+class signUpWidget extends StatefulWidget {
+  const signUpWidget({Key? key}) : super(key: key);
 
   @override
-  _loginWidgetState createState() => _loginWidgetState();
+  _signUpWidgetState createState() => _signUpWidgetState();
 }
 
-class _loginWidgetState extends State<loginWidget> {
+class _signUpWidgetState extends State<signUpWidget> {
   TextEditingController emial = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
-        imageWidgets.coustomImageWidgets(imageAssets.loginLogo),
-        SizedBox(height: AppStyles.fifteennumber,),
+
+        InputField(
+            'next',
+            'Enter Username',
+            'Username',
+            Icons.account_circle_outlined,
+            emial,
+            TextInputType.emailAddress,
+            true
+        ),
+
+        SizedBox(height: AppStyles.teennumber,),
         InputField(
             'next',
             'Enter Email',
@@ -40,7 +49,18 @@ class _loginWidgetState extends State<loginWidget> {
             'next',
             'Enter Password',
             'Password',
-            Icons.lock,
+            Icons.remove_red_eye,
+            emial,
+            TextInputType.visiblePassword,
+            true
+        ),
+        SizedBox(height: AppStyles.teennumber,),
+
+        InputField(
+            'next',
+            'confirm password',
+            'confirm password',
+            Icons.remove_red_eye,
             emial,
             TextInputType.visiblePassword,
             true
@@ -48,17 +68,9 @@ class _loginWidgetState extends State<loginWidget> {
         SizedBox(height: AppStyles.teennumber,),
         Align(
             alignment: Alignment.centerRight,
-            child: InkWell(
-                onTap: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (context) => forgetScreen()));
-                },
-                child: coustomTextWidgets.coustomText( 'Forget Password',16.0,AppColors.backgroubdGrye,FontWeight.bold))),
+            child: coustomTextWidgets.coustomText( 'Forget Password',16.0,AppColors.backgroubdGrye,FontWeight.bold)),
         SizedBox(height: AppStyles.fifteennumber,),
-        InkWell(
-            onTap: (){
-              Navigator.push(context, MaterialPageRoute(builder: (context) => recentlyWatched()));
-            },
-            child: buttonWidgets.coustomButton('Login',16.0,FontWeight.bold,context)),
+        buttonWidgets.coustomButton('Login',16.0,FontWeight.bold,context),
         SizedBox(height: AppStyles.fourtynumber,),
         Align(
             alignment: Alignment.center,
