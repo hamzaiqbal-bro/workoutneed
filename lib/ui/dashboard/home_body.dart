@@ -10,14 +10,14 @@ import 'package:workour/widgets/cardWidgets.dart';
 import 'package:workour/widgets/coustomTextWidgets.dart';
 import 'package:workour/widgets/imageWidgets.dart';
 
-class HomeBody extends StatefulWidget {
-  const HomeBody({Key? key}) : super(key: key);
+class mainProfileDashboard extends StatefulWidget {
+  const mainProfileDashboard({Key? key}) : super(key: key);
 
   @override
-  _HomeBodyState createState() => _HomeBodyState();
+  _mainProfileDashboardState createState() => _mainProfileDashboardState();
 }
 
-class _HomeBodyState extends State<HomeBody> {
+class _mainProfileDashboardState extends State<mainProfileDashboard> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

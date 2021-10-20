@@ -22,7 +22,7 @@ class _DashBoardState extends State<DashBoard> with SingleTickerProviderStateMix
   var _bottomNavIndex = 0;
 
   List<Widget> bottomNavList = <Widget>[
-    HomeBody(),
+    mainProfileDashboard(),
     VideoBody(),
     MarketBody(),
   ];
