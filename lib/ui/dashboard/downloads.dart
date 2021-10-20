@@ -92,7 +92,7 @@ class _DownloadsState extends State<Downloads> {
                   children: [
                     coustomTextWidgets.detailsText(download.text, TextStyle(
                         letterSpacing: 0.2,
-                        overflow: TextOverflow.ellipsis,
+                        // overflow: TextOverflow.ellipsis,
                         color: Colors.black
                     ), 3),
                     Padding(
