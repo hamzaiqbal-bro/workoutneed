@@ -4,6 +4,7 @@ import 'package:workour/constants/stringAssets.dart';
 import 'package:workour/models/DownloadsModel.dart';
 import 'package:workour/models/NotesModel.dart';
 import 'package:workour/models/NotificationsModel.dart';
+import 'package:workour/models/PurchaseProductsModel.dart';
 import 'package:workour/models/SubscriptionModel.dart';
 
 Future readDownloadsJSONData() async {
@@ -72,4 +73,21 @@ Future readSubscriptionChannelsJSONData() async {
       .toList();
 
   return subChannelsList;
+}
+
+Future readPurchaseProductsJSONData() async {
+  List purchaseProductsList;
+
+  String response = await rootBundle.loadString(StringAssets.jsonFile);
+
+  var data = await json.decode(response);
+  var result;
+
+  result = data["Purchase_Products"] as List;
+  purchaseProductsList = result
+      .map<PurchaseProductsModel>(
+          (json) => PurchaseProductsModel.fromJson(json))
+      .toList();
+
+  return purchaseProductsList;
 }

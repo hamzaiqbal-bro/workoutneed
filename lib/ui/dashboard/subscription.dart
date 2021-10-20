@@ -247,7 +247,9 @@ class _SubscriptionState extends State<Subscription> {
                           letterSpacing: 0.2,
                           overflow: TextOverflow.ellipsis,
                           color: Colors.black
-                      )),
+                      ),
+                      3
+                      ),
                       Padding(
                         padding: const EdgeInsets.all(5.0),
                         child: coustomTextWidgets.defaultText(premiumContent.views, TextStyle(

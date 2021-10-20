@@ -88,7 +88,9 @@ class _NotificationsState extends State<Notifications> {
                       coustomTextWidgets.detailsText(notification.text, TextStyle(
                           letterSpacing: 0.05,
                           color: Colors.black
-                      )),
+                      ),
+                      3
+                      ),
                       Padding(
                         padding: const EdgeInsets.all(5.0),
                         child: coustomTextWidgets.defaultText(notification.time, TextStyle(

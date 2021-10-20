@@ -1,5 +1,9 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:workour/constants/app_colors.dart';
+import 'package:workour/methods/json_method.dart';
+import 'package:workour/models/PurchaseProductsModel.dart';
+import 'package:workour/widgets/coustomTextWidgets.dart';
 import 'package:workour/widgets/iconWidgets.dart';
 
 class PurchaseProducts extends StatefulWidget {
@@ -38,14 +42,54 @@ class _PurchaseProductsState extends State<PurchaseProducts> with SingleTickerPr
           IconButton(onPressed: null, icon: IconWidgets.customIcon(Icons.search, AppColors.kPrimaryTwo))
         ],
       ),
-      body: Container(
-        child: Column(
-          children: [
-            Container(
-              height: 200.0,
-              color: AppColors.backgroubdGrye,
-            )
-          ],
+      body: SingleChildScrollView(
+        child: Container(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Container(
+                height: 200.0,
+                width: MediaQuery.of(context).size.width,
+                color: AppColors.backgroubdGrye,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: coustomTextWidgets.centeredText("Recently Purchased", 20.0, Colors.black, FontWeight.bold),
+                    ),
+                  ],
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: coustomTextWidgets.coustomText("Purchased Products", 18.0, Colors.black, FontWeight.bold),
+              ),
+              Container(
+                child: FutureBuilder(
+                  future: readPurchaseProductsJSONData(),
+                  builder: (BuildContext context, AsyncSnapshot<dynamic> snapshot) {
+                    print(snapshot.data.length);
+                    if (snapshot.hasData){
+                      return ListView.builder(
+                          itemCount: snapshot.data.length,
+                          shrinkWrap: true,
+                          physics: NeverScrollableScrollPhysics(),
+                          itemBuilder: (BuildContext bContext, int index) {
+                            PurchaseProductsModel purchaseProducts = snapshot.data[index];
+                            return _buildPurchaseProducts(purchaseProducts);
+                          });
+                    }
+                    else if(snapshot.hasError) {
+                      return coustomTextWidgets.centeredText("Error while fetching data..!", 18.0, AppColors.kPrimaryOne, FontWeight.normal);
+                    }
+                    return CircularProgressIndicator();
+                  },
+
+                ),
+              )
+            ],
+          ),
         ),
       ),
     );
@@ -55,5 +99,74 @@ class _PurchaseProductsState extends State<PurchaseProducts> with SingleTickerPr
   void dispose() {
     tabController.dispose();
     super.dispose();
+  }
+
+  Widget _buildPurchaseProducts(PurchaseProductsModel purchaseProducts) {
+    return Container(
+      margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 10.0),
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.all(Radius.circular(10.0)),
+        color: Colors.white,
+        boxShadow: [
+          BoxShadow(color: AppColors.smokeWhiteColor, spreadRadius: 1.5),
+        ],
+      ),
+      child: IntrinsicHeight(
+        child: Row(
+          children: [
+            Container(
+              width: 120.0,
+              margin: EdgeInsets.only(right: 10.0),
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  fit: BoxFit.cover, image: AssetImage(purchaseProducts.imageUrl),
+                ),
+                borderRadius: BorderRadius.only(bottomLeft: Radius.circular(10.0), topLeft: Radius.circular(10.0)),
+                color: Colors.redAccent,
+              ),
+            ),
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.all(4.0),
+                    child: coustomTextWidgets.myCustomText(purchaseProducts.name, 15.0, Colors.black, FontWeight.bold),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 5.0),
+                    child: coustomTextWidgets.detailsText(purchaseProducts.details, TextStyle(
+                        color: Colors.black), 2
+                    )
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: coustomTextWidgets.coustomText("\$${purchaseProducts.price}", 18.0, AppColors.kPrimaryTwo, FontWeight.bold),
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.only(left: 5.0, right: 5.0),
+                            child: coustomTextWidgets.defaultText("item: ${purchaseProducts.item}", TextStyle(color: AppColors.greyColor, fontSize: 14.0), TextAlign.start),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 5.0, right: 10.0),
+                            child: coustomTextWidgets.defaultText("Qty: ${purchaseProducts.quantity}", TextStyle(color: AppColors.greyColor, fontSize: 14.0), TextAlign.start),
+                          ),
+                        ],
+                      )
+                    ],
+                  )
+                ],
+              ),
+            )
+          ],
+        ),
+      ),
+    );
   }
 }

@@ -206,5 +206,87 @@
       "channel_name": "Plussize",
       "channel_icon": "assets/images/profile.png"
     }
+  ],
+  "Purchase_Products": [
+    {
+      "name": "Nike NH3 (Summer Collection)",
+      "imageUrl": "assets/images/product.jpg",
+      "details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
+      "price": 347.0,
+      "item": 1,
+      "quantity": 1
+    },
+    {
+      "name": "Nike NH3 (Summer Collection)",
+      "imageUrl": "assets/images/product.jpg",
+      "details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
+      "price": 347.0,
+      "item": 1,
+      "quantity": 1
+    },
+    {
+      "name": "Nike NH3 (Summer Collection)",
+      "imageUrl": "assets/images/product.jpg",
+      "details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
+      "price": 347.0,
+      "item": 1,
+      "quantity": 1
+    },
+    {
+      "name": "Nike NH3 (Summer Collection)",
+      "imageUrl": "assets/images/product.jpg",
+      "details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
+      "price": 347.0,
+      "item": 1,
+      "quantity": 1
+    },
+    {
+      "name": "Nike NH3 (Summer Collection)",
+      "imageUrl": "assets/images/product.jpg",
+      "details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
+      "price": 347.0,
+      "item": 1,
+      "quantity": 1
+    },
+    {
+      "name": "Nike NH3 (Summer Collection)",
+      "imageUrl": "assets/images/product.jpg",
+      "details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
+      "price": 347.0,
+      "item": 1,
+      "quantity": 1
+    },
+    {
+      "name": "Nike NH3 (Summer Collection)",
+      "imageUrl": "assets/images/product.jpg",
+      "details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
+      "price": 347.0,
+      "item": 1,
+      "quantity": 1
+    },
+    {
+      "name": "Nike NH3 (Summer Collection)",
+      "imageUrl": "assets/images/product.jpg",
+      "details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
+      "price": 347.0,
+      "item": 1,
+      "quantity": 1
+    },
+    {
+      "name": "Nike NH3 (Summer Collection)",
+      "imageUrl": "assets/images/product.jpg",
+      "details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
+      "price": 347.0,
+      "item": 1,
+      "quantity": 1
+    },
+    {
+      "name": "Nike NH3 (Summer Collection)",
+      "imageUrl": "assets/images/product.jpg",
+      "details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
+      "price": 347.0,
+      "item": 1,
+      "quantity": 1
+    }
   ]
 }
