@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:workour/constants/app_colors.dart';
 
 class imageWidgets{
   imageWidgets._();
@@ -16,6 +17,18 @@ class imageWidgets{
           width: _width,
           fit: BoxFit.cover
         )
+    );
+  }
+
+  static Widget circleAvatar(String imagePath) {
+    return CircleAvatar(
+      child: CircleAvatar(
+        backgroundColor: Colors.white,
+        backgroundImage: AssetImage(imagePath),
+        radius: 23.0,
+      ),
+      radius: 25.0,
+      backgroundColor: AppColors.kPrimaryTwo,
     );
   }
 }

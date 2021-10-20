@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:workour/constants/app_colors.dart';
+import 'package:workour/ui/dashboard/notifications.dart';
 import 'package:workour/ui/dashboard/video_body.dart';
 import 'package:workour/widgets/iconWidgets.dart';
 import 'package:workour/widgets/statefulWidgets.dart';
@@ -51,8 +52,11 @@ class _DashBoardState extends State<DashBoard> with SingleTickerProviderStateMix
         actions: [
           IconButton(
               padding: EdgeInsets.all(5.0),
-              onPressed: null,
-              icon: IconWidgets.customIcon(Icons.notifications, Colors.white))
+              icon: IconWidgets.customIcon(Icons.notifications, Colors.white),
+              onPressed: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) => Notifications()));
+              }
+          )
         ],
       ),
       body: bottomNavList.elementAt(_bottomNavIndex),

@@ -3,6 +3,8 @@ import 'package:flutter/services.dart';
 import 'package:workour/constants/stringAssets.dart';
 import 'package:workour/models/DownloadsModel.dart';
 import 'package:workour/models/NotesModel.dart';
+import 'package:workour/models/NotificationsModel.dart';
+import 'package:workour/models/SubscriptionModel.dart';
 
 Future readDownloadsJSONData() async {
   List downloadsList;
@@ -36,4 +38,38 @@ Future readNotesJSONData() async {
       .toList();
 
   return notesList;
+}
+
+Future readNotificationsJSONData() async {
+  List notificationsList;
+
+  String response = await rootBundle.loadString(StringAssets.jsonFile);
+
+  var data = await json.decode(response);
+  var result;
+
+  result = data["Notifications"] as List;
+  notificationsList = result
+      .map<NotificationsModel>(
+          (json) => NotificationsModel.fromJson(json))
+      .toList();
+
+  return notificationsList;
+}
+
+Future readSubscriptionChannelsJSONData() async {
+  List subChannelsList;
+
+  String response = await rootBundle.loadString(StringAssets.jsonFile);
+
+  var data = await json.decode(response);
+  var result;
+
+  result = data["Subscription"] as List;
+  subChannelsList = result
+      .map<SubscriptionModel>(
+          (json) => SubscriptionModel.fromJson(json))
+      .toList();
+
+  return subChannelsList;
 }

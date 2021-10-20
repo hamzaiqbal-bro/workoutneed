@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:workour/constants/app_colors.dart';
+import 'package:workour/ui/dashboard/help_and_support.dart';
+import 'package:workour/ui/dashboard/settings.dart';
 import 'package:workour/widgets/coustomTextWidgets.dart';
 
 class DrawerWidget extends StatefulWidget {
@@ -34,6 +36,7 @@ class _DrawerWidgetState extends State<DrawerWidget> {
                 trailing: Icon(Icons.arrow_forward_ios,color: AppColors.greyColor),
                 onTap: () {
                   Navigator.pop(context);
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => Settings()));
                 },
               ),
               ListTile(
@@ -42,6 +45,7 @@ class _DrawerWidgetState extends State<DrawerWidget> {
                 trailing: Icon(Icons.arrow_forward_ios,color: AppColors.greyColor),
                 onTap: () {
                   Navigator.pop(context);
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => HelpAndSupport()));
                 },
               ),
               ListTile(

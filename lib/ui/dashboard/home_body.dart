@@ -4,6 +4,8 @@ import 'package:workour/constants/imageAssets.dart';
 import 'package:workour/ui/dashboard/downloads.dart';
 import 'package:workour/ui/dashboard/notes.dart';
 import 'package:workour/ui/dashboard/profile.dart';
+import 'package:workour/ui/dashboard/purchase_products.dart';
+import 'package:workour/ui/dashboard/subscription.dart';
 import 'package:workour/widgets/cardWidgets.dart';
 import 'package:workour/widgets/coustomTextWidgets.dart';
 import 'package:workour/widgets/imageWidgets.dart';
@@ -77,8 +79,18 @@ class _HomeBodyState extends State<HomeBody> {
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
-                        CardWidgets.customCardWidget(context, "Purchase", Icons.account_balance_sharp),
-                        CardWidgets.customCardWidget(context, "Channel Subscription", Icons.subscriptions_outlined),
+                        InkWell(
+                            child: CardWidgets.customCardWidget(context, "Purchase", Icons.account_balance_sharp),
+                          onTap: () {
+                            Navigator.push(context, MaterialPageRoute(builder: (context) => PurchaseProducts()));
+                          },
+                        ),
+                        InkWell(
+                          child: CardWidgets.customCardWidget(context, "Channel Subscription", Icons.subscriptions_outlined),
+                          onTap: () {
+                            Navigator.push(context, MaterialPageRoute(builder: (context) => Subscription()));
+                          },
+                        ),
                       ],
                     ),
                     Row(
