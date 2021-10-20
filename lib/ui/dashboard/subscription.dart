@@ -245,7 +245,7 @@ class _SubscriptionState extends State<Subscription> {
                     children: [
                       coustomTextWidgets.detailsText(premiumContent.text, TextStyle(
                           letterSpacing: 0.2,
-                          overflow: TextOverflow.ellipsis,
+                          // overflow: TextOverflow.ellipsis,
                           color: Colors.black
                       ),
                       3
