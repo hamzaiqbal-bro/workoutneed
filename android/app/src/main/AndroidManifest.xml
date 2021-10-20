@@ -5,6 +5,8 @@
 
     <application
         android:label="workour"
+   <application
+        android:label="Work Out Need"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"
