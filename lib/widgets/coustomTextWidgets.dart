@@ -5,6 +5,17 @@ import 'package:flutter/material.dart';
 class coustomTextWidgets {
   coustomTextWidgets._();
 
+  static Widget myCustomText(String text, double fontSize, Color textColor, FontWeight fontWeight) {
+    return Text(
+      text != null ? text : "",
+      style: TextStyle(
+          color: textColor,
+          fontSize: fontSize,
+          fontWeight: fontWeight
+      ),
+    );
+  }
+
   static Widget coustomText(String text, double fontSize, Color textColor,FontWeight fontWeight) {
     return Text(
       text != null ? text : "",
@@ -41,12 +52,13 @@ class coustomTextWidgets {
     );
   }
 
-  static Widget detailsText(String text, TextStyle textStyle) {
+  static Widget detailsText(String text, TextStyle textStyle, int maxLines) {
     return Text(
       text != null ? text : "",
       textAlign: TextAlign.start,
       softWrap: true,
-      maxLines: 3,
+      overflow: TextOverflow.ellipsis,
+      maxLines: maxLines,
       style: textStyle,
     );
   }

@@ -10,6 +10,7 @@ class AppColors {
   static const Color whiteColor = Color(0xfff5f5f5);
   static const Color greyColor = Color(0xff9E9E9E);
   static const Color defaultColor = Color(0xfff2f2f2);
+  static const Color smokeWhiteColor = Color(0xfff5f5f5);
 
   static const Map<int, Color> black = const <int, Color>{
 

@@ -76,17 +76,17 @@ class _DownloadsState extends State<Downloads> {
           children: [
             Container(
               width: 170.0,
-              margin: EdgeInsets.symmetric(vertical: 15.0),
+              margin: EdgeInsets.symmetric(vertical: 5.0),
               decoration: BoxDecoration(
                 image: DecorationImage(
                     fit: BoxFit.cover, image: AssetImage(download.image)),
-                borderRadius: BorderRadius.all(Radius.circular(8.0)),
+                borderRadius: BorderRadius.all(Radius.circular(10.0)),
                 color: Colors.redAccent,
               ),
             ),
             Expanded(
               child: Container(
-                padding: EdgeInsets.only(left: 5.0),
+                padding: EdgeInsets.only(left: 5.0, top: 2.0),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -94,11 +94,11 @@ class _DownloadsState extends State<Downloads> {
                         letterSpacing: 0.2,
                         overflow: TextOverflow.ellipsis,
                         color: Colors.black
-                    )),
+                    ), 3),
                     Padding(
-                      padding: const EdgeInsets.all(5.0),
+                      padding: const EdgeInsets.symmetric(horizontal: 2.0),
                       child: coustomTextWidgets.defaultText(download.views, TextStyle(
-                          color: AppColors.greyColor
+                          color: AppColors.greyColor, fontWeight: FontWeight.w600
                       ), TextAlign.start),
                     ),
                     Row(
@@ -108,6 +108,7 @@ class _DownloadsState extends State<Downloads> {
                           padding: const EdgeInsets.all(5.0),
                           child: coustomTextWidgets.defaultText(download.channelName, TextStyle(
                               color: AppColors.greyColor,
+                              fontSize: 12.0,
                               fontWeight: FontWeight.w600
                           ), TextAlign.start),
                         ),
