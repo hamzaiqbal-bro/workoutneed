@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:workour/constants/app_colors.dart';
 import 'package:workour/constants/imageAssets.dart';
@@ -39,14 +40,21 @@ class _NotesState extends State<Notes> {
                   future: readNotesJSONData(),
                   builder: (BuildContext context, AsyncSnapshot<dynamic> snapshot) {
                     if (snapshot.hasData){
-                      return ListView.builder(
-                          itemCount: snapshot.data.length,
-                          shrinkWrap: true,
-                          physics: NeverScrollableScrollPhysics(),
-                          itemBuilder: (BuildContext bContext, int index) {
-                            NotesModel notes = snapshot.data[index];
-                            return _buildNotes(notes);
-                          });
+                      return AnimationLimiter(
+                        child: ListView.builder(
+                            itemCount: snapshot.data.length,
+                            shrinkWrap: true,
+                            physics: NeverScrollableScrollPhysics(),
+                            itemBuilder: (BuildContext bContext, int index) {
+                              NotesModel notes = snapshot.data[index];
+                              return AnimationConfiguration.staggeredList(
+                                position: index,
+                                duration: const Duration(milliseconds: 1000),
+                                child: FlipAnimation(
+                                    child: _buildNotes(notes)),
+                              );
+                            }),
+                      );
                     }
                     else if(snapshot.hasError) {
                       return coustomTextWidgets.centeredText("Error while fetching data..!", 18.0, AppColors.kPrimaryOne, FontWeight.normal);

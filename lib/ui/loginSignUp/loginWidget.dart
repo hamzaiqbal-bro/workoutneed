@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:workour/constants/app_colors.dart';
 import 'package:workour/constants/app_styles.dart';
 import 'package:workour/constants/imageAssets.dart';
+import 'package:workour/ui/dashboard/dash_board.dart';
 import 'package:workour/ui/dashboard/home_body.dart';
 import 'package:workour/ui/loginSignUp/forgetScreen.dart';
 import 'package:workour/widgets/bnuttonWidgets.dart';
@@ -56,7 +57,7 @@ class _loginWidgetState extends State<loginWidget> {
         SizedBox(height: AppStyles.fifteennumber,),
         InkWell(
             onTap: (){
-              Navigator.push(context, MaterialPageRoute(builder: (context) => mainProfileDashboard()));
+              Navigator.push(context, MaterialPageRoute(builder: (context) => DashBoard()));
             },
             child: buttonWidgets.coustomButton('Login',16.0,FontWeight.bold,context)),
         SizedBox(height: AppStyles.fourtynumber,),

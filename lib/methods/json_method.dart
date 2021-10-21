@@ -21,6 +21,8 @@ Future readDownloadsJSONData() async {
           (json) => DownloadsModel.fromJson(json))
       .toList();
 
+  print(downloadsList);
+
   return downloadsList;
 }
 
