@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
 import 'package:workour/constants/app_colors.dart';
 import 'package:workour/methods/json_method.dart';
 import 'package:workour/models/DownloadsModel.dart';
@@ -44,17 +45,24 @@ class _DownloadsState extends State<Downloads> {
                   future: readDownloadsJSONData(),
                   builder: (BuildContext context, AsyncSnapshot<dynamic> snapshot) {
                     if (snapshot.hasData){
-                      return ListView.builder(
-                          itemCount: snapshot.data.length,
-                          shrinkWrap: true,
-                          physics: NeverScrollableScrollPhysics(),
-                          itemBuilder: (BuildContext bContext, int index) {
-                            DownloadsModel download = snapshot.data[index];
-                            return _buildDownload(download);
-                          });
+                      return AnimationLimiter(
+                        child: ListView.builder(
+                            itemCount: snapshot.data.length,
+                            shrinkWrap: true,
+                            physics: NeverScrollableScrollPhysics(),
+                            itemBuilder: (BuildContext bContext, int index) {
+                              DownloadsModel download = snapshot.data[index];
+                              return AnimationConfiguration.staggeredList(
+                                position: index,
+                                duration: const Duration(milliseconds: 1000),
+                                child: ScaleAnimation(
+                                    child: _buildDownload(download)),
+                              );
+                            }),
+                      );
                     }
                     else if(snapshot.hasError) {
-                      return coustomTextWidgets.centeredText("Error while fetching data..!", 18.0, AppColors.kPrimaryOne, FontWeight.normal);
+                      return coustomTextWidgets.centeredText("Error while fetching data..!" + snapshot.error.toString(), 18.0, AppColors.kPrimaryOne, FontWeight.normal);
                     }
                     return CircularProgressIndicator();
                   },
@@ -98,7 +106,7 @@ class _DownloadsState extends State<Downloads> {
                     Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 2.0),
                       child: coustomTextWidgets.defaultText(download.views, TextStyle(
-                          color: AppColors.greyColor, fontWeight: FontWeight.w600
+                          color: AppColors.greyColor, fontSize: 12.0, fontWeight: FontWeight.w600
                       ), TextAlign.start),
                     ),
                     Row(

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
 import 'package:workour/constants/app_colors.dart';
 import 'package:workour/methods/json_method.dart';
 import 'package:workour/models/NotificationsModel.dart';
@@ -37,14 +38,21 @@ class _NotificationsState extends State<Notifications> {
                   future: readNotificationsJSONData(),
                   builder: (BuildContext context, AsyncSnapshot<dynamic> snapshot) {
                     if (snapshot.hasData){
-                      return ListView.builder(
-                          itemCount: snapshot.data.length,
-                          shrinkWrap: true,
-                          physics: NeverScrollableScrollPhysics(),
-                          itemBuilder: (BuildContext bContext, int index) {
-                            NotificationsModel notification = snapshot.data[index];
-                            return _buildDNotification(notification);
-                          });
+                      return AnimationLimiter(
+                        child: ListView.builder(
+                            itemCount: snapshot.data.length,
+                            shrinkWrap: true,
+                            physics: NeverScrollableScrollPhysics(),
+                            itemBuilder: (BuildContext bContext, int index) {
+                              NotificationsModel notification = snapshot.data[index];
+                              return AnimationConfiguration.staggeredList(
+                                position: index,
+                                duration: const Duration(milliseconds: 1000),
+                                child: ScaleAnimation(
+                                    child: _buildDNotification(notification)),
+                              );
+                            }),
+                      );
                     }
                     else if(snapshot.hasError) {
                       return coustomTextWidgets.centeredText("Error while fetching data..!", 18.0, AppColors.kPrimaryOne, FontWeight.normal);

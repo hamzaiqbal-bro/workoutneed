@@ -3,6 +3,7 @@ import 'package:workour/constants/app_colors.dart';
 import 'package:workour/constants/imageAssets.dart';
 import 'package:workour/ui/dashboard/downloads.dart';
 import 'package:workour/ui/dashboard/notes.dart';
+import 'package:workour/ui/dashboard/premium_content.dart';
 import 'package:workour/ui/dashboard/profile.dart';
 import 'package:workour/ui/dashboard/purchase_products.dart';
 import 'package:workour/ui/dashboard/subscription.dart';
@@ -66,13 +67,19 @@ class _mainProfileDashboardState extends State<mainProfileDashboard> {
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         InkWell(
-                            child: CardWidgets.customCardWidget(context, "Download", Icons.download),
+                          child: CardWidgets.customCardWidget(context, "Download", Icons.download),
                           onTap: () {
                             Navigator.push(context, MaterialPageRoute(builder: (context) =>
                                 Downloads()));
                           },
                         ),
-                        CardWidgets.customCardWidget(context, "Premium Content", Icons.ac_unit_sharp),
+                        InkWell(
+                          child: CardWidgets.customCardWidget(context, "Premium Content", Icons.ac_unit_sharp),
+                          onTap: () {
+                            Navigator.push(context, MaterialPageRoute(builder: (context) =>
+                                PremiumContent()));
+                          },
+                        ),
                       ],
                     ),
                     Row(

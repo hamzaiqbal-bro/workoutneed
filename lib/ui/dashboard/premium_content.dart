@@ -1,28 +1,33 @@
+import 'package:carousel_slider/carousel_options.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
 import 'package:workour/constants/app_colors.dart';
 import 'package:workour/methods/json_method.dart';
+import 'package:workour/models/DownloadsModel.dart';
 import 'package:workour/models/PurchaseProductsModel.dart';
 import 'package:workour/widgets/coustomTextWidgets.dart';
 import 'package:workour/widgets/iconWidgets.dart';
+import 'package:workour/widgets/imageWidgets.dart';
 
-class PurchaseProducts extends StatefulWidget {
-  const PurchaseProducts({Key? key}) : super(key: key);
+class PremiumContent extends StatefulWidget {
+  const PremiumContent({Key? key}) : super(key: key);
 
   @override
-  _PurchaseProductsState createState() => _PurchaseProductsState();
+  _PremiumContentState createState() => _PremiumContentState();
 }
 
-class _PurchaseProductsState extends State<PurchaseProducts> with SingleTickerProviderStateMixin {
+class _PremiumContentState extends State<PremiumContent> with SingleTickerProviderStateMixin {
 
   late TabController tabController;
-
-  static List<String> imagesLinks = [
-    "https://i.pinimg.com/originals/cc/18/8c/cc188c604e58cffd36e1d183c7198d21.jpg",
-    "https://www.kyoceradocumentsolutions.be/blog/wp-content/uploads/2019/03/iStock-881331810.jpg",
-    "https://resources.matcha-jp.com/resize/720x2000/2020/04/23-101958.jpeg"
+  final List<String> imgList = [
+    'https://images.unsplash.com/photo-1520342868574-5fa3804e551c?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=6ff92caffcdd63681a35134a6770ed3b&auto=format&fit=crop&w=1951&q=80',
+    'https://images.unsplash.com/photo-1522205408450-add114ad53fe?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=368f45b0888aeb0b7b08e3a1084d3ede&auto=format&fit=crop&w=1950&q=80',
+    'https://images.unsplash.com/photo-1519125323398-675f0ddb6308?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=94a1e718d89ca60a6337a6008341ca50&auto=format&fit=crop&w=1950&q=80',
+    'https://images.unsplash.com/photo-1523205771623-e0faa4d2813d?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=89719a0d55dd05e2deae4120227e6efc&auto=format&fit=crop&w=1953&q=80',
+    'https://images.unsplash.com/photo-1508704019882-f9cf40e475b4?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=8c6e5e3aba713b17aa1fe71ab4f0ae5b&auto=format&fit=crop&w=1352&q=80',
+    'https://images.unsplash.com/photo-1519985176271-adb1088fa94c?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=a0c8d632e977f94e5d312d9893258f59&auto=format&fit=crop&w=1355&q=80'
   ];
 
   @override
@@ -64,13 +69,13 @@ class _PurchaseProductsState extends State<PurchaseProducts> with SingleTickerPr
                   children: [
                     CarouselSlider(
                       options: CarouselOptions(
-                          autoPlay: true,
-                          aspectRatio: 2.8,
-                          enlargeCenterPage: true,
-                          autoPlayInterval: const Duration(seconds: 5),
-                          autoPlayAnimationDuration: const Duration(milliseconds: 800),
+                        autoPlay: true,
+                        aspectRatio: 2.8,
+                        enlargeCenterPage: true,
+                        autoPlayInterval: const Duration(seconds: 5),
+                        autoPlayAnimationDuration: const Duration(milliseconds: 800),
                       ),
-                      items: imagesLinks
+                      items: imgList
                           .map((item) => ClipRRect(
                         borderRadius: BorderRadius.all(Radius.circular(20.0)),
                         child: Image.network(item, fit: BoxFit.fill, width: MediaQuery.of(context).size.width - 100),
@@ -78,21 +83,20 @@ class _PurchaseProductsState extends State<PurchaseProducts> with SingleTickerPr
                           .toList(),
                     ),
                     Padding(
-                      padding: const EdgeInsets.all(10.0),
-                      child: coustomTextWidgets.centeredText("Recently Purchased", 18.0, Colors.black, FontWeight.bold),
+                      padding: const EdgeInsets.all(8.0),
+                      child: coustomTextWidgets.centeredText("Recently Watched", 18.0, Colors.black, FontWeight.bold),
                     ),
                   ],
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: coustomTextWidgets.coustomText("Purchased Products", 18.0, Colors.black, FontWeight.bold),
+                padding: const EdgeInsets.all(10.0),
+                child: coustomTextWidgets.coustomText("Premium Content", 18.0, Colors.black, FontWeight.bold),
               ),
               Container(
                 child: FutureBuilder(
-                  future: readPurchaseProductsJSONData(),
+                  future: readDownloadsJSONData(),
                   builder: (BuildContext context, AsyncSnapshot<dynamic> snapshot) {
-                    print(snapshot.data.length);
                     if (snapshot.hasData){
                       return AnimationLimiter(
                         child: ListView.builder(
@@ -100,18 +104,18 @@ class _PurchaseProductsState extends State<PurchaseProducts> with SingleTickerPr
                             shrinkWrap: true,
                             physics: NeverScrollableScrollPhysics(),
                             itemBuilder: (BuildContext bContext, int index) {
-                              PurchaseProductsModel purchaseProducts = snapshot.data[index];
+                              DownloadsModel download = snapshot.data[index];
                               return AnimationConfiguration.staggeredList(
                                 position: index,
                                 duration: const Duration(milliseconds: 1500),
                                 child: FlipAnimation(
-                                    child: _buildPurchaseProducts(purchaseProducts)),
+                                    child: _buildPremiumContent(download)),
                               );
                             }),
                       );
                     }
                     else if(snapshot.hasError) {
-                      return coustomTextWidgets.centeredText("Error while fetching data..!", 18.0, AppColors.kPrimaryOne, FontWeight.normal);
+                      return coustomTextWidgets.centeredText("Error while fetching data..!" + snapshot.error.toString(), 18.0, AppColors.kPrimaryOne, FontWeight.normal);
                     }
                     return CircularProgressIndicator();
                   },
@@ -131,67 +135,54 @@ class _PurchaseProductsState extends State<PurchaseProducts> with SingleTickerPr
     super.dispose();
   }
 
-  Widget _buildPurchaseProducts(PurchaseProductsModel purchaseProducts) {
+  Widget _buildPremiumContent(DownloadsModel download) {
     return Container(
-      margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 10.0),
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.all(Radius.circular(10.0)),
-        color: Colors.white,
-        boxShadow: [
-          BoxShadow(color: AppColors.smokeWhiteColor, spreadRadius: 1.5),
-        ],
-      ),
+      margin: EdgeInsets.symmetric(horizontal: 5.0, vertical: 5.0),
       child: IntrinsicHeight(
         child: Row(
           children: [
             Container(
-              width: 120.0,
-              margin: EdgeInsets.only(right: 10.0),
+              width: 170.0,
+              margin: EdgeInsets.symmetric(vertical: 5.0),
               decoration: BoxDecoration(
                 image: DecorationImage(
-                  fit: BoxFit.cover, image: AssetImage(purchaseProducts.imageUrl),
-                ),
-                borderRadius: BorderRadius.only(bottomLeft: Radius.circular(10.0), topLeft: Radius.circular(10.0)),
+                    fit: BoxFit.cover, image: AssetImage(download.image)),
+                borderRadius: BorderRadius.all(Radius.circular(10.0)),
                 color: Colors.redAccent,
               ),
             ),
             Expanded(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.all(4.0),
-                    child: coustomTextWidgets.myCustomText(purchaseProducts.name, 15.0, Colors.black, FontWeight.bold),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 5.0),
-                    child: coustomTextWidgets.detailsText(purchaseProducts.details, TextStyle(
-                        color: Colors.black), 2
-                    )
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              child: Container(
+                  padding: EdgeInsets.only(left: 5.0, top: 2.0),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
+                      coustomTextWidgets.detailsText(download.text, TextStyle(
+                          letterSpacing: 0.2,
+                          // overflow: TextOverflow.ellipsis,
+                          color: Colors.black
+                      ), 3),
                       Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: coustomTextWidgets.coustomText("\$${purchaseProducts.price}", 18.0, AppColors.kPrimaryTwo, FontWeight.bold),
+                        padding: const EdgeInsets.symmetric(horizontal: 2.0),
+                        child: coustomTextWidgets.defaultText(download.views, TextStyle(
+                            color: AppColors.greyColor, fontSize: 12.0, fontWeight: FontWeight.w600
+                        ), TextAlign.start),
                       ),
                       Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
+                          imageWidgets.circularImage(download.image, 20.0, 20.0),
                           Padding(
-                            padding: const EdgeInsets.only(left: 5.0, right: 5.0),
-                            child: coustomTextWidgets.defaultText("item: ${purchaseProducts.item}", TextStyle(color: AppColors.greyColor, fontSize: 14.0), TextAlign.start),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.only(left: 5.0, right: 10.0),
-                            child: coustomTextWidgets.defaultText("Qty: ${purchaseProducts.quantity}", TextStyle(color: AppColors.greyColor, fontSize: 14.0), TextAlign.start),
+                            padding: const EdgeInsets.all(5.0),
+                            child: coustomTextWidgets.defaultText(download.channelName, TextStyle(
+                                color: AppColors.greyColor,
+                                fontSize: 12.0,
+                                fontWeight: FontWeight.w600
+                            ), TextAlign.start),
                           ),
                         ],
                       )
                     ],
                   )
-                ],
               ),
             )
           ],
