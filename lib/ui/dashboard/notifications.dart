@@ -111,7 +111,7 @@ class _NotificationsState extends State<Notifications> {
             ),
             Container(
                 margin: EdgeInsets.only(left: 2.0, right: 5.0),
-                child: imageWidgets.circleAvatar(notification.channelIcon)),
+                child: imageWidgets.circleAvatar(notification.channelIcon, 23.0, 25.0)),
           ],
         ),
       ),

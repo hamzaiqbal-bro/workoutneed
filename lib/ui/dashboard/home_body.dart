@@ -9,7 +9,11 @@ import 'package:workour/ui/dashboard/purchase_products.dart';
 import 'package:workour/ui/dashboard/subscription.dart';
 import 'package:workour/widgets/cardWidgets.dart';
 import 'package:workour/widgets/coustomTextWidgets.dart';
+import 'package:workour/widgets/iconWidgets.dart';
 import 'package:workour/widgets/imageWidgets.dart';
+import 'package:workour/widgets/statefulWidgets.dart';
+
+import 'notifications.dart';
 
 class mainProfileDashboard extends StatefulWidget {
   const mainProfileDashboard({Key? key}) : super(key: key);
@@ -22,6 +26,35 @@ class _mainProfileDashboardState extends State<mainProfileDashboard> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: DrawerWidget(),
+      appBar: AppBar(
+        backgroundColor: AppColors.kPrimaryTwo,
+        flexibleSpace: Container(
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+                begin: FractionalOffset.topCenter,
+                end: FractionalOffset.bottomCenter,
+                colors: [
+                  AppColors.kPrimaryOne.withOpacity(0.8),
+                  AppColors.kPrimaryTwo,
+                ],
+                stops: [
+                  0.0,
+                  0.7
+                ]),
+          ),
+        ),
+        elevation: 0,
+        actions: [
+          IconButton(
+              padding: EdgeInsets.all(5.0),
+              icon: IconWidgets.customIcon(Icons.notifications, Colors.white),
+              onPressed: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) => Notifications()));
+              }
+          )
+        ],
+      ),
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(

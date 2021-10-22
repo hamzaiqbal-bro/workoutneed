@@ -21,14 +21,14 @@ class imageWidgets{
     );
   }
 
-  static Widget circleAvatar(String imagePath) {
+  static Widget circleAvatar(String imagePath, double innerRadius, double outerRadius) {
     return CircleAvatar(
       child: CircleAvatar(
         backgroundColor: Colors.white,
         backgroundImage: AssetImage(imagePath),
-        radius: 23.0,
+        radius: innerRadius,
       ),
-      radius: 25.0,
+      radius: outerRadius,
       backgroundColor: AppColors.kPrimaryTwo,
     );
   }

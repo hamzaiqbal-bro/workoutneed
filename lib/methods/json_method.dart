@@ -1,9 +1,11 @@
 import 'dart:convert';
 import 'package:flutter/services.dart';
 import 'package:workour/constants/stringAssets.dart';
+import 'package:workour/models/CategoryModel.dart';
 import 'package:workour/models/DownloadsModel.dart';
 import 'package:workour/models/NotesModel.dart';
 import 'package:workour/models/NotificationsModel.dart';
+import 'package:workour/models/ProductsModel.dart';
 import 'package:workour/models/PurchaseProductsModel.dart';
 import 'package:workour/models/SubscriptionModel.dart';
 
@@ -92,4 +94,89 @@ Future readPurchaseProductsJSONData() async {
       .toList();
 
   return purchaseProductsList;
+}
+
+Future readCategoryJSONData() async {
+  List categoriesList;
+
+  String response = await rootBundle.loadString(StringAssets.jsonFile);
+
+  var data = await json.decode(response);
+  var result;
+
+  result = data["Categories"] as List;
+  categoriesList = result
+      .map<CategoryModel>(
+          (json) => CategoryModel.fromJson(json))
+      .toList();
+
+  return categoriesList;
+}
+
+Future readProductsJSONData() async {
+  List productsList;
+
+  String response = await rootBundle.loadString(StringAssets.jsonFile);
+
+  var data = await json.decode(response);
+  var result;
+
+  result = data["Products"] as List;
+  productsList = result
+      .map<ProductsModel>(
+          (json) => ProductsModel.fromJson(json))
+      .toList();
+
+  return productsList;
+}
+
+Future readTrendingProductsJSONData() async {
+  List trendingProductsList;
+
+  String response = await rootBundle.loadString(StringAssets.jsonFile);
+
+  var data = await json.decode(response);
+  var result;
+
+  result = data["Trending_Products"] as List;
+  trendingProductsList = result
+      .map<ProductsModel>(
+          (json) => ProductsModel.fromJson(json))
+      .toList();
+
+  return trendingProductsList;
+}
+
+Future readPopularProductsJSONData() async {
+  List popularProductsList;
+
+  String response = await rootBundle.loadString(StringAssets.jsonFile);
+
+  var data = await json.decode(response);
+  var result;
+
+  result = data["Popular_Products"] as List;
+  popularProductsList = result
+      .map<ProductsModel>(
+          (json) => ProductsModel.fromJson(json))
+      .toList();
+
+  return popularProductsList;
+}
+
+Future readStoreProductsJSONData() async {
+  List storeProductsList;
+
+  String response = await rootBundle.loadString(StringAssets.jsonFile);
+
+  var data = await json.decode(response);
+  var result;
+
+  result = data["Store_Products"] as List;
+  storeProductsList = result
+      .map<ProductsModel>(
+          (json) => ProductsModel.fromJson(json))
+      .toList();
+
+  return storeProductsList;
 }

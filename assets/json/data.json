@@ -288,5 +288,259 @@
       "item": 1,
       "quantity": 1
     }
+  ],
+  "Categories": [
+    {
+      "name": "Shoes",
+      "imageUrl": "assets/images/store_product_image.png"
+    },
+    {
+      "name": "Trousers",
+      "imageUrl": "assets/images/trousers.png"
+    },
+    {
+      "name": "Protiens",
+      "imageUrl": "assets/images/protiens.png"
+    },
+    {
+      "name": "Vitamins",
+      "imageUrl": "assets/images/vitamins.png"
+    },
+    {
+      "name": "Watches",
+      "imageUrl": "assets/images/watches.png"
+    }
+  ],
+  "Products": [
+    {
+      "name": "Nike NH3",
+      "imageUrl": "assets/images/shoes_yellow.png",
+      "iconUrl": "assets/images/profile.png",
+      "rating": 4.0,
+      "price": 347.0
+    },
+    {
+      "name": "Nike NH3",
+      "imageUrl": "assets/images/shoes_blue.png",
+      "iconUrl": "assets/images/profile.png",
+      "rating": 4.0,
+      "price": 347.0
+    },
+    {
+      "name": "Nike NH3",
+      "imageUrl": "assets/images/shoes_fila.png",
+      "iconUrl": "assets/images/profile.png",
+      "rating": 4.0,
+      "price": 347.0
+    },
+    {
+      "name": "Nike NH3",
+      "imageUrl": "assets/images/shoes_racebok.png",
+      "iconUrl": "assets/images/profile.png",
+      "rating": 4.0,
+      "price": 347.0
+    },
+    {
+      "name": "Nike NH3",
+      "imageUrl": "assets/images/shoes_fila.png",
+      "iconUrl": "assets/images/profile.png",
+      "rating": 4.0,
+      "price": 347.0
+    },
+    {
+      "name": "Nike NH3",
+      "imageUrl": "assets/images/shoes_racebok.png",
+      "iconUrl": "assets/images/profile.png",
+      "rating": 4.0,
+      "price": 347.0
+    },
+    {
+      "name": "Nike NH3",
+      "imageUrl": "assets/images/shoes_yellow.png",
+      "iconUrl": "assets/images/profile.png",
+      "rating": 4.0,
+      "price": 347.0
+    },
+    {
+      "name": "Nike NH3",
+      "imageUrl": "assets/images/shoes_blue.png",
+      "iconUrl": "assets/images/profile.png",
+      "rating": 4.0,
+      "price": 347.0
+    }
+  ],
+  "Trending_Products": [
+    {
+      "name": "Nike NH3",
+      "imageUrl": "assets/images/yellow_nike_shoes.png",
+      "iconUrl": "assets/images/profile.png",
+      "rating": 4.0,
+      "price": 347.0
+    },
+    {
+      "name": "Nike NH3",
+      "imageUrl": "assets/images/yellow_nike_shoes.png",
+      "iconUrl": "assets/images/profile.png",
+      "rating": 4.0,
+      "price": 347.0
+    },
+    {
+      "name": "Nike NH3",
+      "imageUrl": "assets/images/yellow_nike_shoes.png",
+      "iconUrl": "assets/images/profile.png",
+      "rating": 4.0,
+      "price": 347.0
+    },
+    {
+      "name": "Nike NH3",
+      "imageUrl": "assets/images/yellow_nike_shoes.png",
+      "iconUrl": "assets/images/profile.png",
+      "rating": 4.0,
+      "price": 347.0
+    },
+    {
+      "name": "Nike NH3",
+      "imageUrl": "assets/images/yellow_nike_shoes.png",
+      "iconUrl": "assets/images/profile.png",
+      "rating": 4.0,
+      "price": 347.0
+    },
+    {
+      "name": "Nike NH3",
+      "imageUrl": "assets/images/yellow_nike_shoes.png",
+      "iconUrl": "assets/images/profile.png",
+      "rating": 4.0,
+      "price": 347.0
+    },
+    {
+      "name": "Nike NH3",
+      "imageUrl": "assets/images/yellow_nike_shoes.png",
+      "iconUrl": "assets/images/profile.png",
+      "rating": 4.0,
+      "price": 347.0
+    },
+    {
+      "name": "Nike NH3",
+      "imageUrl": "assets/images/yellow_nike_shoes.png",
+      "iconUrl": "assets/images/profile.png",
+      "rating": 4.0,
+      "price": 347.0
+    }
+  ],
+  "Popular_Products": [
+    {
+      "name": "Nike NH3",
+      "imageUrl": "assets/images/yellow_nike_shoes.png",
+      "iconUrl": "assets/images/profile.png",
+      "rating": 4.0,
+      "price": 347.0
+    },
+    {
+      "name": "Nike NH3",
+      "imageUrl": "assets/images/yellow_nike_shoes.png",
+      "iconUrl": "assets/images/profile.png",
+      "rating": 4.0,
+      "price": 347.0
+    },
+    {
+      "name": "Nike NH3",
+      "imageUrl": "assets/images/yellow_nike_shoes.png",
+      "iconUrl": "assets/images/profile.png",
+      "rating": 4.0,
+      "price": 347.0
+    },
+    {
+      "name": "Nike NH3",
+      "imageUrl": "assets/images/yellow_nike_shoes.png",
+      "iconUrl": "assets/images/profile.png",
+      "rating": 4.0,
+      "price": 347.0
+    },
+    {
+      "name": "Nike NH3",
+      "imageUrl": "assets/images/yellow_nike_shoes.png",
+      "iconUrl": "assets/images/profile.png",
+      "rating": 4.0,
+      "price": 347.0
+    },
+    {
+      "name": "Nike NH3",
+      "imageUrl": "assets/images/yellow_nike_shoes.png",
+      "iconUrl": "assets/images/profile.png",
+      "rating": 4.0,
+      "price": 347.0
+    },
+    {
+      "name": "Nike NH3",
+      "imageUrl": "assets/images/yellow_nike_shoes.png",
+      "iconUrl": "assets/images/profile.png",
+      "rating": 4.0,
+      "price": 347.0
+    },
+    {
+      "name": "Nike NH3",
+      "imageUrl": "assets/images/yellow_nike_shoes.png",
+      "iconUrl": "assets/images/profile.png",
+      "rating": 4.0,
+      "price": 347.0
+    }
+  ],
+  "Store_Products": [
+    {
+      "name": "Nike NH3",
+      "imageUrl": "assets/images/store_product_image.png",
+      "iconUrl": "assets/images/profile.png",
+      "rating": 4.0,
+      "price": 347.0
+    },
+    {
+      "name": "Nike NH3",
+      "imageUrl": "assets/images/store_product_image.png",
+      "iconUrl": "assets/images/profile.png",
+      "rating": 4.0,
+      "price": 347.0
+    },
+    {
+      "name": "Nike NH3",
+      "imageUrl": "assets/images/store_product_image.png",
+      "iconUrl": "assets/images/profile.png",
+      "rating": 4.0,
+      "price": 347.0
+    },
+    {
+      "name": "Nike NH3",
+      "imageUrl": "assets/images/store_product_image.png",
+      "iconUrl": "assets/images/profile.png",
+      "rating": 4.0,
+      "price": 347.0
+    },
+    {
+      "name": "Nike NH3",
+      "imageUrl": "assets/images/store_product_image.png",
+      "iconUrl": "assets/images/profile.png",
+      "rating": 4.0,
+      "price": 347.0
+    },
+    {
+      "name": "Nike NH3",
+      "imageUrl": "assets/images/store_product_image.png",
+      "iconUrl": "assets/images/profile.png",
+      "rating": 4.0,
+      "price": 347.0
+    },
+    {
+      "name": "Nike NH3",
+      "imageUrl": "assets/images/store_product_image.png",
+      "iconUrl": "assets/images/profile.png",
+      "rating": 4.0,
+      "price": 347.0
+    },
+    {
+      "name": "Nike NH3",
+      "imageUrl": "assets/images/store_product_image.png",
+      "iconUrl": "assets/images/profile.png",
+      "rating": 4.0,
+      "price": 347.0
+    }
   ]
 }

@@ -62,4 +62,18 @@ class coustomTextWidgets {
     );
   }
 
+  static Widget customText(String text, double fontSize, Color textColor,FontWeight fontWeight) {
+    return Text(
+      text != null ? text : "",
+      overflow: TextOverflow.ellipsis,
+      maxLines: 2,
+      softWrap: true,
+      style: TextStyle(
+          color: textColor,
+          fontSize: fontSize,
+          fontWeight: fontWeight
+      ),
+    );
+  }
+
 }

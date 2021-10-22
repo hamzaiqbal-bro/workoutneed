@@ -6,7 +6,7 @@ import 'package:workour/ui/dashboard/video_body.dart';
 import 'package:workour/widgets/iconWidgets.dart';
 import 'package:workour/widgets/statefulWidgets.dart';
 import 'home_body.dart';
-import 'market_body.dart';
+import '../market/market_body.dart';
 import 'package:flutter_zoom_drawer/flutter_zoom_drawer.dart';
 
 class DashBoard extends StatefulWidget {
@@ -30,35 +30,6 @@ class _DashBoardState extends State<DashBoard> with SingleTickerProviderStateMix
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: DrawerWidget(),
-      appBar: AppBar(
-        backgroundColor: AppColors.kPrimaryTwo,
-        flexibleSpace: Container(
-          decoration: BoxDecoration(
-            gradient: LinearGradient(
-                begin: FractionalOffset.topCenter,
-                end: FractionalOffset.bottomCenter,
-                colors: [
-                  AppColors.kPrimaryOne.withOpacity(0.8),
-                  AppColors.kPrimaryTwo,
-                ],
-                stops: [
-                  0.0,
-                  0.7
-                ]),
-          ),
-        ),
-        elevation: 0,
-        actions: [
-          IconButton(
-              padding: EdgeInsets.all(5.0),
-              icon: IconWidgets.customIcon(Icons.notifications, Colors.white),
-              onPressed: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context) => Notifications()));
-              }
-          )
-        ],
-      ),
       body: bottomNavList.elementAt(_bottomNavIndex),
       bottomNavigationBar: Container(
           padding: EdgeInsets.all(10.0),

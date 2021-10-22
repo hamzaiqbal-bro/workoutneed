@@ -9,6 +9,8 @@ class imageAssets{
   static String downloadImage = 'assets/images/download_image.jpg';
   static String profileImage = 'assets/images/profile.png';
   static String productImage = 'assets/images/product.jpg';
+  static String marketMainImage = 'assets/images/market_main_image.png';
+  static String categoryMainImage = 'assets/images/categories_main_image.png';
   static String cameraIcon = 'assets/icons/camera.svg';
   static String editIcon = 'assets/icons/edit.svg';
   static String pencilIcon = 'assets/icons/pencil.png';
