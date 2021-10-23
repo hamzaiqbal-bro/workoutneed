@@ -92,7 +92,6 @@ class _PurchaseProductsState extends State<PurchaseProducts> with SingleTickerPr
                 child: FutureBuilder(
                   future: readPurchaseProductsJSONData(),
                   builder: (BuildContext context, AsyncSnapshot<dynamic> snapshot) {
-                    print(snapshot.data.length);
                     if (snapshot.hasData){
                       return AnimationLimiter(
                         child: ListView.builder(

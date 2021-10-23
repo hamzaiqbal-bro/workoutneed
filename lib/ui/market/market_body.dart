@@ -7,6 +7,7 @@ import 'package:workour/constants/imageAssets.dart';
 import 'package:workour/methods/json_method.dart';
 import 'package:workour/models/CategoryModel.dart';
 import 'package:workour/models/ProductsModel.dart';
+import 'package:workour/ui/market/cart_screen.dart';
 import 'package:workour/ui/market/category_products.dart';
 import 'package:workour/ui/market/product_details.dart';
 import 'package:workour/widgets/coustomTextWidgets.dart';
@@ -57,6 +58,7 @@ class _MarketBodyState extends State<MarketBody> with SingleTickerProviderStateM
               padding: EdgeInsets.all(5.0),
               icon: IconWidgets.customIcon(Icons.shopping_cart, AppColors.kPrimaryOne),
               onPressed: () {
+                Navigator.of(context).push(MaterialPageRoute(builder: (_) => CartScreen()));
               }
           ),
           IconButton(

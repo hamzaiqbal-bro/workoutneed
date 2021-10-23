@@ -1,12 +1,14 @@
 import 'dart:convert';
 import 'package:flutter/services.dart';
 import 'package:workour/constants/stringAssets.dart';
+import 'package:workour/models/CartModel.dart';
 import 'package:workour/models/CategoryModel.dart';
 import 'package:workour/models/DownloadsModel.dart';
 import 'package:workour/models/NotesModel.dart';
 import 'package:workour/models/NotificationsModel.dart';
 import 'package:workour/models/ProductsModel.dart';
 import 'package:workour/models/PurchaseProductsModel.dart';
+import 'package:workour/models/ReviewsModel.dart';
 import 'package:workour/models/SubscriptionModel.dart';
 
 Future readDownloadsJSONData() async {
@@ -179,4 +181,38 @@ Future readStoreProductsJSONData() async {
       .toList();
 
   return storeProductsList;
+}
+
+Future readCartProductsJSONData() async {
+  List cartList;
+
+  String response = await rootBundle.loadString(StringAssets.jsonFile);
+
+  var data = await json.decode(response);
+  var result;
+
+  result = data["Cart"] as List;
+  cartList = result
+      .map<CartModel>(
+          (json) => CartModel.fromJson(json))
+      .toList();
+
+  return cartList;
+}
+
+Future readRatingAndReviewsJSONData() async {
+  List reviewsList;
+
+  String response = await rootBundle.loadString(StringAssets.jsonFile);
+
+  var data = await json.decode(response);
+  var result;
+
+  result = data["Rating_and_Reviews"] as List;
+  reviewsList = result
+      .map<ReviewsModel>(
+          (json) => ReviewsModel.fromJson(json))
+      .toList();
+
+  return reviewsList;
 }

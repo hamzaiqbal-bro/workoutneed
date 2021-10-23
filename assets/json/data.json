@@ -542,5 +542,83 @@
       "rating": 4.0,
       "price": 347.0
     }
+  ],
+  "Rating_and_Reviews": [
+    {
+      "user_name": "User1234",
+      "user_image": "assets/images/profile.png",
+      "rating": 4.0,
+      "review_text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
+      "date": "08/06/2021"
+    },
+    {
+      "user_name": "User1234",
+      "user_image": "assets/images/profile.png",
+      "rating": 4.0,
+      "review_text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
+      "date": "08/06/2021"
+    },
+    {
+      "user_name": "User1234",
+      "user_image": "assets/images/profile.png",
+      "rating": 4.0,
+      "review_text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
+      "date": "08/06/2021"
+    },
+    {
+      "user_name": "User1234",
+      "user_image": "assets/images/profile.png",
+      "rating": 4.0,
+      "review_text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
+      "date": "08/06/2021"
+    },
+    {
+      "user_name": "User1234",
+      "user_image": "assets/images/profile.png",
+      "rating": 4.0,
+      "review_text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
+      "date": "08/06/2021"
+    },
+    {
+      "user_name": "User1234",
+      "user_image": "assets/images/profile.png",
+      "rating": 4.0,
+      "review_text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
+      "date": "08/06/2021"
+    },
+    {
+      "user_name": "User1234",
+      "user_image": "assets/images/profile.png",
+      "rating": 4.0,
+      "review_text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
+      "date": "08/06/2021"
+    },
+    {
+      "user_name": "User1234",
+      "user_image": "assets/images/profile.png",
+      "rating": 4.0,
+      "review_text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
+      "date": "08/06/2021"
+    }
+  ],
+  "Cart": [
+    {
+      "name": "Nike NH3 (Summer Collection)",
+      "imageUrl": "assets/images/shoes_yellow.png",
+      "details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
+      "price": 347.0,
+      "item": 1,
+      "is_checked": false,
+      "quantity": 1
+    },
+    {
+      "name": "Nike NH3 (Summer Collection)",
+      "imageUrl": "assets/images/store_product_image.png",
+      "details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
+      "price": 347.0,
+      "item": 1,
+      "is_checked": true,
+      "quantity": 1
+    }
   ]
 }
