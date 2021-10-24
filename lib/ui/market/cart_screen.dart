@@ -3,9 +3,11 @@ import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
 import 'package:workour/constants/app_colors.dart';
 import 'package:workour/methods/json_method.dart';
 import 'package:workour/models/CartModel.dart';
+import 'package:workour/ui/market/checkout_screen.dart';
 import 'package:workour/widgets/bnuttonWidgets.dart';
 import 'package:workour/widgets/coustomTextWidgets.dart';
 import 'package:workour/widgets/iconWidgets.dart';
+import 'package:workour/widgets/stateless_widgets.dart';
 
 class CartScreen extends StatefulWidget {
   const CartScreen({Key? key}) : super(key: key);
@@ -74,7 +76,7 @@ class _CartScreenState extends State<CartScreen> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    coustomTextWidgets.coustomText("Subtotal (items)", 16.0, Colors.black, FontWeight.bold),
+                    coustomTextWidgets.coustomText("Subtotal (1 item)", 16.0, Colors.black, FontWeight.normal),
                     coustomTextWidgets.coustomText("\$${347}", 16.0, Colors.black, FontWeight.bold)
                   ],
                 ),
@@ -84,8 +86,8 @@ class _CartScreenState extends State<CartScreen> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    coustomTextWidgets.coustomText("Shipping Fee", 16.0, Colors.black, FontWeight.w600),
-                    coustomTextWidgets.coustomText("\$${5.99}", 16.0, Colors.black, FontWeight.w600)
+                    coustomTextWidgets.coustomText("Shipping Fee", 16.0, Colors.black, FontWeight.normal),
+                    coustomTextWidgets.coustomText("\$${5.99}", 16.0, Colors.black, FontWeight.bold)
                   ],
                 ),
               ),
@@ -93,38 +95,17 @@ class _CartScreenState extends State<CartScreen> {
                   margin: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 5.0),
                   child: coustomTextWidgets.coustomText("Total : \$${352.99}", 16.0, AppColors.kPrimaryTwo, FontWeight.w600)),
               Container(
-                  margin: EdgeInsets.symmetric(horizontal: 20.0, vertical: 20.0),
-                  child: buttonWidgets.customIconTextButton('Checkout', 16.0, FontWeight.bold, Icons.payment, context)),
-              // Container(
-              //   alignment: Alignment.center,
-              //   height: 50.0,
-              //   margin: EdgeInsets.symmetric(horizontal: 20.0, vertical: 5.0),
-              //   child: RaisedButton(
-              //     onPressed: () {},
-              //     shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0)),
-              //     padding: EdgeInsets.all(0.0),
-              //     child: Ink(
-              //       decoration: BoxDecoration(
-              //           gradient: LinearGradient(colors: [AppColors.kPrimaryOne, AppColors.kPrimaryTwo],
-              //             begin: Alignment.centerLeft,
-              //             end: Alignment.centerRight,
-              //           ),
-              //           borderRadius: BorderRadius.circular(10.0)
-              //       ),
-              //       child: Container(
-              //         constraints: BoxConstraints(maxWidth: 400.0, minHeight: 50.0),
-              //         alignment: Alignment.center,
-              //         child: Row(
-              //           mainAxisAlignment: MainAxisAlignment.center,
-              //           children: [
-              //             IconWidgets.sizedIcon(Icons.payment, Colors.white, 40.0),
-              //             coustomTextWidgets.coustomText("Checkout", 18.0, Colors.white, FontWeight.bold)
-              //           ],
-              //         ),
-              //       ),
-              //     ),
-              //   ),
-              // ),
+                margin: EdgeInsets.symmetric(horizontal: 15.0, vertical: 20.0),
+                child: DefIconTextButton(
+                  text: 'Checkout',
+                  fontSize: 16.0,
+                  fontWeight: FontWeight.bold,
+                  iconData: Icons.payment,
+                  onPress: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => CheckOut()));
+                  },
+                ),
+              ),
             ],
           ),
         ),
@@ -219,37 +200,5 @@ class _CartScreenState extends State<CartScreen> {
     );
   }
 
-  buildElevatedButton() {
-    return Container(
-      width: 250,
-      child: ElevatedButton.icon(
-        onPressed: (){},
-        style: ElevatedButton.styleFrom(
-          padding: EdgeInsets.all(0.0),
-          primary: Colors.transparent,
-          onPrimary: AppColors.kPrimaryTwo,
-          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0)),
-        ),
-        icon: Icon(Icons.arrow_forward_ios_rounded),
-        label: Ink(
-          decoration: BoxDecoration(
-              gradient: LinearGradient(colors: [Color(0xffe15084), Color(0xff245587)],
-                begin: Alignment.centerLeft,
-                end: Alignment.centerRight,
-              ),
-              borderRadius: BorderRadius.circular(10.0)
-          ),
-          child: Container(
-            width: 300,
-            height: 50,
-            alignment: Alignment.center,
-            child: Text("Login", style: TextStyle(color: Colors.white),),
-          ),
-        ),
-
-
-      ),
-    );
-  }
 }
 
