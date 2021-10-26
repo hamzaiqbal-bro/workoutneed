@@ -30,4 +30,37 @@ class buttonWidgets{
     );
   }
 
+  static Widget whiteTextButton(String text, double fontSize, FontWeight fontWeight,context) {
+    return Container(
+      height: 50.0,
+      width: MediaQuery.of(context).size.width,
+      alignment: Alignment.center,
+      padding: EdgeInsets.all(AppStyles.fivenumber),
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(8.0),
+        gradient: LinearGradient(
+            begin: FractionalOffset.centerLeft,
+            end: FractionalOffset.centerRight,
+            colors: [
+              AppColors.whiteColor.withOpacity(0.8),
+              AppColors.whiteColor ,
+            ],
+            stops: [
+              0.0,
+              0.6
+            ]),
+
+        boxShadow: [
+          BoxShadow(
+            color: Colors.grey.withOpacity(0.5),
+            spreadRadius: 5,
+            blurRadius: 7,
+            offset: Offset(0, 3), // changes position of shadow
+          ),
+        ],
+      ),
+      child:coustomTextWidgets.coustomText(text, fontSize, AppColors.darkBlack, fontWeight) ,
+    );
+  }
+
 }

@@ -1,3 +1,5 @@
+// @dart = 2.8
+
 import 'package:flutter/material.dart';
 import 'package:workour/constants/app_theme.dart';
 import 'package:workour/ui/splashScreen/splashScreen.dart';

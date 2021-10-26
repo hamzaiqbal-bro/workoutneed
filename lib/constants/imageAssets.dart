@@ -15,4 +15,9 @@ class imageAssets{
   static String notesIcon = 'assets/icons/notes.svg';
   static String circularCheckIcon = 'assets/icons/circular_check.svg';
   static String documentIcon = 'assets/icons/document.svg';
+  static String personImages = 'assets/images/person.png';
+  static String searchIcon = 'assets/images/searchIcon.png';
+  static String uploadIcon = 'assets/images/uploadIcon.png';
+  static String viewIcon = 'assets/images/viewIcon.png';
+  static String backGroundImage = 'assets/images/backImage.png';
 }

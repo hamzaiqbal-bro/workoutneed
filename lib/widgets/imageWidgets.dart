@@ -10,6 +10,10 @@ class imageWidgets{
   }
 
 
+  static Widget coustomImageWithHeightWidthWidgets(String imagePath,height,width) {
+    return Image.asset(imagePath,height: height,width: width,);
+  }
+
   static Widget circularImage(String imagePath, double _height, double _width) {
     return ClipOval(
         child: Image.asset(
