@@ -24,20 +24,17 @@ dependencies:
   flutter:
     sdk: flutter
   carousel_slider: ^4.0.0
-  chewie: ^0.12.2
-  video_player: ^1.0.1
-
-
-  # The following adds the Cupertino Icons font to your application.
-  # Use with the CupertinoIcons class for iOS style icons.
+  chewie: ^1.2.2
+  video_player: ^2.2.5
   cupertino_icons: ^1.0.2
   animated_bottom_navigation_bar: ^0.3.2
   google_nav_bar: any
   flutter_zoom_drawer: ^2.1.1
   flutter_staggered_animations: ^1.0.0
-  flutter_svg: ^0.23.0+1
+  flutter_svg: any
   image_slider: ^1.0.2
-  flutter_rating_bar: ^4.0.0
+  better_player: ^0.0.77
+
 
 dev_dependencies:
   flutter_test:
@@ -60,6 +57,7 @@ flutter:
     - assets/icons/
     - assets/logo/
     - assets/json/
+    - assets/vedios/
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

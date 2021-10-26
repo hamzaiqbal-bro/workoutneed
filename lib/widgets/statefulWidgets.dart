@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:workour/constants/app_colors.dart';
 import 'package:workour/ui/dashboard/help_and_support.dart';
 import 'package:workour/ui/dashboard/settings.dart';
+import 'package:workour/ui/vedioModule/browsing.dart';
 import 'package:workour/widgets/coustomTextWidgets.dart';
 
 class DrawerWidget extends StatefulWidget {
@@ -54,6 +55,15 @@ class _DrawerWidgetState extends State<DrawerWidget> {
                 trailing: Icon(Icons.arrow_forward_ios,color: AppColors.greyColor),
                 onTap: () {
                   Navigator.pop(context);
+                },
+              ),
+
+              ListTile(
+                leading: Icon(Icons.add_reaction_outlined, color: AppColors.black[200]),
+                title: coustomTextWidgets.coustomText("Vedio Module", 16.0, AppColors.greyColor, FontWeight.normal),
+                trailing: Icon(Icons.arrow_forward_ios,color: AppColors.greyColor),
+                onTap: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => browsingScreen()));
                 },
               ),
             ]

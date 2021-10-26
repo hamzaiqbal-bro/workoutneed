@@ -11,10 +11,13 @@ class AppColors {
   //static const Color backgroubdGrye = Color(0xffcfcfcf);
   static const Color backgroubdGrye = Color(0xfff2f2f2);
   static const Color whiteColor = Color(0xfff5f5f5);
+ 
   static const Color lightGrye = Color(0xfff2f2f2);
   static const Color greyColor = Color(0xff9E9E9E);
+  static const Color lightColorGrye = Color(0xffe8e8e8);
   static const Color defaultColor = Color(0xfff2f2f2);
   static const Color smokeWhiteColor = Color(0xfff5f5f5);
+  static const Color darkBlack = Color(0xff000000);
 
   static const Map<int, Color> black = const <int, Color>{
 

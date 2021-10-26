@@ -60,6 +60,7 @@ class buttonWidgets{
           coustomTextWidgets.coustomText(text, fontSize, AppColors.whiteColor, fontWeight)
         ],
       )
+
     );
   }
 

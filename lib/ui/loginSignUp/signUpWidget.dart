@@ -70,7 +70,7 @@ class _signUpWidgetState extends State<signUpWidget> {
             alignment: Alignment.centerRight,
             child: coustomTextWidgets.coustomText( 'Forget Password',16.0,AppColors.backgroubdGrye,FontWeight.bold)),
         SizedBox(height: AppStyles.fifteennumber,),
-        buttonWidgets.coustomButton('Login',16.0,FontWeight.bold,context),
+        buttonWidgets.coustomButton('Sign Up',16.0,FontWeight.bold,context),
         SizedBox(height: AppStyles.fourtynumber,),
         Align(
             alignment: Alignment.center,
