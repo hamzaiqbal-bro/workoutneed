@@ -100,7 +100,7 @@ class _mainProfileDashboardState extends State<mainProfileDashboard> {
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         InkWell(
-                          child: CardWidgets.customCardWidget(context, "Download", Icons.download),
+                          child: CardWidgets.customCardWidget(context, "Download", Icons.download_rounded),
                           onTap: () {
                             Navigator.push(context, MaterialPageRoute(builder: (context) =>
                                 Downloads()));

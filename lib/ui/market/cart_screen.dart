@@ -4,7 +4,6 @@ import 'package:workour/constants/app_colors.dart';
 import 'package:workour/methods/json_method.dart';
 import 'package:workour/models/CartModel.dart';
 import 'package:workour/ui/market/checkout_screen.dart';
-import 'package:workour/widgets/bnuttonWidgets.dart';
 import 'package:workour/widgets/coustomTextWidgets.dart';
 import 'package:workour/widgets/iconWidgets.dart';
 import 'package:workour/widgets/stateless_widgets.dart';
@@ -153,7 +152,7 @@ class _CartScreenState extends State<CartScreen> {
                           checkColor: Colors.white,
                           fillColor: MaterialStateProperty.all<Color>(AppColors.kPrimaryTwo),
                           value: cartProduct.isChecked,
-                          shape: CircleBorder(),
+                          //shape: CircleBorder(),
                           onChanged: (bool? value) {
                             setState(() {
                               cartProduct.isChecked = !cartProduct.isChecked;

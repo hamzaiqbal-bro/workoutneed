@@ -18,4 +18,7 @@ class imageAssets{
   static String notesIcon = 'assets/icons/notes.svg';
   static String circularCheckIcon = 'assets/icons/circular_check.svg';
   static String documentIcon = 'assets/icons/document.svg';
+  static String jazzCashIcon = 'assets/icons/jazzcash_icon.svg';
+  static String easyPaisaIcon = 'assets/icons/easypaisa_icon.svg';
+  static String bankAccountIcon = 'assets/icons/bank_account_icon.svg';
 }

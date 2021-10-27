@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
+//import 'package:flutter_svg/svg.dart';
 import 'package:workour/constants/app_colors.dart';
 import 'package:workour/constants/imageAssets.dart';
 import 'package:workour/widgets/coustomTextWidgets.dart';
@@ -45,7 +45,7 @@ class _ProfileState extends State<Profile> {
                           Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
-                          SvgPicture.asset(imageAssets.cameraIcon, color: AppColors.kPrimaryTwo),
+                          //SvgPicture.asset(imageAssets.cameraIcon, color: AppColors.kPrimaryTwo),
                           SizedBox(width: 10.0),
                           Text("Change Picture")
                         ],
@@ -83,7 +83,7 @@ class _ProfileState extends State<Profile> {
                             Row(
                               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                               children: [
-                                SvgPicture.asset(imageAssets.editIcon, color: AppColors.kPrimaryTwo),
+                                //SvgPicture.asset(imageAssets.editIcon, color: AppColors.kPrimaryTwo),
                                 SizedBox(width: 10.0),
                                 Text("Edit Data")
                               ],

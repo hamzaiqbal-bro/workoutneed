@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:workour/constants/app_colors.dart';
+import 'package:workour/constants/app_styles.dart';
 import 'package:workour/widgets/coustomTextWidgets.dart';
 import 'package:workour/widgets/iconWidgets.dart';
 
@@ -62,10 +63,11 @@ class MyIconTextButton extends StatelessWidget {
   final double fontSize;
   final FontWeight fontWeight;
   final IconData iconData;
+  final double iconSize;
   final MainAxisAlignment alignment;
   final VoidCallback onPress;
 
-  MyIconTextButton({required this.text, required this.fontSize, required this.fontWeight, required this.iconData, required this.alignment, required this.onPress});
+  MyIconTextButton({required this.text, required this.fontSize, required this.fontWeight, required this.iconData, required this.iconSize, required this.alignment, required this.onPress});
 
   @override
   Widget build(BuildContext context) {
@@ -87,7 +89,7 @@ class MyIconTextButton extends StatelessWidget {
             child: Row(
               mainAxisAlignment: alignment,
               children: [
-                IconWidgets.sizedIcon(iconData, AppColors.kPrimaryTwo, 40.0),
+                IconWidgets.sizedIcon(iconData, AppColors.kPrimaryTwo, iconSize),
                 SizedBox(width: 10.0),
                 coustomTextWidgets.coustomText(text, fontSize, AppColors.kPrimaryTwo, fontWeight)
               ],

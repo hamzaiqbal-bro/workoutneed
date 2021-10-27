@@ -1,13 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:workour/constants/app_colors.dart';
-import 'package:workour/ui/dashboard/notifications.dart';
 import 'package:workour/ui/dashboard/video_body.dart';
-import 'package:workour/widgets/iconWidgets.dart';
-import 'package:workour/widgets/statefulWidgets.dart';
 import 'home_body.dart';
 import '../market/market_body.dart';
-import 'package:flutter_zoom_drawer/flutter_zoom_drawer.dart';
 
 class DashBoard extends StatefulWidget {
   const DashBoard({Key? key}) : super(key: key);
