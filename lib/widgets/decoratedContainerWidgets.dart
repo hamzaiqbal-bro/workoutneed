@@ -18,6 +18,31 @@ class DecoratedContainerWidgets{
     );
   }
 
+  static Widget simpleContainer(Widget child) {
+    return Container(
+      padding: EdgeInsets.symmetric(horizontal: 5.0, vertical: 5.0),
+      decoration: new BoxDecoration(
+        borderRadius: BorderRadius.circular(5),
+        color: Colors.white,
+      ),
+      child: child,
+    );
+  }
+
+  static Widget circularContainer(Color bgColor, Color iconColor, IconData iconData) {
+    return Container(
+      padding: EdgeInsets.symmetric(horizontal: 5.0, vertical: 5.0),
+      decoration: new BoxDecoration(
+        borderRadius: BorderRadius.circular(50),
+        color: bgColor,
+      ),
+      child: Padding(
+        padding: const EdgeInsets.all(10.0),
+        child: Icon(iconData, color: iconColor, size: 30.0,),
+      ),
+    );
+  }
+
   static Widget messagingContainer(Color borderColor, Widget child) {
     return Container(
       margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 10.0),

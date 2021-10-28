@@ -4,10 +4,13 @@ import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
 import 'package:workour/constants/app_colors.dart';
 import 'package:workour/constants/imageAssets.dart';
+import 'package:workour/constants/stringAssets.dart';
 import 'package:workour/methods/json_method.dart';
 import 'package:workour/models/ProductsModel.dart';
 import 'package:workour/models/ReviewsModel.dart';
 import 'package:workour/widgets/coustomTextWidgets.dart';
+import 'package:workour/widgets/decoratedContainerWidgets.dart';
+import 'package:workour/widgets/formFieldWidget.dart';
 import 'package:workour/widgets/iconWidgets.dart';
 import 'package:workour/widgets/imageWidgets.dart';
 
@@ -20,8 +23,11 @@ class ProductDetails extends StatefulWidget {
 
 class _ProductDetailsState extends State<ProductDetails> {
 
+  TextEditingController textEditingController = new TextEditingController();
   IconData iconData = Icons.keyboard_arrow_down_outlined;
   bool showAllReviews = false;
+
+  List<String> sizeList = ["S", "L", "X", "XL", "XXL", "S", "L", "X", "XL", "XXL"];
 
   @override
   Widget build(BuildContext context) {
@@ -45,9 +51,149 @@ class _ProductDetailsState extends State<ProductDetails> {
         ],
       ),
       body: SingleChildScrollView(
+        //physics: BouncingScrollPhysics(),
         child: Container(
           child: Column(
             children: [
+              Stack(
+                children: [
+                  Column(
+                    children: [
+                      Container(
+                        width: MediaQuery.of(context).size.width,
+                        height: 200.0,
+                        child: imageWidgets.imageWidget(imageAssets.productImage, BoxFit.fitWidth),
+                      ),
+                      Container(
+                        width: MediaQuery.of(context).size.width,
+                        decoration: BoxDecoration(
+                            color: AppColors.backgroubdGrye,
+                            borderRadius: BorderRadius.only(bottomLeft: Radius.circular(15.0), bottomRight: Radius.circular(15.0))
+                        ),
+                        child: Column(
+                          children: [
+                            SizedBox(height: 20.0),
+                            Divider(
+                              thickness: 1.5,
+                              indent: 0,
+                              endIndent: 0,
+                              color: Colors.white,
+                              height: 5,
+                            ),
+                            Container(
+                              width: MediaQuery.of(context).size.width,
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Padding(
+                                    padding: const EdgeInsets.only(left: 10.0, top: 10.0),
+                                    child: coustomTextWidgets.coustomText("Color: Army green", 15.0, Colors.black, FontWeight.bold),
+                                  ),
+                                  Container(
+                                    height: 70.0,
+                                    padding: const EdgeInsets.symmetric(horizontal: 20),
+                                    child: ListView.builder(
+                                        itemCount: 10,
+                                        shrinkWrap: true,
+                                        physics: ClampingScrollPhysics(),
+                                        scrollDirection: Axis.horizontal,
+                                        itemBuilder: (BuildContext bContext, int position) {
+                                          return Container(
+                                              margin: EdgeInsets.symmetric(horizontal: 10.0, vertical: 5.0),
+                                              child: imageWidgets.circleAvatar(imageAssets.profileImage, 18.0, 20.0));
+                                        }),
+                                  ),
+                                ],
+                              ),
+                            ),
+                            Divider(
+                              thickness: 1.5,
+                              indent: 0,
+                              endIndent: 0,
+                              color: Colors.white,
+                              height: 5,
+                            ),
+                            Container(
+                              width: MediaQuery.of(context).size.width,
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Padding(
+                                    padding: const EdgeInsets.only(left: 10.0, top: 10.0),
+                                    child: coustomTextWidgets.coustomText("Size: ", 15.0, Colors.black, FontWeight.bold),
+                                  ),
+                                  Container(
+                                    alignment: Alignment.center,
+                                    height: 70.0,
+                                    padding: const EdgeInsets.symmetric(horizontal: 20),
+                                    child: ListView.builder(
+                                        itemCount: sizeList.length,
+                                        shrinkWrap: true,
+                                        physics: ClampingScrollPhysics(),
+                                        scrollDirection: Axis.horizontal,
+                                        itemBuilder: (BuildContext bContext, int position) {
+                                          return Container(
+                                              alignment: Alignment.center,
+                                              margin: EdgeInsets.symmetric(horizontal: 5.0, vertical: 5.0),
+                                              padding: EdgeInsets.symmetric(horizontal: 5.0, vertical: 10.0),
+                                              child: DecoratedContainerWidgets.simpleContainer(coustomTextWidgets.myCustomText(sizeList[position], 16.0, AppColors.black[100]!, FontWeight.bold)));
+                                        }),
+                                  ),
+                                ],
+                              ),
+                            ),
+                            Divider(
+                              thickness: 1.5,
+                              indent: 0,
+                              endIndent: 0,
+                              color: Colors.white,
+                              height: 5,
+                            ),
+                            Container(
+                              width: MediaQuery.of(context).size.width,
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Padding(
+                                    padding: const EdgeInsets.only(left: 10.0, top: 10.0),
+                                    child: coustomTextWidgets.coustomText("Product Details: ", 15.0, Colors.black, FontWeight.bold),
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.all(8.0),
+                                    child: coustomTextWidgets.detailsText(StringAssets.loremIpsumText, TextStyle(fontSize: 14.0, color: AppColors.black[100]!, fontWeight: FontWeight.normal), 5),
+                                  )
+                                ],
+                              ),
+                            ),
+                            Divider(
+                              thickness: 1.5,
+                              indent: 0,
+                              endIndent: 0,
+                              color: Colors.white,
+                              height: 5,
+                            ),
+                            Row(
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              children: [
+                                imageWidgets.circleAvatar(imageAssets.profileImage, 23, 25),
+                                Expanded(
+                                    child: Container(
+                                      margin: const EdgeInsets.all(8.0),
+                                      child: PostReviewInputField(textEditingController: textEditingController),
+                                    )),
+                                imageWidgets.ccircleAvatar(Icons.add, AppColors.kPrimaryTwo, 23, 25, Colors.white, AppColors.kPrimaryTwo),
+                                imageWidgets.ccircleAvatar(Icons.camera_alt, Colors.white, 23, 25, AppColors.kPrimaryTwo, AppColors.kPrimaryTwo),
+                              ],
+                            ),
+                            SizedBox(height: 20.0)
+                          ],
+                        ),
+                      )
+                    ],
+                  )
+                ],
+              ),
               Container(
                 width: MediaQuery.of(context).size.width,
                 child: Column(

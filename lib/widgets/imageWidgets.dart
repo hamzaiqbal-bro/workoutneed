@@ -9,6 +9,9 @@ class imageWidgets{
     return Image.asset(imagePath);
   }
 
+  static Widget imageWidget(String imagePath, BoxFit boxFit) {
+    return Image.asset(imagePath, fit: boxFit);
+  }
 
   static Widget circularImage(String imagePath, double _height, double _width) {
     return ClipOval(
@@ -32,4 +35,17 @@ class imageWidgets{
       backgroundColor: AppColors.kPrimaryTwo,
     );
   }
+
+  static Widget ccircleAvatar(IconData iconData, Color iconColor, double innerRadius, double outerRadius, Color innerBgColor, Color outerBgColor) {
+    return CircleAvatar(
+      child: CircleAvatar(
+        backgroundColor: innerBgColor,
+        radius: innerRadius,
+        child: Icon(iconData, size: 35.0, color: iconColor,),
+      ),
+      radius: outerRadius,
+      backgroundColor: outerBgColor,
+    );
+  }
+
 }

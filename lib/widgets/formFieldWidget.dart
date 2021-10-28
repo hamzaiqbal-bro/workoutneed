@@ -161,6 +161,37 @@ class BackgroundInputField extends StatelessWidget {
   }
 }
 
+class PostReviewInputField extends StatelessWidget {
+
+  final TextEditingController textEditingController;
+
+  PostReviewInputField({required this.textEditingController});
+
+  @override
+  Widget build(BuildContext context) {
+    return TextFormField(
+      controller: textEditingController,
+      textInputAction: TextInputAction.done,
+      autofocus: false,
+      keyboardType: TextInputType.text,
+      decoration: InputDecoration(
+        fillColor: Colors.white,
+        filled: true,
+        border: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(40.0),
+          borderSide: BorderSide(
+            width: 0,
+            style: BorderStyle.none,
+          ),
+        ),
+        hintText: "Post your review...",
+        //hintStyle: AppStyles.khintStyle,
+      ),
+      onFieldSubmitted: (_) {},
+    );
+  }
+}
+
 void fieldFocusChange(BuildContext context, FocusNode currentFocus, FocusNode nextFocus) {
   currentFocus.unfocus();
   FocusScope.of(context).requestFocus(nextFocus);
