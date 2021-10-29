@@ -196,25 +196,7 @@ class _CheckOutState extends State<CheckOut> {
                           children: [
                             Padding(
                               padding: const EdgeInsets.symmetric(vertical: 5.0),
-                              child: Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                children: [
-                                  Expanded(
-                                      child: coustomTextWidgets.myCustomText("Nike NH3 (Summer Colletion)", 15.0, Colors.black, FontWeight.bold)
-                                  ),
-                                  Checkbox(
-                                    checkColor: Colors.white,
-                                    fillColor: MaterialStateProperty.all<Color>(AppColors.kPrimaryTwo),
-                                    value: isChecked,
-                                    //shape: CircleBorder(),
-                                    onChanged: (bool? value) {
-                                      setState(() {
-                                        isChecked = !isChecked;
-                                      });
-                                    },
-                                  )
-                                ],
-                              ),
+                              child: coustomTextWidgets.myCustomText("Nike NH3 (Summer Collection)", 15.0, Colors.black, FontWeight.bold),
                             ),
                             Padding(
                                 padding: const EdgeInsets.symmetric(horizontal: 0.0),

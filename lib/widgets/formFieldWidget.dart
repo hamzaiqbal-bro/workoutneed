@@ -192,6 +192,37 @@ class PostReviewInputField extends StatelessWidget {
   }
 }
 
+class MessageInputField extends StatelessWidget {
+
+  final TextEditingController textEditingController;
+
+  MessageInputField({required this.textEditingController});
+
+  @override
+  Widget build(BuildContext context) {
+    return TextFormField(
+      controller: textEditingController,
+      textInputAction: TextInputAction.done,
+      autofocus: false,
+      keyboardType: TextInputType.text,
+      decoration: InputDecoration(
+        fillColor: AppColors.black[400],
+        filled: true,
+        border: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(20.0),
+          borderSide: BorderSide(
+            width: 0,
+            style: BorderStyle.none,
+          ),
+        ),
+        hintText: "Text message here...",
+        hintStyle: AppStyles.hintStyle,
+      ),
+      onFieldSubmitted: (_) {},
+    );
+  }
+}
+
 void fieldFocusChange(BuildContext context, FocusNode currentFocus, FocusNode nextFocus) {
   currentFocus.unfocus();
   FocusScope.of(context).requestFocus(nextFocus);

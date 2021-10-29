@@ -14,6 +14,8 @@ import 'package:workour/widgets/formFieldWidget.dart';
 import 'package:workour/widgets/iconWidgets.dart';
 import 'package:workour/widgets/imageWidgets.dart';
 
+import 'messaging.dart';
+
 class ProductDetails extends StatefulWidget {
   const ProductDetails({Key? key}) : super(key: key);
 
@@ -176,35 +178,125 @@ class _ProductDetailsState extends State<ProductDetails> {
                               crossAxisAlignment: CrossAxisAlignment.center,
                               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                               children: [
-                                imageWidgets.circleAvatar(imageAssets.profileImage, 23, 25),
+                                Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: imageWidgets.circleAvatar(imageAssets.profileImage, 18, 20),
+                                ),
                                 Expanded(
                                     child: Container(
                                       margin: const EdgeInsets.all(8.0),
                                       child: PostReviewInputField(textEditingController: textEditingController),
                                     )),
-                                imageWidgets.ccircleAvatar(Icons.add, AppColors.kPrimaryTwo, 23, 25, Colors.white, AppColors.kPrimaryTwo),
-                                imageWidgets.ccircleAvatar(Icons.camera_alt, Colors.white, 23, 25, AppColors.kPrimaryTwo, AppColors.kPrimaryTwo),
+                                Padding(
+                                  padding: const EdgeInsets.all(4.0),
+                                  child: imageWidgets.ccircleAvatar(Icons.add, AppColors.kPrimaryTwo, 18, 20, Colors.white, AppColors.kPrimaryTwo),
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.all(4.0),
+                                  child: imageWidgets.ccircleAvatar(Icons.camera_alt, Colors.white, 18, 20, AppColors.kPrimaryTwo, AppColors.kPrimaryTwo),
+                                ),
                               ],
                             ),
-                            SizedBox(height: 20.0)
+                            SizedBox(height: 10.0)
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                  Align(
+                      alignment: Alignment.bottomCenter,
+                      child: DecoratedContainerWidgets.mainContainer(
+                        MediaQuery.of(context).size.width,
+                        Column(
+                          children: [
+                            Row(
+                              children: [
+                                Expanded(
+                                  child: Container(
+                                    width: MediaQuery.of(context).size.width,
+                                    padding: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 10.0),
+                                    child: coustomTextWidgets.coustomText("Nike NH3 (Summer Collection)", 16.0, Colors.black, FontWeight.bold),
+                                  ),
+                                ),
+                                IconButton(
+                                  icon: Icon(Icons.share, color: AppColors.black[400]),
+                                  onPressed: () {},
+                                )
+                              ],
+                            ),
+                            Row(
+                              children: [
+                                Container(
+                                  padding: const EdgeInsets.symmetric(horizontal: 10.0),
+                                  child: coustomTextWidgets.coustomText("\$${347}", 16.0, AppColors.kPrimaryTwo, FontWeight.bold),
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.symmetric(horizontal: 5.0),
+                                  child: RatingBarIndicator(
+                                    rating: 4,
+                                    itemCount: 5,
+                                    itemSize: 15.0,
+                                    physics: BouncingScrollPhysics(),
+                                    itemBuilder: (context, _) => Icon(
+                                      Icons.star,
+                                      color: AppColors.kPrimaryTwo,
+                                    ),
+                                  ),
+                                )
+                              ],
+                            ),
+                            Divider(
+                              thickness: 1.5,
+                              indent: 0,
+                              endIndent: 0,
+                              color: AppColors.backgroubdGrye,
+                              height: 5,
+                            ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Row(
+                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  children: [
+                                    Padding(
+                                      padding: const EdgeInsets.all(10.0),
+                                      child: DecoratedContainerWidgets.decoratedContainer("Buy Now", Icons.shopping_bag, AppColors.kPrimaryTwo),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.all(10.0),
+                                      child: DecoratedContainerWidgets.decoratedContainer("Add to Cart", Icons.add_shopping_cart, AppColors.kPrimaryTwo),
+                                    ),
+                                  ],
+                                ),
+                                Align(
+                                  alignment: Alignment.centerRight,
+                                    child: InkWell(
+                                      onTap: () {
+                                        Navigator.of(context).push(MaterialPageRoute(builder: (_) => Messaging()));
+                                      },
+                                      child: Container(
+                                        margin: EdgeInsets.all(10.0),
+                                        child: Column(
+                                          children: [
+                                            IconWidgets.customIcon(Icons.message, AppColors.kPrimaryTwo),
+                                            coustomTextWidgets.myCustomText("Chat", 14.0, AppColors.kPrimaryTwo, FontWeight.normal)
+                                          ],
+                                        ),
+                                      ),
+                                    ),
+                                )
+                              ],
+                            )
                           ],
                         ),
                       )
-                    ],
                   )
                 ],
               ),
               Container(
                 width: MediaQuery.of(context).size.width,
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.only(left: 10.0, top: 10.0),
-                      child: coustomTextWidgets.coustomText("Reviews:", 18.0, Colors.black, FontWeight.bold),
-                    ),
-                  ],
-                ),
+                padding: const EdgeInsets.only(left: 10.0, top: 10.0),
+                child: coustomTextWidgets.coustomText("Reviews:", 18.0, Colors.black, FontWeight.bold),
               ),
               Container(
                 child: FutureBuilder(

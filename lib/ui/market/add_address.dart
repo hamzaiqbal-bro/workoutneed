@@ -184,7 +184,7 @@ class _AddAddressState extends State<AddAddress> {
                         text: 'Save Address',
                         fontSize: 16.0,
                         fontWeight: FontWeight.bold,
-                        iconData: Icons.camera_alt,
+                        iconData: Icons.save,
                         onPress: () {
                           Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => CheckOut()));
                         },

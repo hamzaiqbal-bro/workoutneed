@@ -3,6 +3,7 @@ import 'package:workour/constants/app_colors.dart';
 import 'package:workour/constants/app_styles.dart';
 import 'package:workour/widgets/coustomTextWidgets.dart';
 import 'package:workour/widgets/iconWidgets.dart';
+import 'package:workour/widgets/imageWidgets.dart';
 
 class DefIconTextButton extends StatelessWidget {
 
@@ -48,6 +49,93 @@ class DefIconTextButton extends StatelessWidget {
                 IconWidgets.sizedIcon(iconData, Colors.white, 30.0),
                 SizedBox(width: 10.0),
                 coustomTextWidgets.coustomText(text, fontSize, AppColors.whiteColor, fontWeight)
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class DefImageTextButton extends StatelessWidget {
+
+  final String text;
+  final double fontSize;
+  final FontWeight fontWeight;
+  final String imageUrl;
+  final VoidCallback onPress;
+
+  DefImageTextButton({required this.text, required this.fontSize, required this.fontWeight, required this.imageUrl, required this.onPress});
+
+  // @override
+  // Widget build(BuildContext context) {
+  //   return Container(
+  //     alignment: Alignment.center,
+  //     height: 50.0,
+  //     margin: EdgeInsets.symmetric(horizontal: 20.0, vertical: 5.0),
+  //     child: RaisedButton(
+  //       onPressed: onPress,
+  //       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0)),
+  //       padding: EdgeInsets.all(0.0),
+  //       child: Ink(
+  //         decoration: BoxDecoration(
+  //             gradient: LinearGradient(
+  //                 begin: FractionalOffset.centerLeft,
+  //                 end: FractionalOffset.centerRight,
+  //                 colors: [
+  //                   AppColors.kPrimaryOne.withOpacity(0.8),
+  //                   AppColors.kPrimaryTwo,
+  //                 ],
+  //                 stops: [
+  //                   0.0,
+  //                   0.6
+  //                 ]
+  //             ),
+  //             borderRadius: BorderRadius.circular(10.0)
+  //         ),
+  //         child: Container(
+  //           alignment: Alignment.centerLeft,
+  //           child: Row(
+  //             mainAxisAlignment: MainAxisAlignment.start,
+  //             children: [
+  //               imageWidgets.coustomImageWidgets(imageUrl),
+  //               SizedBox(width: 10.0),
+  //               coustomTextWidgets.coustomText(text, fontSize, AppColors.whiteColor, fontWeight)
+  //             ],
+  //           ),
+  //         ),
+  //       ),
+  //     ),
+  //   );
+  // }
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      alignment: Alignment.center,
+      height: 50.0,
+      margin: EdgeInsets.symmetric(horizontal: 20.0, vertical: 5.0),
+      child: RaisedButton(
+        onPressed: onPress,
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0)),
+        padding: EdgeInsets.all(0.0),
+        child: Ink(
+          decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(10.0)
+          ),
+          child: Container(
+            alignment: Alignment.center,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: imageWidgets.coustomImageWidgets(imageUrl),
+                ),
+                SizedBox(width: 5.0),
+                coustomTextWidgets.coustomText(text, fontSize, AppColors.black[100]!, fontWeight)
               ],
             ),
           ),

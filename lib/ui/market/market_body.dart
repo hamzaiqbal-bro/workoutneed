@@ -45,9 +45,14 @@ class _MarketBodyState extends State<MarketBody> with SingleTickerProviderStateM
       appBar: AppBar(
         backgroundColor: Colors.white,
         elevation: 1.0,
-        leading: Padding(
-          padding: const EdgeInsets.all(10.0),
-          child: imageWidgets.circularImage(imageAssets.profileImage, 60.0, 60.0),
+        leading: InkWell(
+          child: Padding(
+            padding: const EdgeInsets.all(10.0),
+            child: imageWidgets.circularImage(imageAssets.profileImage, 60.0, 60.0),
+          ),
+          onTap: () {
+            Navigator.of(context).push(MaterialPageRoute(builder: (_) => SellerProfile()));
+          },
         ),
         actions: [
           IconButton(
@@ -67,9 +72,7 @@ class _MarketBodyState extends State<MarketBody> with SingleTickerProviderStateM
           IconButton(
               padding: EdgeInsets.all(5.0),
               icon: IconWidgets.customIcon(Icons.search, AppColors.kPrimaryOne),
-              onPressed: () {
-                Navigator.of(context).push(MaterialPageRoute(builder: (_) => SellerProfile()));
-              }
+              onPressed: () {}
           )
         ],
       ),

@@ -115,18 +115,18 @@ class _MessagingState extends State<Messaging> {
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 20.0),
-                    child: imageWidgets.circleAvatar(imageAssets.profileImage, 25.0, 28.0),
+                    padding: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 10.0),
+                    child: imageWidgets.circleAvatar(imageAssets.profileImage, 20.0, 22.0),
                   ),
                   DecoratedContainerWidgets.messagingContainer(
-                      AppColors.black[200]!,
+                      AppColors.black[300]!,
                       Column(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         crossAxisAlignment: CrossAxisAlignment.end,
                         children: [
                           Padding(
-                            padding: const EdgeInsets.symmetric(horizontal: 10.0),
-                            child: coustomTextWidgets.coustomText("Hello John", 18.0, AppColors.black[200]!, FontWeight.w600),
+                            padding: const EdgeInsets.symmetric(horizontal: 5.0),
+                            child: coustomTextWidgets.coustomText("Hello John", 16.0, AppColors.black[200]!, FontWeight.w600),
                           ),
                           Align(
                               alignment: Alignment.centerRight,
@@ -146,8 +146,8 @@ class _MessagingState extends State<Messaging> {
                         crossAxisAlignment: CrossAxisAlignment.end,
                         children: [
                           Padding(
-                            padding: const EdgeInsets.symmetric(horizontal: 10.0),
-                            child: coustomTextWidgets.coustomText("Hello! How are you?", 18.0, AppColors.black[200]!, FontWeight.w600),
+                            padding: const EdgeInsets.symmetric(horizontal: 5.0),
+                            child: coustomTextWidgets.coustomText("Hello! How are you?", 16.0, AppColors.black[200]!, FontWeight.w600),
                           ),
                           Align(
                               alignment: Alignment.centerRight,
@@ -156,8 +156,8 @@ class _MessagingState extends State<Messaging> {
                       )
                   ),
                   Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 20.0),
-                    child: imageWidgets.circleAvatar(imageAssets.profileImage, 25.0, 28.0),
+                    padding: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 10.0),
+                    child: imageWidgets.circleAvatar(imageAssets.profileImage, 20.0, 22.0),
                   ),
                 ],
               ),
@@ -169,18 +169,20 @@ class _MessagingState extends State<Messaging> {
         color: Colors.white,
         child: Row(
           children: [
-            IconWidgets.sizedIcon(Icons.add, AppColors.kPrimaryTwo, 45.0),
-            IconWidgets.sizedIcon(Icons.camera_alt_rounded, AppColors.black[200]!, 45.0),
-            IconWidgets.sizedIcon(Icons.image, AppColors.black[200]!, 45.0),
-            Expanded(child: Container(
-              padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
-              child: BackgroundInputField(textEditingController: textEditingController),
-            ),
+            IconWidgets.sizedIcon(Icons.add, AppColors.kPrimaryTwo, 35.0),
+            IconWidgets.sizedIcon(Icons.camera_alt_rounded, AppColors.black[300]!, 35.0),
+            IconWidgets.sizedIcon(Icons.image, AppColors.black[300]!, 35.0),
+            Expanded(
+              child: Container(
+                padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 5.0),
+                child: MessageInputField(textEditingController: textEditingController),
+              ),
             ),
             RawMaterialButton(
               onPressed: () {},
               fillColor: AppColors.kPrimaryTwo,
-              child: IconWidgets.sizedIcon(Icons.arrow_right, Colors.white, 45.0),
+              padding: EdgeInsets.all(5.0),
+              child: IconWidgets.sizedIcon(Icons.send, Colors.white, 35.0),
               shape: CircleBorder(),
             )
           ],

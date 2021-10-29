@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:workour/constants/app_colors.dart';
 import 'package:workour/constants/app_styles.dart';
+import 'package:workour/ui/market/payment_confirm_screen.dart';
 import 'package:workour/widgets/coustomTextWidgets.dart';
 import 'package:workour/widgets/formFieldWidget.dart';
 import 'package:workour/widgets/iconWidgets.dart';
@@ -96,7 +97,7 @@ class _PaymentState extends State<Payment> {
                   fontWeight: FontWeight.bold,
                   iconData: Icons.payment,
                   onPress: () {
-                    //Navigator.push(context, MaterialPageRoute(builder: (context) => PaymentMethod()));
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => PaymentConfirm(paymentMethod: paymentMethod, headingText: paymentMethod == "JazzCash" ? "Payment Successful" : "Opps! Operation Failed", detailsText: paymentMethod == "JazzCash" ? "Your payment is done successfully." : "Unfortunately your payment operation is failed.")));
                   },
                 ),
               ),

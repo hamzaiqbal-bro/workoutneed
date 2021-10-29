@@ -37,62 +37,41 @@ class _PaymentMethodState extends State<PaymentMethod> {
                 padding: const EdgeInsets.all(10.0),
                 child: coustomTextWidgets.coustomText("Payment methods", 18.0, Colors.black, FontWeight.bold),
               ),
-              Container(
-                margin: EdgeInsets.symmetric(horizontal: 10.0, vertical: 5.0),
-                child: MyIconTextButton(
-                  text: 'JazzCash',
-                  fontSize: 16.0,
-                  fontWeight: FontWeight.normal,
-                  iconData: Icons.add,
-                  //iconData: imageAssets.jazzCashIcon,
-                  iconSize: 30.0,
-                  alignment: MainAxisAlignment.start,
-                  onPress: () {
-                    Navigator.push(context, MaterialPageRoute(builder: (context) => Payment(paymentMethod: 'JazzCash',)));
-                  },
-                ),
+              DefImageTextButton(
+                text: "JazzCash",
+                imageUrl: imageAssets.jazzCashIcon,
+                fontSize: 16.0,
+                fontWeight: FontWeight.normal,
+                onPress: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => Payment(paymentMethod: 'JazzCash',)));
+                },
               ),
-              Container(
-                margin: EdgeInsets.symmetric(horizontal: 10.0, vertical: 5.0),
-                child: MyIconTextButton(
-                  text: 'EasyPaisa',
-                  fontSize: 16.0,
-                  fontWeight: FontWeight.normal,
-                  iconData: Icons.add,
-                  iconSize: 30.0,
-                  alignment: MainAxisAlignment.start,
-                  onPress: () {
-                    Navigator.push(context, MaterialPageRoute(builder: (context) => Payment(paymentMethod: 'EasyPaisa',)));
-                  },
-                ),
+              DefImageTextButton(
+                text: "EasyPaisa",
+                imageUrl: imageAssets.easyPaisaIcon,
+                fontSize: 16.0,
+                fontWeight: FontWeight.normal,
+                onPress: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => Payment(paymentMethod: 'EasyPaisa',)));
+                },
               ),
-              Container(
-                margin: EdgeInsets.symmetric(horizontal: 10.0, vertical: 5.0),
-                child: MyIconTextButton(
-                  text: 'Bank Account',
-                  fontSize: 16.0,
-                  fontWeight: FontWeight.normal,
-                  iconData: Icons.add,
-                  iconSize: 30.0,
-                  alignment: MainAxisAlignment.start,
-                  onPress: () {
-                    Navigator.push(context, MaterialPageRoute(builder: (context) => Payment(paymentMethod: 'Bank Account',)));
-                  },
-                ),
+              DefImageTextButton(
+                text: "Bank Account",
+                imageUrl: imageAssets.bankAccountIcon,
+                fontSize: 16.0,
+                fontWeight: FontWeight.normal,
+                onPress: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => Payment(paymentMethod: 'Bank Account',)));
+                },
               ),
-              Container(
-                margin: EdgeInsets.symmetric(horizontal: 10.0, vertical: 5.0),
-                child: MyIconTextButton(
-                  text: 'Cash on Delivery',
-                  fontSize: 16.0,
-                  fontWeight: FontWeight.normal,
-                  iconData: Icons.add,
-                  iconSize: 30.0,
-                  alignment: MainAxisAlignment.start,
-                  onPress: () {
-                    Navigator.push(context, MaterialPageRoute(builder: (context) => Payment(paymentMethod: 'Cash on Delivery',)));
-                  },
-                ),
+              DefImageTextButton(
+                text: "Cash on Delivery",
+                imageUrl: imageAssets.cashPaymentIcon,
+                fontSize: 16.0,
+                fontWeight: FontWeight.normal,
+                onPress: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => Payment(paymentMethod: 'Cash on Delivery',)));
+                },
               ),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,

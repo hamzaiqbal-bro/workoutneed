@@ -1,20 +1,29 @@
 import 'package:flutter/material.dart';
 import 'package:workour/constants/app_colors.dart';
+import 'package:workour/widgets/iconWidgets.dart';
 
 class DecoratedContainerWidgets{
   DecoratedContainerWidgets._();
 
-  static Widget decoratedContainer(Widget child) {
+  static Widget decoratedContainer(String text, IconData iconData, Color iconColor) {
     return Container(
       padding: EdgeInsets.symmetric(horizontal: 10.0, vertical: 5.0),
       decoration: new BoxDecoration(
-        borderRadius: BorderRadius.circular(10),
+        borderRadius: BorderRadius.circular(5),
         color: Colors.white,
         boxShadow: [
           BoxShadow(color: AppColors.kPrimaryTwo, spreadRadius: 1.5),
         ],
       ),
-      child: child,
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: [
+          //SvgPicture.asset(imageAssets.cameraIcon, color: AppColors.kPrimaryTwo),
+          IconWidgets.customIcon(iconData, iconColor),
+          SizedBox(width: 10.0),
+          Text(text)
+        ],
+      ),
     );
   }
 
@@ -23,6 +32,18 @@ class DecoratedContainerWidgets{
       padding: EdgeInsets.symmetric(horizontal: 5.0, vertical: 5.0),
       decoration: new BoxDecoration(
         borderRadius: BorderRadius.circular(5),
+        color: Colors.white,
+      ),
+      child: child,
+    );
+  }
+
+  static Widget mainContainer(double _width, Widget child) {
+    return Container(
+      width: _width,
+      margin: EdgeInsets.symmetric(horizontal: 20.0, vertical: 20.0),
+      decoration: new BoxDecoration(
+        borderRadius: BorderRadius.circular(15.0),
         color: Colors.white,
       ),
       child: child,
