@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:workour/constants/app_colors.dart';
 import 'package:workour/constants/stringAssets.dart';
-import 'package:workour/widgets/coustomTextWidgets.dart';
+import 'package:workour/widgets/customTextWidgets.dart';
 import 'package:workour/widgets/iconWidgets.dart';
 
 class NotesDetails extends StatefulWidget {
@@ -18,7 +18,7 @@ class _NotesDetailsState extends State<NotesDetails> {
       appBar: AppBar(
         backgroundColor: Colors.white,
         elevation: 1.0,
-        title: Text("Notes", style: TextStyle(color: AppColors.kPrimaryTwo, fontWeight: FontWeight.bold),),
+        title: CustomTextWidgets.appBarTextWidget("Notes"),
         centerTitle: true,
         leading: IconButton(
           icon: IconWidgets.customIcon(Icons.arrow_back, AppColors.kPrimaryTwo),
@@ -34,11 +34,11 @@ class _NotesDetailsState extends State<NotesDetails> {
               Container(
                   margin: EdgeInsets.symmetric(horizontal: 10.0, vertical: 5.0),
                   padding: EdgeInsets.all(5.0),
-                  child: coustomTextWidgets.coustomText("Title here", 18.0, AppColors.kPrimaryTwo, FontWeight.bold)),
+                  child: CustomTextWidgets.customText("Title here", 18.0, AppColors.kPrimaryTwo, FontWeight.bold)),
               Container(
                   margin: EdgeInsets.symmetric(horizontal: 10.0),
                   padding: EdgeInsets.symmetric(horizontal: 10.0),
-                  child: coustomTextWidgets.defaultText(StringAssets.loremIpsumText, TextStyle(color: Colors.black), TextAlign.justify))
+                  child: CustomTextWidgets.defaultText(StringAssets.loremIpsumText, TextStyle(color: Colors.black), TextAlign.justify))
             ],
           ),
         ),

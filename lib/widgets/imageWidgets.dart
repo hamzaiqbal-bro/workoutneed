@@ -1,11 +1,10 @@
-
 import 'package:flutter/material.dart';
 import 'package:workour/constants/app_colors.dart';
 
-class imageWidgets{
-  imageWidgets._();
+class ImageWidgets{
+  ImageWidgets._();
 
-  static Widget coustomImageWidgets(String imagePath) {
+  static Widget customImageWidgets(String imagePath) {
     return Image.asset(imagePath);
   }
 
@@ -36,7 +35,7 @@ class imageWidgets{
     );
   }
 
-  static Widget ccircleAvatar(IconData iconData, Color iconColor, double innerRadius, double outerRadius, Color innerBgColor, Color outerBgColor) {
+  static Widget circularAvatar(IconData iconData, Color iconColor, double innerRadius, double outerRadius, Color innerBgColor, Color outerBgColor) {
     return CircleAvatar(
       child: CircleAvatar(
         backgroundColor: innerBgColor,

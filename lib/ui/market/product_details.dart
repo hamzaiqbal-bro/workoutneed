@@ -8,7 +8,7 @@ import 'package:workour/constants/stringAssets.dart';
 import 'package:workour/methods/json_method.dart';
 import 'package:workour/models/ProductsModel.dart';
 import 'package:workour/models/ReviewsModel.dart';
-import 'package:workour/widgets/coustomTextWidgets.dart';
+import 'package:workour/widgets/customTextWidgets.dart';
 import 'package:workour/widgets/decoratedContainerWidgets.dart';
 import 'package:workour/widgets/formFieldWidget.dart';
 import 'package:workour/widgets/iconWidgets.dart';
@@ -38,10 +38,10 @@ class _ProductDetailsState extends State<ProductDetails> {
         backgroundColor: Colors.white,
         elevation: 1.0,
         centerTitle: true,
-        title: Text("Store", style: TextStyle(color: AppColors.kPrimaryTwo, fontWeight: FontWeight.bold),),
+        title: CustomTextWidgets.appBarTextWidget("Store"),
         leading: Padding(
           padding: const EdgeInsets.all(10.0),
-          child: imageWidgets.circularImage(imageAssets.profileImage, 60.0, 60.0),
+          child: ImageWidgets.circularImage(imageAssets.profileImage, 60.0, 60.0),
         ),
         actions: [
           IconButton(
@@ -64,7 +64,7 @@ class _ProductDetailsState extends State<ProductDetails> {
                       Container(
                         width: MediaQuery.of(context).size.width,
                         height: 200.0,
-                        child: imageWidgets.imageWidget(imageAssets.productImage, BoxFit.fitWidth),
+                        child: ImageWidgets.imageWidget(imageAssets.productImage, BoxFit.fitWidth),
                       ),
                       Container(
                         width: MediaQuery.of(context).size.width,
@@ -89,7 +89,7 @@ class _ProductDetailsState extends State<ProductDetails> {
                                 children: [
                                   Padding(
                                     padding: const EdgeInsets.only(left: 10.0, top: 10.0),
-                                    child: coustomTextWidgets.coustomText("Color: Army green", 15.0, Colors.black, FontWeight.bold),
+                                    child: CustomTextWidgets.customText("Color: Army green", 15.0, Colors.black, FontWeight.bold),
                                   ),
                                   Container(
                                     height: 70.0,
@@ -102,7 +102,7 @@ class _ProductDetailsState extends State<ProductDetails> {
                                         itemBuilder: (BuildContext bContext, int position) {
                                           return Container(
                                               margin: EdgeInsets.symmetric(horizontal: 10.0, vertical: 5.0),
-                                              child: imageWidgets.circleAvatar(imageAssets.profileImage, 18.0, 20.0));
+                                              child: ImageWidgets.circleAvatar(imageAssets.profileImage, 18.0, 20.0));
                                         }),
                                   ),
                                 ],
@@ -122,7 +122,7 @@ class _ProductDetailsState extends State<ProductDetails> {
                                 children: [
                                   Padding(
                                     padding: const EdgeInsets.only(left: 10.0, top: 10.0),
-                                    child: coustomTextWidgets.coustomText("Size: ", 15.0, Colors.black, FontWeight.bold),
+                                    child: CustomTextWidgets.customText("Size: ", 15.0, Colors.black, FontWeight.bold),
                                   ),
                                   Container(
                                     alignment: Alignment.center,
@@ -138,7 +138,7 @@ class _ProductDetailsState extends State<ProductDetails> {
                                               alignment: Alignment.center,
                                               margin: EdgeInsets.symmetric(horizontal: 5.0, vertical: 5.0),
                                               padding: EdgeInsets.symmetric(horizontal: 5.0, vertical: 10.0),
-                                              child: DecoratedContainerWidgets.simpleContainer(coustomTextWidgets.myCustomText(sizeList[position], 16.0, AppColors.black[100]!, FontWeight.bold)));
+                                              child: DecoratedContainerWidgets.simpleContainer(CustomTextWidgets.myCustomText(sizeList[position], 16.0, AppColors.black[100]!, FontWeight.bold)));
                                         }),
                                   ),
                                 ],
@@ -158,11 +158,11 @@ class _ProductDetailsState extends State<ProductDetails> {
                                 children: [
                                   Padding(
                                     padding: const EdgeInsets.only(left: 10.0, top: 10.0),
-                                    child: coustomTextWidgets.coustomText("Product Details: ", 15.0, Colors.black, FontWeight.bold),
+                                    child: CustomTextWidgets.customText("Product Details: ", 15.0, Colors.black, FontWeight.bold),
                                   ),
                                   Padding(
                                     padding: const EdgeInsets.all(8.0),
-                                    child: coustomTextWidgets.detailsText(StringAssets.loremIpsumText, TextStyle(fontSize: 14.0, color: AppColors.black[100]!, fontWeight: FontWeight.normal), 5),
+                                    child: CustomTextWidgets.detailsText(StringAssets.loremIpsumText, TextStyle(fontSize: 14.0, color: AppColors.black[100]!, fontWeight: FontWeight.normal), 5),
                                   )
                                 ],
                               ),
@@ -180,7 +180,7 @@ class _ProductDetailsState extends State<ProductDetails> {
                               children: [
                                 Padding(
                                   padding: const EdgeInsets.all(8.0),
-                                  child: imageWidgets.circleAvatar(imageAssets.profileImage, 18, 20),
+                                  child: ImageWidgets.circleAvatar(imageAssets.profileImage, 18, 20),
                                 ),
                                 Expanded(
                                     child: Container(
@@ -189,11 +189,11 @@ class _ProductDetailsState extends State<ProductDetails> {
                                     )),
                                 Padding(
                                   padding: const EdgeInsets.all(4.0),
-                                  child: imageWidgets.ccircleAvatar(Icons.add, AppColors.kPrimaryTwo, 18, 20, Colors.white, AppColors.kPrimaryTwo),
+                                  child: ImageWidgets.circularAvatar(Icons.add, AppColors.kPrimaryTwo, 18, 20, Colors.white, AppColors.kPrimaryTwo),
                                 ),
                                 Padding(
                                   padding: const EdgeInsets.all(4.0),
-                                  child: imageWidgets.ccircleAvatar(Icons.camera_alt, Colors.white, 18, 20, AppColors.kPrimaryTwo, AppColors.kPrimaryTwo),
+                                  child: ImageWidgets.circularAvatar(Icons.camera_alt, Colors.white, 18, 20, AppColors.kPrimaryTwo, AppColors.kPrimaryTwo),
                                 ),
                               ],
                             ),
@@ -215,7 +215,7 @@ class _ProductDetailsState extends State<ProductDetails> {
                                   child: Container(
                                     width: MediaQuery.of(context).size.width,
                                     padding: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 10.0),
-                                    child: coustomTextWidgets.coustomText("Nike NH3 (Summer Collection)", 16.0, Colors.black, FontWeight.bold),
+                                    child: CustomTextWidgets.customText("Nike NH3 (Summer Collection)", 16.0, Colors.black, FontWeight.bold),
                                   ),
                                 ),
                                 IconButton(
@@ -228,7 +228,7 @@ class _ProductDetailsState extends State<ProductDetails> {
                               children: [
                                 Container(
                                   padding: const EdgeInsets.symmetric(horizontal: 10.0),
-                                  child: coustomTextWidgets.coustomText("\$${347}", 16.0, AppColors.kPrimaryTwo, FontWeight.bold),
+                                  child: CustomTextWidgets.customText("\$${347}", 16.0, AppColors.kPrimaryTwo, FontWeight.bold),
                                 ),
                                 Padding(
                                   padding: const EdgeInsets.symmetric(horizontal: 5.0),
@@ -279,7 +279,7 @@ class _ProductDetailsState extends State<ProductDetails> {
                                         child: Column(
                                           children: [
                                             IconWidgets.customIcon(Icons.message, AppColors.kPrimaryTwo),
-                                            coustomTextWidgets.myCustomText("Chat", 14.0, AppColors.kPrimaryTwo, FontWeight.normal)
+                                            CustomTextWidgets.myCustomText("Chat", 14.0, AppColors.kPrimaryTwo, FontWeight.normal)
                                           ],
                                         ),
                                       ),
@@ -296,7 +296,7 @@ class _ProductDetailsState extends State<ProductDetails> {
               Container(
                 width: MediaQuery.of(context).size.width,
                 padding: const EdgeInsets.only(left: 10.0, top: 10.0),
-                child: coustomTextWidgets.coustomText("Reviews:", 18.0, Colors.black, FontWeight.bold),
+                child: CustomTextWidgets.customText("Reviews:", 18.0, Colors.black, FontWeight.bold),
               ),
               Container(
                 child: FutureBuilder(
@@ -322,7 +322,7 @@ class _ProductDetailsState extends State<ProductDetails> {
                       );
                     }
                     else if(snapshot.hasError) {
-                      return coustomTextWidgets.centeredText("Error while fetching data..!", 18.0, AppColors.kPrimaryOne, FontWeight.normal);
+                      return CustomTextWidgets.centeredText("Error while fetching data..!", 18.0, AppColors.kPrimaryOne, FontWeight.normal);
                     }
                     return CircularProgressIndicator();
                   },
@@ -360,7 +360,7 @@ class _ProductDetailsState extends State<ProductDetails> {
                   children: [
                     Padding(
                       padding: const EdgeInsets.only(left: 10.0, top: 10.0),
-                      child: coustomTextWidgets.coustomText("Seller:", 18.0, Colors.black, FontWeight.bold),
+                      child: CustomTextWidgets.customText("Seller:", 18.0, Colors.black, FontWeight.bold),
                     ),
                     Row(
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -368,28 +368,28 @@ class _ProductDetailsState extends State<ProductDetails> {
                       children: [
                         Padding(
                             padding: EdgeInsets.symmetric(horizontal: 5.0, vertical: 10.0),
-                            child: imageWidgets.circleAvatar(imageAssets.profileImage, 28.0, 30.0)),
+                            child: ImageWidgets.circleAvatar(imageAssets.profileImage, 28.0, 30.0)),
                         Expanded(
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Padding(
                                   padding: const EdgeInsets.only(left: 10.0, top: 10.0),
-                                  child: coustomTextWidgets.coustomText("Haseeb Shinwari", 16.0, AppColors.kPrimaryTwo, FontWeight.w600),
+                                  child: CustomTextWidgets.customText("Haseeb Shinwari", 16.0, AppColors.kPrimaryTwo, FontWeight.w600),
                                 ),
                                 Padding(
                                   padding: const EdgeInsets.only(left: 10.0),
-                                  child: coustomTextWidgets.coustomText("Phone Number: 989-288-6896", 14.0, Colors.black, FontWeight.normal),
+                                  child: CustomTextWidgets.customText("Phone Number: 989-288-6896", 14.0, Colors.black, FontWeight.normal),
                                 ),
                                 Padding(
                                   padding: const EdgeInsets.only(left: 10.0),
-                                  child: coustomTextWidgets.customText("Address: 428 Hart Ridge Road, SANTA MONICA, California", 14.0, Colors.black, FontWeight.normal),
+                                  child: CustomTextWidgets.customText("Address: 428 Hart Ridge Road, SANTA MONICA, California", 14.0, Colors.black, FontWeight.normal),
                                 ),
                                 Padding(
                                   padding: const EdgeInsets.only(left: 10.0, top: 10.0, bottom: 10.0),
                                   child: Row(
                                     children: [
-                                      coustomTextWidgets.customText("Seller Rating: ", 14.0, Colors.black, FontWeight.normal),
+                                      CustomTextWidgets.customText("Seller Rating: ", 14.0, Colors.black, FontWeight.normal),
                                       Padding(
                                         padding: const EdgeInsets.symmetric(horizontal: 5.0, vertical: 5.0),
                                         child: RatingBarIndicator(
@@ -421,7 +421,7 @@ class _ProductDetailsState extends State<ProductDetails> {
                   children: [
                     Padding(
                       padding: const EdgeInsets.only(left: 10.0, top: 10.0),
-                      child: coustomTextWidgets.coustomText("Products From Seller", 18.0, Colors.black, FontWeight.bold),
+                      child: CustomTextWidgets.customText("Products From Seller", 18.0, Colors.black, FontWeight.bold),
                     ),
                     Container(
                       height: 180.0,
@@ -447,7 +447,7 @@ class _ProductDetailsState extends State<ProductDetails> {
                             );
                           }
                           else if(snapshot.hasError) {
-                            return coustomTextWidgets.centeredText("Error while fetching data..!" + snapshot.error.toString(), 18.0, AppColors.kPrimaryOne, FontWeight.normal);
+                            return CustomTextWidgets.centeredText("Error while fetching data..!" + snapshot.error.toString(), 18.0, AppColors.kPrimaryOne, FontWeight.normal);
                           }
                           return CircularProgressIndicator();
                         },
@@ -464,7 +464,7 @@ class _ProductDetailsState extends State<ProductDetails> {
                   children: [
                     Padding(
                       padding: const EdgeInsets.only(left: 10.0, top: 10.0),
-                      child: coustomTextWidgets.coustomText("You may also like", 18.0, Colors.black, FontWeight.bold),
+                      child: CustomTextWidgets.customText("You may also like", 18.0, Colors.black, FontWeight.bold),
                     ),
                     Container(
                       height: 180.0,
@@ -490,7 +490,7 @@ class _ProductDetailsState extends State<ProductDetails> {
                             );
                           }
                           else if(snapshot.hasError) {
-                            return coustomTextWidgets.centeredText("Error while fetching data..!" + snapshot.error.toString(), 18.0, AppColors.kPrimaryOne, FontWeight.normal);
+                            return CustomTextWidgets.centeredText("Error while fetching data..!" + snapshot.error.toString(), 18.0, AppColors.kPrimaryOne, FontWeight.normal);
                           }
                           return CircularProgressIndicator();
                         },
@@ -523,14 +523,14 @@ class _ProductDetailsState extends State<ProductDetails> {
           children: [
             Container(
                 margin: EdgeInsets.symmetric(horizontal: 5.0, vertical: 10.0),
-                child: imageWidgets.circleAvatar(reviewsModel.userImageUrl, 18.0, 20.0)),
+                child: ImageWidgets.circleAvatar(reviewsModel.userImageUrl, 18.0, 20.0)),
             Expanded(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Padding(
                     padding: const EdgeInsets.only(left: 5.0, right: 5.0, top: 10.0),
-                    child: coustomTextWidgets.myCustomText(reviewsModel.userName, 15.0, Colors.black, FontWeight.w600),
+                    child: CustomTextWidgets.myCustomText(reviewsModel.userName, 15.0, Colors.black, FontWeight.w600),
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.start,
@@ -550,13 +550,13 @@ class _ProductDetailsState extends State<ProductDetails> {
                       ),
                       Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 5.0),
-                        child: coustomTextWidgets.defaultText(reviewsModel.date, TextStyle(color: AppColors.greyColor, fontSize: 12.0), TextAlign.start),
+                        child: CustomTextWidgets.defaultText(reviewsModel.date, TextStyle(color: AppColors.greyColor, fontSize: 12.0), TextAlign.start),
                       ),
                     ],
                   ),
                   Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 5.0, vertical: 5.0),
-                      child: coustomTextWidgets.detailsText(reviewsModel.reviewText, TextStyle(
+                      child: CustomTextWidgets.detailsText(reviewsModel.reviewText, TextStyle(
                           color: Colors.black, letterSpacing: 0.2, fontSize: 13.0), 3
                       )
                   ),
@@ -598,11 +598,11 @@ class _ProductDetailsState extends State<ProductDetails> {
                     Expanded(
                       child: Padding(
                           padding: EdgeInsets.symmetric(horizontal: 5.0),
-                          child: coustomTextWidgets.customText(productModel.name, 14.0, Colors.black, FontWeight.bold)),
+                          child: CustomTextWidgets.customText(productModel.name, 14.0, Colors.black, FontWeight.bold)),
                     ),
                     Padding(
                         padding: EdgeInsets.symmetric(horizontal: 5.0),
-                        child: imageWidgets.circularImage(productModel.iconUrl, 30.0, 30.0))
+                        child: ImageWidgets.circularImage(productModel.iconUrl, 30.0, 30.0))
                   ],
                 ),
               )
@@ -638,11 +638,11 @@ class _ProductDetailsState extends State<ProductDetails> {
                     Expanded(
                       child: Padding(
                           padding: EdgeInsets.symmetric(horizontal: 5.0),
-                          child: coustomTextWidgets.customText(productModel.name, 14.0, Colors.black, FontWeight.bold)),
+                          child: CustomTextWidgets.customText(productModel.name, 14.0, Colors.black, FontWeight.bold)),
                     ),
                     Padding(
                         padding: EdgeInsets.symmetric(horizontal: 5.0),
-                        child: imageWidgets.circularImage(productModel.iconUrl, 30.0, 30.0))
+                        child: ImageWidgets.circularImage(productModel.iconUrl, 30.0, 30.0))
                   ],
                 ),
               )

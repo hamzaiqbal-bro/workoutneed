@@ -12,7 +12,7 @@ import 'package:workour/ui/market/category_products.dart';
 import 'package:workour/ui/market/messaging.dart';
 import 'package:workour/ui/market/product_details.dart';
 import 'package:workour/ui/market/seller_profile.dart';
-import 'package:workour/widgets/coustomTextWidgets.dart';
+import 'package:workour/widgets/customTextWidgets.dart';
 import 'package:workour/widgets/iconWidgets.dart';
 import 'package:workour/widgets/imageWidgets.dart';
 
@@ -48,7 +48,7 @@ class _MarketBodyState extends State<MarketBody> with SingleTickerProviderStateM
         leading: InkWell(
           child: Padding(
             padding: const EdgeInsets.all(10.0),
-            child: imageWidgets.circularImage(imageAssets.profileImage, 60.0, 60.0),
+            child: ImageWidgets.circularImage(imageAssets.profileImage, 60.0, 60.0),
           ),
           onTap: () {
             Navigator.of(context).push(MaterialPageRoute(builder: (_) => SellerProfile()));
@@ -106,7 +106,7 @@ class _MarketBodyState extends State<MarketBody> with SingleTickerProviderStateM
                   children: [
                     Padding(
                       padding: const EdgeInsets.only(left: 10.0, top: 10.0),
-                      child: coustomTextWidgets.coustomText("Categories", 20.0, Colors.black, FontWeight.bold),
+                      child: CustomTextWidgets.customText("Categories", 20.0, Colors.black, FontWeight.bold),
                     ),
                     Container(
                       padding: EdgeInsets.all(5.0),
@@ -137,7 +137,7 @@ class _MarketBodyState extends State<MarketBody> with SingleTickerProviderStateM
                             );
                           }
                           else if(snapshot.hasError) {
-                            return coustomTextWidgets.centeredText("Error while fetching data..!" + snapshot.error.toString(), 18.0, AppColors.kPrimaryOne, FontWeight.normal);
+                            return CustomTextWidgets.centeredText("Error while fetching data..!" + snapshot.error.toString(), 18.0, AppColors.kPrimaryOne, FontWeight.normal);
                           }
                           return CircularProgressIndicator();
                         },
@@ -154,7 +154,7 @@ class _MarketBodyState extends State<MarketBody> with SingleTickerProviderStateM
                   children: [
                     Padding(
                       padding: const EdgeInsets.only(left: 10.0, top: 10.0),
-                      child: coustomTextWidgets.coustomText("Trending", 20.0, Colors.black, FontWeight.bold),
+                      child: CustomTextWidgets.customText("Trending", 20.0, Colors.black, FontWeight.bold),
                     ),
                     Container(
                       height: 180.0,
@@ -180,7 +180,7 @@ class _MarketBodyState extends State<MarketBody> with SingleTickerProviderStateM
                             );
                           }
                           else if(snapshot.hasError) {
-                            return coustomTextWidgets.centeredText("Error while fetching data..!" + snapshot.error.toString(), 18.0, AppColors.kPrimaryOne, FontWeight.normal);
+                            return CustomTextWidgets.centeredText("Error while fetching data..!" + snapshot.error.toString(), 18.0, AppColors.kPrimaryOne, FontWeight.normal);
                           }
                           return CircularProgressIndicator();
                         },
@@ -197,7 +197,7 @@ class _MarketBodyState extends State<MarketBody> with SingleTickerProviderStateM
                   children: [
                     Padding(
                       padding: const EdgeInsets.only(left: 10.0, top: 10.0),
-                      child: coustomTextWidgets.coustomText("Most Popular", 20.0, Colors.black, FontWeight.bold),
+                      child: CustomTextWidgets.customText("Most Popular", 20.0, Colors.black, FontWeight.bold),
                     ),
                     Container(
                       height: 180.0,
@@ -223,7 +223,7 @@ class _MarketBodyState extends State<MarketBody> with SingleTickerProviderStateM
                             );
                           }
                           else if(snapshot.hasError) {
-                            return coustomTextWidgets.centeredText("Error while fetching data..!" + snapshot.error.toString(), 18.0, AppColors.kPrimaryOne, FontWeight.normal);
+                            return CustomTextWidgets.centeredText("Error while fetching data..!" + snapshot.error.toString(), 18.0, AppColors.kPrimaryOne, FontWeight.normal);
                           }
                           return CircularProgressIndicator();
                         },
@@ -240,7 +240,7 @@ class _MarketBodyState extends State<MarketBody> with SingleTickerProviderStateM
                   children: [
                     Padding(
                       padding: const EdgeInsets.only(left: 10.0, top: 10.0),
-                      child: coustomTextWidgets.coustomText("Feature Products", 20.0, Colors.black, FontWeight.bold),
+                      child: CustomTextWidgets.customText("Feature Products", 20.0, Colors.black, FontWeight.bold),
                     ),
                     Container(
                       padding: EdgeInsets.all(5.0),
@@ -271,7 +271,7 @@ class _MarketBodyState extends State<MarketBody> with SingleTickerProviderStateM
                             );
                           }
                           else if(snapshot.hasError) {
-                            return coustomTextWidgets.centeredText("Error while fetching data..!" + snapshot.error.toString(), 18.0, AppColors.kPrimaryOne, FontWeight.normal);
+                            return CustomTextWidgets.centeredText("Error while fetching data..!" + snapshot.error.toString(), 18.0, AppColors.kPrimaryOne, FontWeight.normal);
                           }
                           return CircularProgressIndicator();
                         },
@@ -304,7 +304,7 @@ class _MarketBodyState extends State<MarketBody> with SingleTickerProviderStateM
               ),
               Padding(
                 padding: const EdgeInsets.all(5.0),
-                child: coustomTextWidgets.coustomText(categoryModel.categoryName, 18.0, AppColors.whiteColor, FontWeight.bold),
+                child: CustomTextWidgets.customText(categoryModel.categoryName, 18.0, AppColors.whiteColor, FontWeight.bold),
               ),
             ],
           ),
@@ -341,11 +341,11 @@ class _MarketBodyState extends State<MarketBody> with SingleTickerProviderStateM
                       Expanded(
                         child: Padding(
                             padding: EdgeInsets.symmetric(horizontal: 5.0),
-                            child: coustomTextWidgets.customText(productModel.name, 14.0, Colors.black, FontWeight.bold)),
+                            child: CustomTextWidgets.customText(productModel.name, 14.0, Colors.black, FontWeight.bold)),
                       ),
                       Padding(
                           padding: EdgeInsets.symmetric(horizontal: 5.0),
-                          child: imageWidgets.circularImage(productModel.iconUrl, 30.0, 30.0))
+                          child: ImageWidgets.circularImage(productModel.iconUrl, 30.0, 30.0))
                     ],
                   ),
               )
@@ -403,11 +403,11 @@ class _MarketBodyState extends State<MarketBody> with SingleTickerProviderStateM
                     children: [
                       Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 5.0),
-                        child: coustomTextWidgets.coustomText(productModel.name, 16.0, Colors.black, FontWeight.bold),
+                        child: CustomTextWidgets.customText(productModel.name, 16.0, Colors.black, FontWeight.bold),
                       ),
                       Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 5.0),
-                        child: coustomTextWidgets.coustomText("\$${productModel.price}", 14.0, AppColors.kPrimaryTwo, FontWeight.normal),
+                        child: CustomTextWidgets.customText("\$${productModel.price}", 14.0, AppColors.kPrimaryTwo, FontWeight.normal),
                       ),
                       Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 5.0, vertical: 5.0),
@@ -426,7 +426,7 @@ class _MarketBodyState extends State<MarketBody> with SingleTickerProviderStateM
                   ),
                   Padding(
                     padding: const EdgeInsets.only(right: 5.0),
-                    child: imageWidgets.circleAvatar(productModel.iconUrl, 16.0, 18.0),
+                    child: ImageWidgets.circleAvatar(productModel.iconUrl, 16.0, 18.0),
                   )
                 ],
               ),

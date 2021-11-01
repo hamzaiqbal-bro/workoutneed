@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:workour/constants/app_colors.dart';
 import 'package:workour/constants/app_styles.dart';
 import 'package:workour/ui/market/payment_confirm_screen.dart';
-import 'package:workour/widgets/coustomTextWidgets.dart';
+import 'package:workour/widgets/customTextWidgets.dart';
 import 'package:workour/widgets/formFieldWidget.dart';
 import 'package:workour/widgets/iconWidgets.dart';
 import 'package:workour/widgets/stateless_widgets.dart';
@@ -35,7 +35,7 @@ class _PaymentState extends State<Payment> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.white,
-        title: Text(paymentMethod, style: TextStyle(color: AppColors.kPrimaryTwo, fontWeight: FontWeight.bold),),
+        title: CustomTextWidgets.appBarTextWidget(paymentMethod),
         centerTitle: true,
         elevation: 1.0,
         leading: IconButton(
@@ -51,11 +51,11 @@ class _PaymentState extends State<Payment> {
             children: [
               Container(
                 padding: const EdgeInsets.all(10.0),
-                child: coustomTextWidgets.coustomText(paymentMethod, 18.0, Colors.black, FontWeight.normal),
+                child: CustomTextWidgets.customText(paymentMethod, 18.0, Colors.black, FontWeight.normal),
               ),
               Container(
                 padding: const EdgeInsets.symmetric(horizontal: 10.0),
-                child: coustomTextWidgets.detailsText(text, TextStyle(color: AppColors.greyColor), 5),
+                child: CustomTextWidgets.detailsText(text, TextStyle(color: AppColors.greyColor), 5),
               ),
               Container(
                 padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
@@ -69,8 +69,8 @@ class _PaymentState extends State<Payment> {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        coustomTextWidgets.coustomText("Subtotal (1 item)", 16.0, Colors.black, FontWeight.normal),
-                        coustomTextWidgets.coustomText("\$${347}", 16.0, Colors.black, FontWeight.bold)
+                        CustomTextWidgets.customText("Subtotal (1 item)", 16.0, Colors.black, FontWeight.normal),
+                        CustomTextWidgets.customText("\$${347}", 16.0, Colors.black, FontWeight.bold)
                       ],
                     ),
                   ),
@@ -79,14 +79,14 @@ class _PaymentState extends State<Payment> {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        coustomTextWidgets.coustomText("Shipping Fee", 16.0, Colors.black, FontWeight.normal),
-                        coustomTextWidgets.coustomText("\$${5.99}", 16.0, Colors.black, FontWeight.bold)
+                        CustomTextWidgets.customText("Shipping Fee", 16.0, Colors.black, FontWeight.normal),
+                        CustomTextWidgets.customText("\$${5.99}", 16.0, Colors.black, FontWeight.bold)
                       ],
                     ),
                   ),
                   Container(
                       margin: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 5.0),
-                      child: coustomTextWidgets.coustomText("Total : \$${352.99}", 16.0, AppColors.kPrimaryTwo, FontWeight.w600)),
+                      child: CustomTextWidgets.customText("Total : \$${352.99}", 16.0, AppColors.kPrimaryTwo, FontWeight.w600)),
                 ],
               ),
               Container(

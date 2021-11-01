@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:workour/constants/app_colors.dart';
-import 'package:workour/widgets/coustomTextWidgets.dart';
+import 'package:workour/widgets/customTextWidgets.dart';
 import 'iconWidgets.dart';
 
 class CardWidgets{
@@ -25,7 +25,7 @@ class CardWidgets{
           IconWidgets.customIcon(iconData, AppColors.kPrimaryTwo),
           Padding(
             padding: const EdgeInsets.all(5.0),
-            child: coustomTextWidgets.centeredText(text, 16.0, AppColors.kPrimaryTwo, FontWeight.w400),
+            child: CustomTextWidgets.centeredText(text, 16.0, AppColors.kPrimaryTwo, FontWeight.w400),
           )
         ],
       ),

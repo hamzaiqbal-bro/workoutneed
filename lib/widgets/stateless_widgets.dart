@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:workour/constants/app_colors.dart';
 import 'package:workour/constants/app_styles.dart';
-import 'package:workour/widgets/coustomTextWidgets.dart';
+import 'package:workour/widgets/customTextWidgets.dart';
 import 'package:workour/widgets/iconWidgets.dart';
 import 'package:workour/widgets/imageWidgets.dart';
 
@@ -48,7 +48,7 @@ class DefIconTextButton extends StatelessWidget {
               children: [
                 IconWidgets.sizedIcon(iconData, Colors.white, 30.0),
                 SizedBox(width: 10.0),
-                coustomTextWidgets.coustomText(text, fontSize, AppColors.whiteColor, fontWeight)
+                CustomTextWidgets.customText(text, fontSize, AppColors.whiteColor, fontWeight)
               ],
             ),
           ),
@@ -99,9 +99,9 @@ class DefImageTextButton extends StatelessWidget {
   //           child: Row(
   //             mainAxisAlignment: MainAxisAlignment.start,
   //             children: [
-  //               imageWidgets.coustomImageWidgets(imageUrl),
+  //               ImageWidgets.coustomImageWidgets(imageUrl),
   //               SizedBox(width: 10.0),
-  //               coustomTextWidgets.coustomText(text, fontSize, AppColors.whiteColor, fontWeight)
+  //               CustomTextWidgets.customText(text, fontSize, AppColors.whiteColor, fontWeight)
   //             ],
   //           ),
   //         ),
@@ -132,10 +132,10 @@ class DefImageTextButton extends StatelessWidget {
               children: [
                 Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: imageWidgets.coustomImageWidgets(imageUrl),
+                  child: ImageWidgets.customImageWidgets(imageUrl),
                 ),
                 SizedBox(width: 5.0),
-                coustomTextWidgets.coustomText(text, fontSize, AppColors.black[100]!, fontWeight)
+                CustomTextWidgets.customText(text, fontSize, AppColors.black[100]!, fontWeight)
               ],
             ),
           ),
@@ -179,7 +179,7 @@ class MyIconTextButton extends StatelessWidget {
               children: [
                 IconWidgets.sizedIcon(iconData, AppColors.kPrimaryTwo, iconSize),
                 SizedBox(width: 10.0),
-                coustomTextWidgets.coustomText(text, fontSize, AppColors.kPrimaryTwo, fontWeight)
+                CustomTextWidgets.customText(text, fontSize, AppColors.kPrimaryTwo, fontWeight)
               ],
             ),
           ),

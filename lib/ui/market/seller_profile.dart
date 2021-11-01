@@ -8,7 +8,7 @@ import 'package:workour/constants/stringAssets.dart';
 import 'package:workour/methods/json_method.dart';
 import 'package:workour/models/ProductsModel.dart';
 import 'package:workour/models/ReviewsModel.dart';
-import 'package:workour/widgets/coustomTextWidgets.dart';
+import 'package:workour/widgets/customTextWidgets.dart';
 import 'package:workour/widgets/iconWidgets.dart';
 import 'package:workour/widgets/imageWidgets.dart';
 
@@ -46,7 +46,7 @@ class _SellerProfileState extends State<SellerProfile> {
                         children: [
                           Padding(
                             padding: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 20.0),
-                            child: imageWidgets.circleAvatar(imageAssets.profileImage, 32.0, 35.0),
+                            child: ImageWidgets.circleAvatar(imageAssets.profileImage, 32.0, 35.0),
                           ),
                           Expanded(
                             child: Column(
@@ -57,7 +57,7 @@ class _SellerProfileState extends State<SellerProfile> {
                                     children: [
                                       Padding(
                                         padding: const EdgeInsets.only(left: 10.0, top: 10.0),
-                                        child: coustomTextWidgets.coustomText("Paul Lee", 20.0, AppColors.kPrimaryTwo, FontWeight.w600),
+                                        child: CustomTextWidgets.customText("Paul Lee", 20.0, AppColors.kPrimaryTwo, FontWeight.w600),
                                       ),
                                       Row(
                                         mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -78,17 +78,17 @@ class _SellerProfileState extends State<SellerProfile> {
                                   ),
                                 Padding(
                                     padding: const EdgeInsets.only(left: 10.0),
-                                    child: coustomTextWidgets.coustomText("Phone Number: 989-288-6896", 14.0, Colors.black, FontWeight.normal),
+                                    child: CustomTextWidgets.customText("Phone Number: 989-288-6896", 14.0, Colors.black, FontWeight.normal),
                                   ),
                                 Padding(
                                     padding: const EdgeInsets.only(left: 10.0),
-                                    child: coustomTextWidgets.customText("Address: 428 Hart Ridge Road, SANTA MONICA, California", 14.0, Colors.black, FontWeight.normal),
+                                    child: CustomTextWidgets.customText("Address: 428 Hart Ridge Road, SANTA MONICA, California", 14.0, Colors.black, FontWeight.normal),
                                   ),
                                 Padding(
                                     padding: const EdgeInsets.only(left: 10.0, top: 10.0, bottom: 10.0),
                                     child: Row(
                                       children: [
-                                        coustomTextWidgets.customText("Seller Rating: ", 14.0, Colors.black, FontWeight.normal),
+                                        CustomTextWidgets.customText("Seller Rating: ", 14.0, Colors.black, FontWeight.normal),
                                         Padding(
                                           padding: const EdgeInsets.symmetric(horizontal: 5.0, vertical: 5.0),
                                           child: RatingBarIndicator(
@@ -119,7 +119,7 @@ class _SellerProfileState extends State<SellerProfile> {
                       ),
                       Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 10.0),
-                        child: coustomTextWidgets.detailsText(StringAssets.loremIpsumSampleText, TextStyle(color: AppColors.greyColor), 4),
+                        child: CustomTextWidgets.detailsText(StringAssets.loremIpsumSampleText, TextStyle(color: AppColors.greyColor), 4),
                       ),
                       Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
@@ -127,11 +127,11 @@ class _SellerProfileState extends State<SellerProfile> {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           mainAxisAlignment: MainAxisAlignment.start,
                           children: [
-                            imageWidgets.coustomImageWidgets(imageAssets.googleIcon),
+                            ImageWidgets.customImageWidgets(imageAssets.googleIcon),
                             SizedBox(width: AppStyles.tweentynumber,),
-                            imageWidgets.coustomImageWidgets(imageAssets.facebookIcon),
+                            ImageWidgets.customImageWidgets(imageAssets.facebookIcon),
                             SizedBox(width: AppStyles.tweentynumber,),
-                            imageWidgets.coustomImageWidgets(imageAssets.twitterIcon),
+                            ImageWidgets.customImageWidgets(imageAssets.twitterIcon),
                           ],
                         ),
                       ),
@@ -145,7 +145,7 @@ class _SellerProfileState extends State<SellerProfile> {
                     children: [
                       Padding(
                         padding: const EdgeInsets.only(left: 10.0, top: 10.0),
-                        child: coustomTextWidgets.coustomText("Popular From Seller", 20.0, Colors.black, FontWeight.bold),
+                        child: CustomTextWidgets.customText("Popular From Seller", 20.0, Colors.black, FontWeight.bold),
                       ),
                       Container(
                         height: 180.0,
@@ -171,7 +171,7 @@ class _SellerProfileState extends State<SellerProfile> {
                               );
                             }
                             else if(snapshot.hasError) {
-                              return coustomTextWidgets.centeredText("Error while fetching data..!" + snapshot.error.toString(), 18.0, AppColors.kPrimaryOne, FontWeight.normal);
+                              return CustomTextWidgets.centeredText("Error while fetching data..!" + snapshot.error.toString(), 18.0, AppColors.kPrimaryOne, FontWeight.normal);
                             }
                             return CircularProgressIndicator();
                           },
@@ -188,7 +188,7 @@ class _SellerProfileState extends State<SellerProfile> {
                     children: [
                       Padding(
                         padding: const EdgeInsets.only(left: 10.0, top: 10.0),
-                        child: coustomTextWidgets.coustomText("Products", 20.0, Colors.black, FontWeight.bold),
+                        child: CustomTextWidgets.customText("Products", 20.0, Colors.black, FontWeight.bold),
                       ),
                       Container(
                         padding: EdgeInsets.all(5.0),
@@ -219,7 +219,7 @@ class _SellerProfileState extends State<SellerProfile> {
                               );
                             }
                             else if(snapshot.hasError) {
-                              return coustomTextWidgets.centeredText("Error while fetching data..!" + snapshot.error.toString(), 18.0, AppColors.kPrimaryOne, FontWeight.normal);
+                              return CustomTextWidgets.centeredText("Error while fetching data..!" + snapshot.error.toString(), 18.0, AppColors.kPrimaryOne, FontWeight.normal);
                             }
                             return CircularProgressIndicator();
                           },
@@ -236,7 +236,7 @@ class _SellerProfileState extends State<SellerProfile> {
                     children: [
                       Padding(
                         padding: const EdgeInsets.only(left: 10.0, top: 10.0),
-                        child: coustomTextWidgets.coustomText("Reviews", 18.0, Colors.black, FontWeight.bold),
+                        child: CustomTextWidgets.customText("Reviews", 18.0, Colors.black, FontWeight.bold),
                       ),
                     ],
                   ),
@@ -265,7 +265,7 @@ class _SellerProfileState extends State<SellerProfile> {
                         );
                       }
                       else if(snapshot.hasError) {
-                        return coustomTextWidgets.centeredText("Error while fetching data..!", 18.0, AppColors.kPrimaryOne, FontWeight.normal);
+                        return CustomTextWidgets.centeredText("Error while fetching data..!", 18.0, AppColors.kPrimaryOne, FontWeight.normal);
                       }
                       return CircularProgressIndicator();
                     },
@@ -328,11 +328,11 @@ class _SellerProfileState extends State<SellerProfile> {
                     Expanded(
                       child: Padding(
                           padding: EdgeInsets.symmetric(horizontal: 5.0),
-                          child: coustomTextWidgets.customText(productModel.name, 14.0, Colors.black, FontWeight.bold)),
+                          child: CustomTextWidgets.customText(productModel.name, 14.0, Colors.black, FontWeight.bold)),
                     ),
                     Padding(
                         padding: EdgeInsets.symmetric(horizontal: 5.0),
-                        child: imageWidgets.circularImage(productModel.iconUrl, 30.0, 30.0))
+                        child: ImageWidgets.circularImage(productModel.iconUrl, 30.0, 30.0))
                   ],
                 ),
               )
@@ -390,11 +390,11 @@ class _SellerProfileState extends State<SellerProfile> {
                       children: [
                         Padding(
                           padding: const EdgeInsets.symmetric(horizontal: 5.0),
-                          child: coustomTextWidgets.coustomText(productModel.name, 16.0, Colors.black, FontWeight.bold),
+                          child: CustomTextWidgets.customText(productModel.name, 16.0, Colors.black, FontWeight.bold),
                         ),
                         Padding(
                           padding: const EdgeInsets.symmetric(horizontal: 5.0),
-                          child: coustomTextWidgets.coustomText("\$${productModel.price}", 14.0, AppColors.kPrimaryTwo, FontWeight.normal),
+                          child: CustomTextWidgets.customText("\$${productModel.price}", 14.0, AppColors.kPrimaryTwo, FontWeight.normal),
                         ),
                         Padding(
                           padding: const EdgeInsets.symmetric(horizontal: 5.0, vertical: 5.0),
@@ -413,7 +413,7 @@ class _SellerProfileState extends State<SellerProfile> {
                     ),
                     Padding(
                       padding: const EdgeInsets.only(right: 5.0),
-                      child: imageWidgets.circleAvatar(productModel.iconUrl, 16.0, 18.0),
+                      child: ImageWidgets.circleAvatar(productModel.iconUrl, 16.0, 18.0),
                     )
                   ],
                 ),
@@ -440,14 +440,14 @@ class _SellerProfileState extends State<SellerProfile> {
           children: [
             Container(
                 margin: EdgeInsets.symmetric(horizontal: 5.0, vertical: 10.0),
-                child: imageWidgets.circleAvatar(reviewsModel.userImageUrl, 18.0, 20.0)),
+                child: ImageWidgets.circleAvatar(reviewsModel.userImageUrl, 18.0, 20.0)),
             Expanded(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Padding(
                     padding: const EdgeInsets.only(left: 5.0, right: 5.0, top: 10.0),
-                    child: coustomTextWidgets.myCustomText(reviewsModel.userName, 15.0, Colors.black, FontWeight.w600),
+                    child: CustomTextWidgets.myCustomText(reviewsModel.userName, 15.0, Colors.black, FontWeight.w600),
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.start,
@@ -467,13 +467,13 @@ class _SellerProfileState extends State<SellerProfile> {
                       ),
                       Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 5.0),
-                        child: coustomTextWidgets.defaultText(reviewsModel.date, TextStyle(color: AppColors.greyColor, fontSize: 12.0), TextAlign.start),
+                        child: CustomTextWidgets.defaultText(reviewsModel.date, TextStyle(color: AppColors.greyColor, fontSize: 12.0), TextAlign.start),
                       ),
                     ],
                   ),
                   Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 5.0, vertical: 5.0),
-                      child: coustomTextWidgets.detailsText(reviewsModel.reviewText, TextStyle(
+                      child: CustomTextWidgets.detailsText(reviewsModel.reviewText, TextStyle(
                           color: Colors.black, letterSpacing: 0.2, fontSize: 13.0), 3
                       )
                   ),

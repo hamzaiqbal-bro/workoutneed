@@ -5,7 +5,7 @@ import 'package:workour/constants/app_colors.dart';
 import 'package:workour/constants/imageAssets.dart';
 import 'package:workour/methods/json_method.dart';
 import 'package:workour/models/ProductsModel.dart';
-import 'package:workour/widgets/coustomTextWidgets.dart';
+import 'package:workour/widgets/customTextWidgets.dart';
 import 'package:workour/widgets/iconWidgets.dart';
 import 'package:workour/widgets/imageWidgets.dart';
 
@@ -24,10 +24,10 @@ class _StorePopularProductsState extends State<StorePopularProducts> {
         backgroundColor: Colors.white,
         elevation: 1.0,
         centerTitle: true,
-        title: Text("Store", style: TextStyle(color: AppColors.kPrimaryTwo, fontWeight: FontWeight.bold),),
+        title: CustomTextWidgets.appBarTextWidget("Store"),
         leading: Padding(
           padding: const EdgeInsets.all(10.0),
-          child: imageWidgets.circularImage(imageAssets.profileImage, 60.0, 60.0),
+          child: ImageWidgets.circularImage(imageAssets.profileImage, 60.0, 60.0),
         ),
         actions: [
           IconButton(
@@ -47,7 +47,7 @@ class _StorePopularProductsState extends State<StorePopularProducts> {
               InkWell(
                 child: Padding(
                   padding: const EdgeInsets.only(left: 10.0, top: 10.0),
-                  child: coustomTextWidgets.coustomText("Nike", 18.0, AppColors.kPrimaryTwo, FontWeight.bold),
+                  child: CustomTextWidgets.customText("Nike", 18.0, AppColors.kPrimaryTwo, FontWeight.bold),
                 ),
                 onTap: () {
                   Navigator.of(context).push(MaterialPageRoute(builder: (_) => StorePopularProducts()));
@@ -83,7 +83,7 @@ class _StorePopularProductsState extends State<StorePopularProducts> {
                       );
                     }
                     else if(snapshot.hasError) {
-                      return coustomTextWidgets.centeredText("Error while fetching data..!" + snapshot.error.toString(), 18.0, AppColors.kPrimaryOne, FontWeight.normal);
+                      return CustomTextWidgets.centeredText("Error while fetching data..!" + snapshot.error.toString(), 18.0, AppColors.kPrimaryOne, FontWeight.normal);
                     }
                     return CircularProgressIndicator();
                   },
@@ -139,11 +139,11 @@ class _StorePopularProductsState extends State<StorePopularProducts> {
                     children: [
                       Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 5.0),
-                        child: coustomTextWidgets.coustomText(productModel.name, 16.0, Colors.black, FontWeight.bold),
+                        child: CustomTextWidgets.customText(productModel.name, 16.0, Colors.black, FontWeight.bold),
                       ),
                       Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 5.0),
-                        child: coustomTextWidgets.coustomText("\$${productModel.price}", 14.0, AppColors.kPrimaryTwo, FontWeight.normal),
+                        child: CustomTextWidgets.customText("\$${productModel.price}", 14.0, AppColors.kPrimaryTwo, FontWeight.normal),
                       ),
                       Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 5.0, vertical: 5.0),
@@ -162,7 +162,7 @@ class _StorePopularProductsState extends State<StorePopularProducts> {
                   ),
                   Padding(
                     padding: const EdgeInsets.only(right: 5.0),
-                    child: imageWidgets.circleAvatar(productModel.iconUrl, 16.0, 18.0),
+                    child: ImageWidgets.circleAvatar(productModel.iconUrl, 16.0, 18.0),
                   )
                 ],
               ),

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:workour/constants/app_colors.dart';
 import 'package:workour/constants/imageAssets.dart';
 import 'package:workour/widgets/bnuttonWidgets.dart';
-import 'package:workour/widgets/coustomTextWidgets.dart';
+import 'package:workour/widgets/customTextWidgets.dart';
 import 'package:workour/widgets/iconWidgets.dart';
 import 'package:workour/widgets/imageWidgets.dart';
 
@@ -28,7 +28,7 @@ class _PaymentConfirmState extends State<PaymentConfirm> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.white,
-        title: Text(paymentMethod, style: TextStyle(color: AppColors.kPrimaryTwo, fontWeight: FontWeight.bold),),
+        title: CustomTextWidgets.appBarTextWidget(paymentMethod),
         centerTitle: true,
         elevation: 1.0,
         leading: IconButton(
@@ -44,15 +44,15 @@ class _PaymentConfirmState extends State<PaymentConfirm> {
           children: [
             Container(
               padding: const EdgeInsets.all(10.0),
-              child: imageWidgets.coustomImageWidgets(paymentMethod == "JazzCash" ? imageAssets.paymentSuccessImage : imageAssets.paymentFailedImage),
+              child: ImageWidgets.customImageWidgets(paymentMethod == "JazzCash" ? imageAssets.paymentSuccessImage : imageAssets.paymentFailedImage),
             ),
             Container(
               padding: const EdgeInsets.symmetric(horizontal: 10.0),
-              child: coustomTextWidgets.customText(headingText, 18.0, AppColors.black[100]!, FontWeight.bold),
+              child: CustomTextWidgets.customText(headingText, 18.0, AppColors.black[100]!, FontWeight.bold),
             ),
             Container(
               padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
-              child: coustomTextWidgets.centeredText(detailsText, 14.0, AppColors.black[200]!, FontWeight.normal),
+              child: CustomTextWidgets.centeredText(detailsText, 14.0, AppColors.black[200]!, FontWeight.normal),
             ),
             Visibility(
               visible: paymentMethod != "JazzCash" ? true : false,
@@ -62,11 +62,11 @@ class _PaymentConfirmState extends State<PaymentConfirm> {
                   children: [
                     Container(
                       margin: const EdgeInsets.all(10.0),
-                      child: buttonWidgets.coustomButton("Okay", 18.0, FontWeight.bold, context),
+                      child: ButtonWidgets.coustomButton("Okay", 18.0, FontWeight.bold, context),
                     ),
                     Container(
                       margin: const EdgeInsets.all(10.0),
-                      child: buttonWidgets.darkGreyButton("Not Now", 18.0, FontWeight.bold, context),
+                      child: ButtonWidgets.darkGreyButton("Not Now", 18.0, FontWeight.bold, context),
                     ),
                   ],
                 ),

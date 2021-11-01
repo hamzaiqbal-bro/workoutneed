@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:workour/constants/app_colors.dart';
 import 'package:workour/constants/app_styles.dart';
 import 'package:workour/ui/loginSignUp/confirmResetPassword.dart';
-import 'package:workour/widgets/coustomTextWidgets.dart';
+import 'package:workour/widgets/customTextWidgets.dart';
 import 'package:workour/widgets/formFieldWidget.dart';
 import 'package:workour/widgets/bnuttonWidgets.dart';
 
@@ -37,7 +37,7 @@ class _forgetScreenState extends State<forgetScreen> {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Expanded(child: coustomTextWidgets.coustomText('Reset Password',19.0,AppColors.kPrimaryTwo,FontWeight.bold)),
+                      Expanded(child: CustomTextWidgets.customText('Reset Password',19.0,AppColors.kPrimaryTwo,FontWeight.bold)),
                       Expanded(child: Column(
                         children: [
                           InputField(
@@ -55,7 +55,7 @@ class _forgetScreenState extends State<forgetScreen> {
                               onTap: (){
                                 Navigator.push(context, MaterialPageRoute(builder: (context) => confirmResetPassword()));
                               },
-                              child: buttonWidgets.coustomButton('Send Code',16.0,FontWeight.bold,context)),
+                              child: ButtonWidgets.coustomButton('Send Code',16.0,FontWeight.bold,context)),
                         ],
                       ),)
                     ],

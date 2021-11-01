@@ -3,7 +3,7 @@ import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
 import 'package:workour/constants/app_colors.dart';
 import 'package:workour/methods/json_method.dart';
 import 'package:workour/models/NotificationsModel.dart';
-import 'package:workour/widgets/coustomTextWidgets.dart';
+import 'package:workour/widgets/customTextWidgets.dart';
 import 'package:workour/widgets/iconWidgets.dart';
 import 'package:workour/widgets/imageWidgets.dart';
 
@@ -21,7 +21,7 @@ class _NotificationsState extends State<Notifications> {
       appBar: AppBar(
         backgroundColor: Colors.white,
         elevation: 1.0,
-        title: Text("Notifications", style: TextStyle(color: AppColors.kPrimaryTwo, fontWeight: FontWeight.bold),),
+        title: CustomTextWidgets.appBarTextWidget("Notifications"),
         centerTitle: true,
         leading: IconButton(
           icon: IconWidgets.customIcon(Icons.arrow_back, AppColors.kPrimaryTwo),
@@ -55,7 +55,7 @@ class _NotificationsState extends State<Notifications> {
                       );
                     }
                     else if(snapshot.hasError) {
-                      return coustomTextWidgets.centeredText("Error while fetching data..!", 18.0, AppColors.kPrimaryOne, FontWeight.normal);
+                      return CustomTextWidgets.centeredText("Error while fetching data..!", 18.0, AppColors.kPrimaryOne, FontWeight.normal);
                     }
                     return CircularProgressIndicator();
                   },
@@ -93,7 +93,7 @@ class _NotificationsState extends State<Notifications> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      coustomTextWidgets.detailsText(notification.text, TextStyle(
+                      CustomTextWidgets.detailsText(notification.text, TextStyle(
                           letterSpacing: 0.05,
                           color: Colors.black
                       ),
@@ -101,7 +101,7 @@ class _NotificationsState extends State<Notifications> {
                       ),
                       Padding(
                         padding: const EdgeInsets.all(5.0),
-                        child: coustomTextWidgets.defaultText(notification.time, TextStyle(
+                        child: CustomTextWidgets.defaultText(notification.time, TextStyle(
                             color: AppColors.greyColor,
                         ), TextAlign.start),
                       ),
@@ -111,7 +111,7 @@ class _NotificationsState extends State<Notifications> {
             ),
             Container(
                 margin: EdgeInsets.only(left: 2.0, right: 5.0),
-                child: imageWidgets.circleAvatar(notification.channelIcon, 23.0, 25.0)),
+                child: ImageWidgets.circleAvatar(notification.channelIcon, 23.0, 25.0)),
           ],
         ),
       ),

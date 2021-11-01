@@ -11,6 +11,8 @@ class AppStyles {
    static double fourtynumber = 40.0;
 
 
+  static const TextStyle appBarTextStyle = TextStyle(color: AppColors.kPrimaryTwo, fontWeight: FontWeight.bold);
+
   static const TextStyle kLabelTextStyle = TextStyle(
     color: AppColors.kPrimaryTwo,
     fontWeight: FontWeight.bold,

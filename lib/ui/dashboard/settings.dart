@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:workour/constants/app_colors.dart';
-import 'package:workour/widgets/coustomTextWidgets.dart';
+import 'package:workour/widgets/customTextWidgets.dart';
 import 'package:workour/widgets/iconWidgets.dart';
 
 class Settings extends StatefulWidget {
@@ -17,7 +17,7 @@ class _SettingsState extends State<Settings> {
       appBar: AppBar(
         backgroundColor: Colors.white,
         elevation: 1.0,
-        title: Text("Settings", style: TextStyle(color: AppColors.kPrimaryTwo, fontWeight: FontWeight.bold),),
+        title: CustomTextWidgets.appBarTextWidget("Settings"),
         centerTitle: true,
         leading: IconButton(
           icon: IconWidgets.customIcon(Icons.arrow_back, AppColors.kPrimaryTwo),
@@ -39,7 +39,7 @@ class _SettingsState extends State<Settings> {
                 width: MediaQuery.of(context).size.width,
                 padding: EdgeInsets.symmetric(horizontal: 15.0, vertical: 10.0),
                 //color: Colors.white,
-                child: coustomTextWidgets.coustomText('Account', 16.0, Colors.black, FontWeight.w600),
+                child: CustomTextWidgets.customText('Account', 16.0, Colors.black, FontWeight.w600),
               ),
               Divider(
                 thickness: 1.5,
@@ -52,7 +52,7 @@ class _SettingsState extends State<Settings> {
                 width: MediaQuery.of(context).size.width,
                 padding: EdgeInsets.symmetric(horizontal: 15.0, vertical: 10.0),
                 //color: Colors.white,
-                child: coustomTextWidgets.coustomText('Video Quality', 16.0, Colors.black, FontWeight.w600),
+                child: CustomTextWidgets.customText('Video Quality', 16.0, Colors.black, FontWeight.w600),
               ),
               Divider(
                 thickness: 1.5,
@@ -65,7 +65,7 @@ class _SettingsState extends State<Settings> {
                 width: MediaQuery.of(context).size.width,
                 padding: EdgeInsets.symmetric(horizontal: 15.0, vertical: 10.0),
                 //color: Colors.white,
-                child: coustomTextWidgets.coustomText('History & Privacy', 16.0, Colors.black, FontWeight.w600),
+                child: CustomTextWidgets.customText('History & Privacy', 16.0, Colors.black, FontWeight.w600),
               ),
               Divider(
                 thickness: 1.5,
