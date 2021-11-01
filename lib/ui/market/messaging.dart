@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:workour/constants/app_colors.dart';
 import 'package:workour/constants/imageAssets.dart';
 import 'package:workour/constants/stringAssets.dart';
-import 'package:workour/widgets/coustomTextWidgets.dart';
+import 'package:workour/widgets/customTextWidgets.dart';
 import 'package:workour/widgets/decoratedContainerWidgets.dart';
 import 'package:workour/widgets/formFieldWidget.dart';
 import 'package:workour/widgets/iconWidgets.dart';
@@ -24,7 +24,7 @@ class _MessagingState extends State<Messaging> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.white,
-        title: Text("John Doe", style: TextStyle(color: AppColors.kPrimaryTwo, fontWeight: FontWeight.bold),),
+        title: CustomTextWidgets.appBarTextWidget("John Doe"),
         centerTitle: true,
         elevation: 1.0,
         leading: IconButton(
@@ -66,11 +66,11 @@ class _MessagingState extends State<Messaging> {
                           children: [
                             Padding(
                               padding: const EdgeInsets.symmetric(vertical: 5.0),
-                              child: coustomTextWidgets.myCustomText("Nike NH3 (Summer Collection)", 15.0, Colors.black, FontWeight.bold),
+                              child: CustomTextWidgets.myCustomText("Nike NH3 (Summer Collection)", 15.0, Colors.black, FontWeight.bold),
                             ),
                             Padding(
                                 padding: const EdgeInsets.symmetric(horizontal: 0.0),
-                                child: coustomTextWidgets.detailsText(StringAssets.loremIpsumSampleText, TextStyle(
+                                child: CustomTextWidgets.detailsText(StringAssets.loremIpsumSampleText, TextStyle(
                                     color: Colors.black), 2
                                 )
                             ),
@@ -79,18 +79,18 @@ class _MessagingState extends State<Messaging> {
                               children: [
                                 Padding(
                                   padding: const EdgeInsets.all(5.0),
-                                  child: coustomTextWidgets.coustomText("\$${347}", 18.0, AppColors.kPrimaryTwo, FontWeight.bold),
+                                  child: CustomTextWidgets.customText("\$${347}", 18.0, AppColors.kPrimaryTwo, FontWeight.bold),
                                 ),
                                 Row(
                                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                                   children: [
                                     Padding(
                                       padding: const EdgeInsets.only(left: 5.0, right: 5.0),
-                                      child: coustomTextWidgets.defaultText("item: ${1}", TextStyle(color: AppColors.greyColor, fontSize: 14.0), TextAlign.start),
+                                      child: CustomTextWidgets.defaultText("item: ${1}", TextStyle(color: AppColors.greyColor, fontSize: 14.0), TextAlign.start),
                                     ),
                                     Padding(
                                       padding: const EdgeInsets.only(left: 5.0, right: 10.0),
-                                      child: coustomTextWidgets.defaultText("Qty: ${1}", TextStyle(color: AppColors.greyColor, fontSize: 14.0), TextAlign.start),
+                                      child: CustomTextWidgets.defaultText("Qty: ${1}", TextStyle(color: AppColors.greyColor, fontSize: 14.0), TextAlign.start),
                                     ),
                                   ],
                                 )
@@ -116,7 +116,7 @@ class _MessagingState extends State<Messaging> {
                 children: [
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 10.0),
-                    child: imageWidgets.circleAvatar(imageAssets.profileImage, 20.0, 22.0),
+                    child: ImageWidgets.circleAvatar(imageAssets.profileImage, 20.0, 22.0),
                   ),
                   DecoratedContainerWidgets.messagingContainer(
                       AppColors.black[300]!,
@@ -126,11 +126,11 @@ class _MessagingState extends State<Messaging> {
                         children: [
                           Padding(
                             padding: const EdgeInsets.symmetric(horizontal: 5.0),
-                            child: coustomTextWidgets.coustomText("Hello John", 16.0, AppColors.black[200]!, FontWeight.w600),
+                            child: CustomTextWidgets.customText("Hello John", 16.0, AppColors.black[200]!, FontWeight.w600),
                           ),
                           Align(
                               alignment: Alignment.centerRight,
-                              child: coustomTextWidgets.customText("9:13 PM", 14.0, AppColors.black[400]!, FontWeight.normal)),
+                              child: CustomTextWidgets.customText("9:13 PM", 14.0, AppColors.black[400]!, FontWeight.normal)),
                         ],
                       )
                   )
@@ -147,17 +147,17 @@ class _MessagingState extends State<Messaging> {
                         children: [
                           Padding(
                             padding: const EdgeInsets.symmetric(horizontal: 5.0),
-                            child: coustomTextWidgets.coustomText("Hello! How are you?", 16.0, AppColors.black[200]!, FontWeight.w600),
+                            child: CustomTextWidgets.customText("Hello! How are you?", 16.0, AppColors.black[200]!, FontWeight.w600),
                           ),
                           Align(
                               alignment: Alignment.centerRight,
-                              child: coustomTextWidgets.customText("9:13 PM", 14.0, AppColors.black[400]!, FontWeight.normal)),
+                              child: CustomTextWidgets.customText("9:13 PM", 14.0, AppColors.black[400]!, FontWeight.normal)),
                         ],
                       )
                   ),
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 10.0),
-                    child: imageWidgets.circleAvatar(imageAssets.profileImage, 20.0, 22.0),
+                    child: ImageWidgets.circleAvatar(imageAssets.profileImage, 20.0, 22.0),
                   ),
                 ],
               ),

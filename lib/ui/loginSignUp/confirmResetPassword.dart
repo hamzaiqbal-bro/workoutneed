@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:workour/constants/app_colors.dart';
 import 'package:workour/constants/app_styles.dart';
 import 'package:workour/ui/loginSignUp/newPasswordScreen.dart';
-import 'package:workour/widgets/coustomTextWidgets.dart';
+import 'package:workour/widgets/customTextWidgets.dart';
 import 'package:workour/widgets/formFieldWidget.dart';
 import 'package:workour/widgets/bnuttonWidgets.dart';
 
@@ -37,11 +37,11 @@ class _confirmResetPasswordState extends State<confirmResetPassword> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
 
                   children: [
-                    Expanded(child: coustomTextWidgets.coustomText('Reset Password',19.0,AppColors.kPrimaryTwo,FontWeight.bold)),
+                    Expanded(child: CustomTextWidgets.customText('Reset Password',19.0,AppColors.kPrimaryTwo,FontWeight.bold)),
                     Expanded(child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        coustomTextWidgets.coustomText('Enter the code that we have sent you on email',14.0,AppColors.kPrimaryTwo,FontWeight.normal),
+                        CustomTextWidgets.customText('Enter the code that we have sent you on email',14.0,AppColors.kPrimaryTwo,FontWeight.normal),
                         SizedBox(height: AppStyles.teennumber,),
                         InputField(
                             'next',
@@ -58,7 +58,7 @@ class _confirmResetPasswordState extends State<confirmResetPassword> {
                             onTap: (){
                               Navigator.push(context, MaterialPageRoute(builder: (context) => newPasswordScreen()));
                             },
-                            child: buttonWidgets.coustomButton('Reset Password',16.0,FontWeight.bold,context)),
+                            child: ButtonWidgets.coustomButton('Reset Password',16.0,FontWeight.bold,context)),
                       ],
                     ),)
                   ],

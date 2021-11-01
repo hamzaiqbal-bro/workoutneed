@@ -3,7 +3,7 @@ import 'package:workour/constants/app_colors.dart';
 import 'package:workour/constants/app_styles.dart';
 import 'package:workour/ui/loginSignUp/loginWidget.dart';
 import 'package:workour/ui/loginSignUp/signUpWidget.dart';
-import 'package:workour/widgets/coustomTextWidgets.dart';
+import 'package:workour/widgets/customTextWidgets.dart';
 
 class loginSignUp extends StatefulWidget {
   const loginSignUp({Key? key}) : super(key: key);
@@ -37,7 +37,7 @@ class _loginSignUpState extends State<loginSignUp> {
                     padding: EdgeInsets.all(AppStyles.fifteennumber),
                     child: Column(
                       children: [
-                        coustomTextWidgets.coustomText(signUpLoginCheck ? 'Login' : 'Sign Up',16.0,AppColors.kPrimaryTwo,FontWeight.bold),
+                        CustomTextWidgets.customText(signUpLoginCheck ? 'Login' : 'Sign Up',16.0,AppColors.kPrimaryTwo,FontWeight.bold),
                         SizedBox(height: AppStyles.teennumber,),
                         Container(
                           decoration: BoxDecoration(
@@ -72,7 +72,7 @@ class _loginSignUpState extends State<loginSignUp> {
                                           ]),
                                     ),
 
-                                    child:coustomTextWidgets.coustomText(
+                                    child:CustomTextWidgets.customText(
                                         'Login',14.0,signUpLoginCheck ? AppColors.whiteColor :AppColors.kPrimaryTwo,FontWeight.bold),
 
                                   ),
@@ -104,7 +104,7 @@ class _loginSignUpState extends State<loginSignUp> {
                                           ]),
                                     ),
 
-                                    child:coustomTextWidgets.coustomText(
+                                    child:CustomTextWidgets.customText(
                                         'Sign Up',14.0,!signUpLoginCheck ? AppColors.whiteColor :AppColors.kPrimaryTwo,FontWeight.bold),
 
                                   ),

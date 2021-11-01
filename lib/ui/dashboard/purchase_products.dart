@@ -5,7 +5,7 @@ import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
 import 'package:workour/constants/app_colors.dart';
 import 'package:workour/methods/json_method.dart';
 import 'package:workour/models/PurchaseProductsModel.dart';
-import 'package:workour/widgets/coustomTextWidgets.dart';
+import 'package:workour/widgets/customTextWidgets.dart';
 import 'package:workour/widgets/iconWidgets.dart';
 
 class PurchaseProducts extends StatefulWidget {
@@ -79,14 +79,14 @@ class _PurchaseProductsState extends State<PurchaseProducts> with SingleTickerPr
                     ),
                     Padding(
                       padding: const EdgeInsets.all(10.0),
-                      child: coustomTextWidgets.centeredText("Recently Purchased", 18.0, Colors.black, FontWeight.bold),
+                      child: CustomTextWidgets.centeredText("Recently Purchased", 18.0, Colors.black, FontWeight.bold),
                     ),
                   ],
                 ),
               ),
               Padding(
                 padding: const EdgeInsets.all(8.0),
-                child: coustomTextWidgets.coustomText("Purchased Products", 18.0, Colors.black, FontWeight.bold),
+                child: CustomTextWidgets.customText("Purchased Products", 18.0, Colors.black, FontWeight.bold),
               ),
               Container(
                 child: FutureBuilder(
@@ -110,7 +110,7 @@ class _PurchaseProductsState extends State<PurchaseProducts> with SingleTickerPr
                       );
                     }
                     else if(snapshot.hasError) {
-                      return coustomTextWidgets.centeredText("Error while fetching data..!", 18.0, AppColors.kPrimaryOne, FontWeight.normal);
+                      return CustomTextWidgets.centeredText("Error while fetching data..!", 18.0, AppColors.kPrimaryOne, FontWeight.normal);
                     }
                     return CircularProgressIndicator();
                   },
@@ -160,11 +160,11 @@ class _PurchaseProductsState extends State<PurchaseProducts> with SingleTickerPr
                 children: [
                   Padding(
                     padding: const EdgeInsets.all(4.0),
-                    child: coustomTextWidgets.myCustomText(purchaseProducts.name, 15.0, Colors.black, FontWeight.bold),
+                    child: CustomTextWidgets.myCustomText(purchaseProducts.name, 15.0, Colors.black, FontWeight.bold),
                   ),
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 5.0),
-                    child: coustomTextWidgets.detailsText(purchaseProducts.details, TextStyle(
+                    child: CustomTextWidgets.detailsText(purchaseProducts.details, TextStyle(
                         color: Colors.black), 2
                     )
                   ),
@@ -173,18 +173,18 @@ class _PurchaseProductsState extends State<PurchaseProducts> with SingleTickerPr
                     children: [
                       Padding(
                         padding: const EdgeInsets.all(8.0),
-                        child: coustomTextWidgets.coustomText("\$${purchaseProducts.price}", 18.0, AppColors.kPrimaryTwo, FontWeight.bold),
+                        child: CustomTextWidgets.customText("\$${purchaseProducts.price}", 18.0, AppColors.kPrimaryTwo, FontWeight.bold),
                       ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
                           Padding(
                             padding: const EdgeInsets.only(left: 5.0, right: 5.0),
-                            child: coustomTextWidgets.defaultText("item: ${purchaseProducts.item}", TextStyle(color: AppColors.greyColor, fontSize: 14.0), TextAlign.start),
+                            child: CustomTextWidgets.defaultText("item: ${purchaseProducts.item}", TextStyle(color: AppColors.greyColor, fontSize: 14.0), TextAlign.start),
                           ),
                           Padding(
                             padding: const EdgeInsets.only(left: 5.0, right: 10.0),
-                            child: coustomTextWidgets.defaultText("Qty: ${purchaseProducts.quantity}", TextStyle(color: AppColors.greyColor, fontSize: 14.0), TextAlign.start),
+                            child: CustomTextWidgets.defaultText("Qty: ${purchaseProducts.quantity}", TextStyle(color: AppColors.greyColor, fontSize: 14.0), TextAlign.start),
                           ),
                         ],
                       )

@@ -3,7 +3,7 @@ import 'package:workour/constants/app_colors.dart';
 import 'package:workour/methods/json_method.dart';
 import 'package:workour/models/DownloadsModel.dart';
 import 'package:workour/models/SubscriptionModel.dart';
-import 'package:workour/widgets/coustomTextWidgets.dart';
+import 'package:workour/widgets/customTextWidgets.dart';
 import 'package:workour/widgets/iconWidgets.dart';
 import 'package:workour/widgets/imageWidgets.dart';
 
@@ -24,7 +24,7 @@ class _SubscriptionState extends State<Subscription> {
       appBar: AppBar(
         backgroundColor: Colors.white,
         elevation: 1.0,
-        title: Text("Subscription", style: TextStyle(color: AppColors.kPrimaryTwo, fontWeight: FontWeight.bold),),
+        title: CustomTextWidgets.appBarTextWidget("Subscription"),
         centerTitle: true,
         leading: IconButton(
           icon: IconWidgets.customIcon(Icons.arrow_back, AppColors.kPrimaryTwo),
@@ -57,7 +57,7 @@ class _SubscriptionState extends State<Subscription> {
                           });
                     }
                     else if(snapshot.hasError) {
-                      return coustomTextWidgets.centeredText("Error while fetching data..!", 18.0, AppColors.kPrimaryOne, FontWeight.normal);
+                      return CustomTextWidgets.centeredText("Error while fetching data..!", 18.0, AppColors.kPrimaryOne, FontWeight.normal);
                     }
                     return CircularProgressIndicator();
                   },
@@ -66,11 +66,11 @@ class _SubscriptionState extends State<Subscription> {
               ),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 5.0),
-                child: coustomTextWidgets.coustomText("Playlists", 16.0, Colors.black, FontWeight.w600),
+                child: CustomTextWidgets.customText("Playlists", 16.0, Colors.black, FontWeight.w600),
               ),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 10.0),
-                child: coustomTextWidgets.coustomText("Premium Playlists", 14.0, Colors.black, FontWeight.normal),
+                child: CustomTextWidgets.customText("Premium Playlists", 14.0, Colors.black, FontWeight.normal),
               ),
               Container(
                 child: FutureBuilder(
@@ -87,7 +87,7 @@ class _SubscriptionState extends State<Subscription> {
                           });
                     }
                     else if(snapshot.hasError) {
-                      return coustomTextWidgets.centeredText("Error while fetching data..!", 18.0, AppColors.kPrimaryOne, FontWeight.normal);
+                      return CustomTextWidgets.centeredText("Error while fetching data..!", 18.0, AppColors.kPrimaryOne, FontWeight.normal);
                     }
                     return CircularProgressIndicator();
                   },
@@ -107,7 +107,7 @@ class _SubscriptionState extends State<Subscription> {
               ),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 10.0),
-                child: coustomTextWidgets.coustomText("Free Content", 14.0, Colors.black, FontWeight.normal),
+                child: CustomTextWidgets.customText("Free Content", 14.0, Colors.black, FontWeight.normal),
               ),
               Container(
                 child: FutureBuilder(
@@ -124,7 +124,7 @@ class _SubscriptionState extends State<Subscription> {
                           });
                     }
                     else if(snapshot.hasError) {
-                      return coustomTextWidgets.centeredText("Error while fetching data..!", 18.0, AppColors.kPrimaryOne, FontWeight.normal);
+                      return CustomTextWidgets.centeredText("Error while fetching data..!", 18.0, AppColors.kPrimaryOne, FontWeight.normal);
                     }
                     return CircularProgressIndicator();
                   },
@@ -144,7 +144,7 @@ class _SubscriptionState extends State<Subscription> {
               ),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 10.0),
-                child: coustomTextWidgets.coustomText("All", 14.0, Colors.black, FontWeight.normal),
+                child: CustomTextWidgets.customText("All", 14.0, Colors.black, FontWeight.normal),
               ),
               Container(
                 child: FutureBuilder(
@@ -161,7 +161,7 @@ class _SubscriptionState extends State<Subscription> {
                           });
                     }
                     else if(snapshot.hasError) {
-                      return coustomTextWidgets.centeredText("Error while fetching data..!", 18.0, AppColors.kPrimaryOne, FontWeight.normal);
+                      return CustomTextWidgets.centeredText("Error while fetching data..!", 18.0, AppColors.kPrimaryOne, FontWeight.normal);
                     }
                     return CircularProgressIndicator();
                   },
@@ -187,7 +187,7 @@ class _SubscriptionState extends State<Subscription> {
         child: Stack(
           alignment: Alignment.center,
           children: [
-            imageWidgets.circularImage(subscription.channelIcon, 80.0, 80.0),
+            ImageWidgets.circularImage(subscription.channelIcon, 80.0, 80.0),
             Container(
               margin: EdgeInsets.symmetric(horizontal: 5.0, vertical: 5.0),
               padding: EdgeInsets.symmetric(horizontal: 5.0, vertical: 5.0),
@@ -208,7 +208,7 @@ class _SubscriptionState extends State<Subscription> {
               ),
               child: Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 5.0),
-                child: coustomTextWidgets.coustomText(
+                child: CustomTextWidgets.customText(
                     subscription.channelName,
                     12.0,
                     index == _selectedIndex ? Colors.white : Colors.black,
@@ -243,7 +243,7 @@ class _SubscriptionState extends State<Subscription> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      coustomTextWidgets.detailsText(premiumContent.text, TextStyle(
+                      CustomTextWidgets.detailsText(premiumContent.text, TextStyle(
                           letterSpacing: 0.2,
                           // overflow: TextOverflow.ellipsis,
                           color: Colors.black
@@ -252,16 +252,16 @@ class _SubscriptionState extends State<Subscription> {
                       ),
                       Padding(
                         padding: const EdgeInsets.all(5.0),
-                        child: coustomTextWidgets.defaultText(premiumContent.views, TextStyle(
+                        child: CustomTextWidgets.defaultText(premiumContent.views, TextStyle(
                             color: AppColors.greyColor
                         ), TextAlign.start),
                       ),
                       Row(
                         children: [
-                          imageWidgets.circularImage(premiumContent.image, 20.0, 20.0),
+                          ImageWidgets.circularImage(premiumContent.image, 20.0, 20.0),
                           Padding(
                             padding: const EdgeInsets.all(5.0),
-                            child: coustomTextWidgets.defaultText(premiumContent.channelName, TextStyle(
+                            child: CustomTextWidgets.defaultText(premiumContent.channelName, TextStyle(
                                 color: AppColors.greyColor,
                                 fontWeight: FontWeight.w600
                             ), TextAlign.start),

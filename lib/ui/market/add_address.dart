@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:workour/constants/app_colors.dart';
 import 'package:workour/constants/app_styles.dart';
 import 'package:workour/ui/market/checkout_screen.dart';
-import 'package:workour/widgets/coustomTextWidgets.dart';
+import 'package:workour/widgets/customTextWidgets.dart';
 import 'package:workour/widgets/formFieldWidget.dart';
 import 'package:workour/widgets/iconWidgets.dart';
 import 'package:workour/widgets/stateless_widgets.dart';
@@ -26,7 +26,7 @@ class _AddAddressState extends State<AddAddress> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.white,
-        title: Text("Address", style: TextStyle(color: AppColors.kPrimaryTwo, fontWeight: FontWeight.bold),),
+        title: CustomTextWidgets.appBarTextWidget("Address"),
         centerTitle: true,
         elevation: 1.0,
         leading: IconButton(
@@ -41,7 +41,7 @@ class _AddAddressState extends State<AddAddress> {
             children: [
               Container(
                 padding: const EdgeInsets.all(10.0),
-                child: coustomTextWidgets.coustomText("Enter Details", 18.0, Colors.black, FontWeight.bold),
+                child: CustomTextWidgets.customText("Enter Details", 18.0, Colors.black, FontWeight.bold),
               ),
               Container(
                 child: Form(
@@ -51,7 +51,7 @@ class _AddAddressState extends State<AddAddress> {
                       children: [
                         Container(
                           padding: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 5.0),
-                          child: coustomTextWidgets.coustomText("Full Name", 14.0, Colors.black, FontWeight.bold),
+                          child: CustomTextWidgets.customText("Full Name", 14.0, Colors.black, FontWeight.bold),
                         ),
                         Container(
                           margin: EdgeInsets.symmetric(horizontal: 10.0),
@@ -64,7 +64,7 @@ class _AddAddressState extends State<AddAddress> {
                         ),
                         Container(
                           padding: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 2.5),
-                          child: coustomTextWidgets.coustomText("Phone Number", 14.0, Colors.black, FontWeight.bold),
+                          child: CustomTextWidgets.customText("Phone Number", 14.0, Colors.black, FontWeight.bold),
                         ),
                         Container(
                           margin: EdgeInsets.symmetric(horizontal: 10.0),
@@ -77,7 +77,7 @@ class _AddAddressState extends State<AddAddress> {
                         ),
                         Container(
                           padding: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 2.5),
-                          child: coustomTextWidgets.coustomText("Province", 14.0, Colors.black, FontWeight.bold),
+                          child: CustomTextWidgets.customText("Province", 14.0, Colors.black, FontWeight.bold),
                         ),
                         Container(
                           margin: EdgeInsets.symmetric(horizontal: 10.0),
@@ -90,7 +90,7 @@ class _AddAddressState extends State<AddAddress> {
                         ),
                         Container(
                           padding: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 2.5),
-                          child: coustomTextWidgets.coustomText("City", 14.0, Colors.black, FontWeight.bold),
+                          child: CustomTextWidgets.customText("City", 14.0, Colors.black, FontWeight.bold),
                         ),
                         Container(
                           margin: EdgeInsets.symmetric(horizontal: 10.0),
@@ -103,7 +103,7 @@ class _AddAddressState extends State<AddAddress> {
                         ),
                         Container(
                           padding: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 2.5),
-                          child: coustomTextWidgets.coustomText("Address", 14.0, Colors.black, FontWeight.bold),
+                          child: CustomTextWidgets.customText("Address", 14.0, Colors.black, FontWeight.bold),
                         ),
                         Container(
                           margin: EdgeInsets.symmetric(horizontal: 10.0),
@@ -163,7 +163,7 @@ class _AddAddressState extends State<AddAddress> {
                     ),
                     SwitchListTile(
                         value: isSwitch,
-                        title: coustomTextWidgets.myCustomText("Make it default shipping address", 14.0, Colors.black, FontWeight.normal),
+                        title: CustomTextWidgets.myCustomText("Make it default shipping address", 14.0, Colors.black, FontWeight.normal),
                         activeColor: AppColors.kPrimaryTwo,
                         onChanged: (bool val) {
                           setState(() {
@@ -199,7 +199,7 @@ class _AddAddressState extends State<AddAddress> {
                   children: [
                     Container(
                       padding: const EdgeInsets.all(10.0),
-                      child: coustomTextWidgets.coustomText("Added Address(s)", 18.0, Colors.black, FontWeight.bold),
+                      child: CustomTextWidgets.customText("Added Address(s)", 18.0, Colors.black, FontWeight.bold),
                     ),
                     InkWell(
                       child: Container(
@@ -225,7 +225,7 @@ class _AddAddressState extends State<AddAddress> {
                                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                         children: [
                                           Expanded(
-                                              child: coustomTextWidgets.myCustomText("Zahid Ullah Khan", 14.0, AppColors.kPrimaryTwo, FontWeight.bold)
+                                              child: CustomTextWidgets.myCustomText("Zahid Ullah Khan", 14.0, AppColors.kPrimaryTwo, FontWeight.bold)
                                           ),
                                           Container(
                                             margin: EdgeInsets.symmetric(vertical: 5.0, horizontal: 5.0),
@@ -234,7 +234,7 @@ class _AddAddressState extends State<AddAddress> {
                                               borderRadius: BorderRadius.all(Radius.circular(30.0)),
                                               color: AppColors.backgroubdGrye,
                                             ),
-                                              child: coustomTextWidgets.myCustomText("Default shipping address", 12.0, Colors.black, FontWeight.normal)
+                                              child: CustomTextWidgets.myCustomText("Default shipping address", 12.0, Colors.black, FontWeight.normal)
                                           ),
                                           Container(
                                               margin: EdgeInsets.symmetric(vertical: 5.0, horizontal: 5.0),
@@ -243,18 +243,18 @@ class _AddAddressState extends State<AddAddress> {
                                                 borderRadius: BorderRadius.all(Radius.circular(30.0)),
                                                 color: AppColors.kPrimaryTwo,
                                               ),
-                                              child: coustomTextWidgets.myCustomText("Office", 12.0, Colors.white, FontWeight.normal)
+                                              child: CustomTextWidgets.myCustomText("Office", 12.0, Colors.white, FontWeight.normal)
                                           )
                                         ],
                                       ),
                                     ),
                                     Padding(
                                       padding: EdgeInsets.all(5.0),
-                                      child: coustomTextWidgets.myCustomText("Phone Number: 989-2886896", 15.0, AppColors.greyColor, FontWeight.normal),
+                                      child: CustomTextWidgets.myCustomText("Phone Number: 989-2886896", 15.0, AppColors.greyColor, FontWeight.normal),
                                     ),
                                     Padding(
                                       padding: EdgeInsets.symmetric(horizontal: 5.0),
-                                      child: coustomTextWidgets.myCustomText("Address: 4285 Hart Ridge Road, SANTA MONICA, California", 15.0, AppColors.greyColor, FontWeight.normal),
+                                      child: CustomTextWidgets.myCustomText("Address: 4285 Hart Ridge Road, SANTA MONICA, California", 15.0, AppColors.greyColor, FontWeight.normal),
                                     ),
                                     SizedBox(height: 10.0)
                                   ],

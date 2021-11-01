@@ -8,7 +8,7 @@ import 'package:workour/ui/loginSignUp/forgetScreen.dart';
 import 'package:workour/widgets/bnuttonWidgets.dart';
 import 'package:workour/widgets/formFieldWidget.dart';
 import 'package:workour/widgets/imageWidgets.dart';
-import 'package:workour/widgets/coustomTextWidgets.dart';
+import 'package:workour/widgets/customTextWidgets.dart';
 
 class loginWidget extends StatefulWidget {
   const loginWidget({Key? key}) : super(key: key);
@@ -23,7 +23,7 @@ class _loginWidgetState extends State<loginWidget> {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        imageWidgets.coustomImageWidgets(imageAssets.loginLogo),
+        ImageWidgets.customImageWidgets(imageAssets.loginLogo),
         SizedBox(height: AppStyles.fifteennumber,),
         InputField(
             'next',
@@ -53,28 +53,28 @@ class _loginWidgetState extends State<loginWidget> {
                 onTap: (){
                   Navigator.push(context, MaterialPageRoute(builder: (context) => forgetScreen()));
                 },
-                child: coustomTextWidgets.coustomText( 'Forget Password',16.0,AppColors.backgroubdGrye,FontWeight.bold))),
+                child: CustomTextWidgets.customText( 'Forget Password',16.0,AppColors.backgroubdGrye,FontWeight.bold))),
         SizedBox(height: AppStyles.fifteennumber,),
         InkWell(
             onTap: (){
               Navigator.push(context, MaterialPageRoute(builder: (context) => DashBoard()));
             },
-            child: buttonWidgets.coustomButton('Login',16.0,FontWeight.bold,context)),
+            child: ButtonWidgets.coustomButton('Login',16.0,FontWeight.bold,context)),
         SizedBox(height: AppStyles.fourtynumber,),
         Align(
             alignment: Alignment.center,
-            child: coustomTextWidgets.coustomText( 'OR',19.0,AppColors.backgroubdGrye,FontWeight.bold)),
+            child: CustomTextWidgets.customText( 'OR',19.0,AppColors.backgroubdGrye,FontWeight.bold)),
         SizedBox(height: AppStyles.thirtynumber,),
 
         Row(
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            imageWidgets.coustomImageWidgets(imageAssets.googleIcon),
+            ImageWidgets.customImageWidgets(imageAssets.googleIcon),
             SizedBox(width: AppStyles.tweentynumber,),
-            imageWidgets.coustomImageWidgets(imageAssets.twitterIcon),
+            ImageWidgets.customImageWidgets(imageAssets.twitterIcon),
             SizedBox(width: AppStyles.tweentynumber,),
-            imageWidgets.coustomImageWidgets(imageAssets.facebookIcon),
+            ImageWidgets.customImageWidgets(imageAssets.facebookIcon),
           ],
         ),
         SizedBox(height: AppStyles.teennumber,),

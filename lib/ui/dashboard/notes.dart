@@ -5,7 +5,7 @@ import 'package:workour/constants/imageAssets.dart';
 import 'package:workour/methods/json_method.dart';
 import 'package:workour/models/NotesModel.dart';
 import 'package:workour/ui/dashboard/notes_details.dart';
-import 'package:workour/widgets/coustomTextWidgets.dart';
+import 'package:workour/widgets/customTextWidgets.dart';
 import 'package:workour/widgets/iconWidgets.dart';
 
 class Notes extends StatefulWidget {
@@ -22,7 +22,7 @@ class _NotesState extends State<Notes> {
       appBar: AppBar(
         backgroundColor: Colors.white,
         elevation: 1.0,
-        title: Text("Notes", style: TextStyle(color: AppColors.kPrimaryTwo, fontWeight: FontWeight.bold),),
+        title: CustomTextWidgets.appBarTextWidget("Notes"),
         centerTitle: true,
         leading: IconButton(
           icon: IconWidgets.customIcon(Icons.arrow_back, AppColors.kPrimaryTwo),
@@ -56,7 +56,7 @@ class _NotesState extends State<Notes> {
                       );
                     }
                     else if(snapshot.hasError) {
-                      return coustomTextWidgets.centeredText("Error while fetching data..!", 18.0, AppColors.kPrimaryOne, FontWeight.normal);
+                      return CustomTextWidgets.centeredText("Error while fetching data..!", 18.0, AppColors.kPrimaryOne, FontWeight.normal);
                     }
                     return CircularProgressIndicator();
                   },
@@ -87,7 +87,7 @@ class _NotesState extends State<Notes> {
             IconWidgets.sizedIcon(Icons.sticky_note_2_rounded, AppColors.black[100]!, 30.0),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 5.0),
-              child: coustomTextWidgets.coustomText(notes.label, 16.0, AppColors.greyColor, FontWeight.normal),
+              child: CustomTextWidgets.customText(notes.label, 16.0, AppColors.greyColor, FontWeight.normal),
             ),
             Spacer(),
             Column(
@@ -95,7 +95,7 @@ class _NotesState extends State<Notes> {
               crossAxisAlignment: CrossAxisAlignment.end,
               children: [
                 IconWidgets.customIcon(Icons.check_circle_outline, AppColors.kPrimaryTwo),
-                coustomTextWidgets.coustomText(notes.date, 12.0, AppColors.greyColor, FontWeight.normal),
+                CustomTextWidgets.customText(notes.date, 12.0, AppColors.greyColor, FontWeight.normal),
               ],
             )
           ],

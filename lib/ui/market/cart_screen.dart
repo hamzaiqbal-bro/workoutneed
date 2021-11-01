@@ -4,7 +4,7 @@ import 'package:workour/constants/app_colors.dart';
 import 'package:workour/methods/json_method.dart';
 import 'package:workour/models/CartModel.dart';
 import 'package:workour/ui/market/checkout_screen.dart';
-import 'package:workour/widgets/coustomTextWidgets.dart';
+import 'package:workour/widgets/customTextWidgets.dart';
 import 'package:workour/widgets/iconWidgets.dart';
 import 'package:workour/widgets/stateless_widgets.dart';
 
@@ -24,7 +24,7 @@ class _CartScreenState extends State<CartScreen> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.white,
-        title: Text("Cart", style: TextStyle(color: AppColors.kPrimaryTwo, fontWeight: FontWeight.bold),),
+        title: CustomTextWidgets.appBarTextWidget("Cart"),
         centerTitle: true,
         elevation: 1.0,
         leading: IconButton(
@@ -39,7 +39,7 @@ class _CartScreenState extends State<CartScreen> {
             children: [
               Container(
                 padding: const EdgeInsets.all(10.0),
-                child: coustomTextWidgets.coustomText("Products", 18.0, AppColors.kPrimaryTwo, FontWeight.bold),
+                child: CustomTextWidgets.customText("Products", 18.0, AppColors.kPrimaryTwo, FontWeight.bold),
               ),
               Container(
                 child: FutureBuilder(
@@ -63,7 +63,7 @@ class _CartScreenState extends State<CartScreen> {
                       );
                     }
                     else if(snapshot.hasError) {
-                      return coustomTextWidgets.centeredText("Error while fetching data..!", 18.0, AppColors.kPrimaryOne, FontWeight.normal);
+                      return CustomTextWidgets.centeredText("Error while fetching data..!", 18.0, AppColors.kPrimaryOne, FontWeight.normal);
                     }
                     return CircularProgressIndicator();
                   },
@@ -75,8 +75,8 @@ class _CartScreenState extends State<CartScreen> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    coustomTextWidgets.coustomText("Subtotal (1 item)", 16.0, Colors.black, FontWeight.normal),
-                    coustomTextWidgets.coustomText("\$${347}", 16.0, Colors.black, FontWeight.bold)
+                    CustomTextWidgets.customText("Subtotal (1 item)", 16.0, Colors.black, FontWeight.normal),
+                    CustomTextWidgets.customText("\$${347}", 16.0, Colors.black, FontWeight.bold)
                   ],
                 ),
               ),
@@ -85,14 +85,14 @@ class _CartScreenState extends State<CartScreen> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    coustomTextWidgets.coustomText("Shipping Fee", 16.0, Colors.black, FontWeight.normal),
-                    coustomTextWidgets.coustomText("\$${5.99}", 16.0, Colors.black, FontWeight.bold)
+                    CustomTextWidgets.customText("Shipping Fee", 16.0, Colors.black, FontWeight.normal),
+                    CustomTextWidgets.customText("\$${5.99}", 16.0, Colors.black, FontWeight.bold)
                   ],
                 ),
               ),
               Container(
                   margin: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 5.0),
-                  child: coustomTextWidgets.coustomText("Total : \$${352.99}", 16.0, AppColors.kPrimaryTwo, FontWeight.w600)),
+                  child: CustomTextWidgets.customText("Total : \$${352.99}", 16.0, AppColors.kPrimaryTwo, FontWeight.w600)),
               Container(
                 margin: EdgeInsets.symmetric(horizontal: 15.0, vertical: 20.0),
                 child: DefIconTextButton(
@@ -146,7 +146,7 @@ class _CartScreenState extends State<CartScreen> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Expanded(
-                          child: coustomTextWidgets.myCustomText(cartProduct.name, 15.0, Colors.black, FontWeight.bold)
+                          child: CustomTextWidgets.myCustomText(cartProduct.name, 15.0, Colors.black, FontWeight.bold)
                         ),
                         Checkbox(
                           checkColor: Colors.white,
@@ -164,7 +164,7 @@ class _CartScreenState extends State<CartScreen> {
                   ),
                   Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 0.0),
-                      child: coustomTextWidgets.detailsText(cartProduct.details, TextStyle(
+                      child: CustomTextWidgets.detailsText(cartProduct.details, TextStyle(
                           color: Colors.black), 2
                       )
                   ),
@@ -173,18 +173,18 @@ class _CartScreenState extends State<CartScreen> {
                     children: [
                       Padding(
                         padding: const EdgeInsets.all(5.0),
-                        child: coustomTextWidgets.coustomText("\$${cartProduct.price}", 18.0, AppColors.kPrimaryTwo, FontWeight.bold),
+                        child: CustomTextWidgets.customText("\$${cartProduct.price}", 18.0, AppColors.kPrimaryTwo, FontWeight.bold),
                       ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
                           Padding(
                             padding: const EdgeInsets.only(left: 5.0, right: 5.0),
-                            child: coustomTextWidgets.defaultText("item: ${cartProduct.item}", TextStyle(color: AppColors.greyColor, fontSize: 14.0), TextAlign.start),
+                            child: CustomTextWidgets.defaultText("item: ${cartProduct.item}", TextStyle(color: AppColors.greyColor, fontSize: 14.0), TextAlign.start),
                           ),
                           Padding(
                             padding: const EdgeInsets.only(left: 5.0, right: 10.0),
-                            child: coustomTextWidgets.defaultText("Qty: ${cartProduct.quantity}", TextStyle(color: AppColors.greyColor, fontSize: 14.0), TextAlign.start),
+                            child: CustomTextWidgets.defaultText("Qty: ${cartProduct.quantity}", TextStyle(color: AppColors.greyColor, fontSize: 14.0), TextAlign.start),
                           ),
                         ],
                       )

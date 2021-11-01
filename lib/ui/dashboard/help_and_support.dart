@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:workour/constants/app_colors.dart';
 import 'package:workour/constants/imageAssets.dart';
 import 'package:workour/constants/stringAssets.dart';
-import 'package:workour/widgets/coustomTextWidgets.dart';
+import 'package:workour/widgets/customTextWidgets.dart';
 import 'package:workour/widgets/iconWidgets.dart';
 
 class HelpAndSupport extends StatefulWidget {
@@ -19,7 +19,7 @@ class _HelpAndSupportState extends State<HelpAndSupport> {
       appBar: AppBar(
         backgroundColor: Colors.white,
         elevation: 1.0,
-        title: Text("Support", style: TextStyle(color: AppColors.kPrimaryTwo, fontWeight: FontWeight.bold),),
+        title: CustomTextWidgets.appBarTextWidget("Support"),
         centerTitle: true,
         leading: IconButton(
           icon: IconWidgets.customIcon(Icons.arrow_back, AppColors.kPrimaryTwo),
@@ -62,7 +62,7 @@ class _HelpAndSupportState extends State<HelpAndSupport> {
                 width: MediaQuery.of(context).size.width,
                 padding: EdgeInsets.symmetric(horizontal: 15.0, vertical: 5.0),
                 //color: Colors.white,
-                child: coustomTextWidgets.coustomText('Popular Articles', 18.0, AppColors.kPrimaryTwo, FontWeight.bold),
+                child: CustomTextWidgets.customText('Popular Articles', 18.0, AppColors.kPrimaryTwo, FontWeight.bold),
               ),
               Divider(
                 thickness: 1,
@@ -82,7 +82,7 @@ class _HelpAndSupportState extends State<HelpAndSupport> {
                 alignment: Alignment.center,
                 width: MediaQuery.of(context).size.width,
                 padding: EdgeInsets.symmetric(horizontal: 15.0, vertical: 5.0),
-                child: coustomTextWidgets.coustomText('Browse All Articles', 18.0, AppColors.kPrimaryTwo, FontWeight.bold),
+                child: CustomTextWidgets.customText('Browse All Articles', 18.0, AppColors.kPrimaryTwo, FontWeight.bold),
               ),
               IconButton(
                 icon: IconWidgets.sizedIcon(
@@ -115,7 +115,7 @@ class _HelpAndSupportState extends State<HelpAndSupport> {
           IconWidgets.sizedIcon(Icons.sticky_note_2_rounded, AppColors.black[100]!, 30.0),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 5.0),
-            child: coustomTextWidgets.coustomText("Profile Signup", 16.0, Colors.black, FontWeight.normal),
+            child: CustomTextWidgets.customText("Profile Signup", 16.0, Colors.black, FontWeight.normal),
           ),
         ],
       ),

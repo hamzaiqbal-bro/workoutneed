@@ -5,6 +5,7 @@ import 'package:workour/ui/dashboard/settings.dart';
 import 'package:workour/ui/vedioModule/browsing.dart';
 import 'package:workour/widgets/coustomTextWidgets.dart';
 
+
 class DrawerWidget extends StatefulWidget {
   const DrawerWidget({Key? key}) : super(key: key);
 
@@ -25,7 +26,7 @@ class _DrawerWidgetState extends State<DrawerWidget> {
             children: [
               ListTile(
                 leading: Icon(Icons.person_add, color: AppColors.black[200]),
-                title: coustomTextWidgets.coustomText("Add Account", 16.0, AppColors.greyColor, FontWeight.normal),
+                title: CustomTextWidgets.customText("Add Account", 16.0, AppColors.greyColor, FontWeight.normal),
                 trailing: Icon(Icons.arrow_forward_ios,color: AppColors.greyColor),
                 onTap: () {
                   Navigator.pop(context);
@@ -33,7 +34,7 @@ class _DrawerWidgetState extends State<DrawerWidget> {
               ),
               ListTile(
                 leading: Icon(Icons.settings, color: AppColors.greyColor),
-                title: coustomTextWidgets.coustomText("Settings", 16.0, AppColors.greyColor, FontWeight.normal),
+                title: CustomTextWidgets.customText("Settings", 16.0, AppColors.greyColor, FontWeight.normal),
                 trailing: Icon(Icons.arrow_forward_ios,color: AppColors.greyColor),
                 onTap: () {
                   Navigator.pop(context);
@@ -42,7 +43,7 @@ class _DrawerWidgetState extends State<DrawerWidget> {
               ),
               ListTile(
                 leading: Icon(Icons.help_center, color: AppColors.black[200]),
-                title: coustomTextWidgets.coustomText("Help Center", 16.0, AppColors.greyColor, FontWeight.normal),
+                title: CustomTextWidgets.customText("Help Center", 16.0, AppColors.greyColor, FontWeight.normal),
                 trailing: Icon(Icons.arrow_forward_ios,color: AppColors.greyColor),
                 onTap: () {
                   Navigator.pop(context);
@@ -51,7 +52,7 @@ class _DrawerWidgetState extends State<DrawerWidget> {
               ),
               ListTile(
                 leading: Icon(Icons.logout, color: AppColors.black[200]),
-                title: coustomTextWidgets.coustomText("Logout", 16.0, AppColors.greyColor, FontWeight.normal),
+                title: CustomTextWidgets.customText("Logout", 16.0, AppColors.greyColor, FontWeight.normal),
                 trailing: Icon(Icons.arrow_forward_ios,color: AppColors.greyColor),
                 onTap: () {
                   Navigator.pop(context);

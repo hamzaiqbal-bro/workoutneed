@@ -7,7 +7,7 @@ import 'package:workour/constants/app_colors.dart';
 import 'package:workour/methods/json_method.dart';
 import 'package:workour/models/DownloadsModel.dart';
 import 'package:workour/models/PurchaseProductsModel.dart';
-import 'package:workour/widgets/coustomTextWidgets.dart';
+import 'package:workour/widgets/customTextWidgets.dart';
 import 'package:workour/widgets/iconWidgets.dart';
 import 'package:workour/widgets/imageWidgets.dart';
 
@@ -84,14 +84,14 @@ class _PremiumContentState extends State<PremiumContent> with SingleTickerProvid
                     ),
                     Padding(
                       padding: const EdgeInsets.all(8.0),
-                      child: coustomTextWidgets.centeredText("Recently Watched", 18.0, Colors.black, FontWeight.bold),
+                      child: CustomTextWidgets.centeredText("Recently Watched", 18.0, Colors.black, FontWeight.bold),
                     ),
                   ],
                 ),
               ),
               Padding(
                 padding: const EdgeInsets.all(10.0),
-                child: coustomTextWidgets.coustomText("Premium Content", 18.0, Colors.black, FontWeight.bold),
+                child: CustomTextWidgets.customText("Premium Content", 18.0, Colors.black, FontWeight.bold),
               ),
               Container(
                 child: FutureBuilder(
@@ -115,7 +115,7 @@ class _PremiumContentState extends State<PremiumContent> with SingleTickerProvid
                       );
                     }
                     else if(snapshot.hasError) {
-                      return coustomTextWidgets.centeredText("Error while fetching data..!" + snapshot.error.toString(), 18.0, AppColors.kPrimaryOne, FontWeight.normal);
+                      return CustomTextWidgets.centeredText("Error while fetching data..!" + snapshot.error.toString(), 18.0, AppColors.kPrimaryOne, FontWeight.normal);
                     }
                     return CircularProgressIndicator();
                   },
@@ -157,23 +157,23 @@ class _PremiumContentState extends State<PremiumContent> with SingleTickerProvid
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      coustomTextWidgets.detailsText(download.text, TextStyle(
+                      CustomTextWidgets.detailsText(download.text, TextStyle(
                           letterSpacing: 0.2,
                           // overflow: TextOverflow.ellipsis,
                           color: Colors.black
                       ), 3),
                       Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 2.0),
-                        child: coustomTextWidgets.defaultText(download.views, TextStyle(
+                        child: CustomTextWidgets.defaultText(download.views, TextStyle(
                             color: AppColors.greyColor, fontSize: 12.0, fontWeight: FontWeight.w600
                         ), TextAlign.start),
                       ),
                       Row(
                         children: [
-                          imageWidgets.circularImage(download.image, 20.0, 20.0),
+                          ImageWidgets.circularImage(download.image, 20.0, 20.0),
                           Padding(
                             padding: const EdgeInsets.all(5.0),
-                            child: coustomTextWidgets.defaultText(download.channelName, TextStyle(
+                            child: CustomTextWidgets.defaultText(download.channelName, TextStyle(
                                 color: AppColors.greyColor,
                                 fontSize: 12.0,
                                 fontWeight: FontWeight.w600

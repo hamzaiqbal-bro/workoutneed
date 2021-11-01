@@ -3,7 +3,7 @@ import 'package:workour/constants/app_colors.dart';
 import 'package:workour/constants/app_styles.dart';
 import 'package:workour/ui/loginSignUp/confirmResetPassword.dart';
 import 'package:workour/ui/loginSignUp/loginSignUp.dart';
-import 'package:workour/widgets/coustomTextWidgets.dart';
+import 'package:workour/widgets/customTextWidgets.dart';
 import 'package:workour/widgets/formFieldWidget.dart';
 import 'package:workour/widgets/bnuttonWidgets.dart';
 
@@ -37,7 +37,7 @@ class _newPasswordScreenState extends State<newPasswordScreen> {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Expanded(child: coustomTextWidgets.coustomText('Reset Password',19.0,AppColors.kPrimaryTwo,FontWeight.bold)),
+                    Expanded(child: CustomTextWidgets.customText('Reset Password',19.0,AppColors.kPrimaryTwo,FontWeight.bold)),
                     Expanded(child: Column(
                       children: [
                         InputField(
@@ -67,7 +67,7 @@ class _newPasswordScreenState extends State<newPasswordScreen> {
                             onTap: (){
                               Navigator.push(context, MaterialPageRoute(builder: (context) => loginSignUp()));
                             },
-                            child: buttonWidgets.coustomButton('Change Password',16.0,FontWeight.bold,context)),
+                            child: ButtonWidgets.coustomButton('Change Password',16.0,FontWeight.bold,context)),
                       ],
                     ),)
                   ],

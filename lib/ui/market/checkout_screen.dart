@@ -3,7 +3,7 @@ import 'package:workour/constants/app_colors.dart';
 import 'package:workour/constants/imageAssets.dart';
 import 'package:workour/ui/market/add_address.dart';
 import 'package:workour/ui/market/payment_method_screen.dart';
-import 'package:workour/widgets/coustomTextWidgets.dart';
+import 'package:workour/widgets/customTextWidgets.dart';
 import 'package:workour/widgets/iconWidgets.dart';
 import 'package:workour/widgets/stateless_widgets.dart';
 
@@ -23,7 +23,7 @@ class _CheckOutState extends State<CheckOut> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.white,
-        title: Text("Checkout", style: TextStyle(color: AppColors.kPrimaryTwo, fontWeight: FontWeight.bold),),
+        title: CustomTextWidgets.appBarTextWidget("Checkout"),
         centerTitle: true,
         elevation: 1.0,
         leading: IconButton(
@@ -76,15 +76,15 @@ class _CheckOutState extends State<CheckOut> {
                               padding: const EdgeInsets.all(5.0),
                               child: Icon(Icons.shop, color: AppColors.kPrimaryTwo),
                             ),
-                            coustomTextWidgets.coustomText("Package 1 of 1", 14.0, AppColors.kPrimaryTwo, FontWeight.normal)
+                            CustomTextWidgets.customText("Package 1 of 1", 14.0, AppColors.kPrimaryTwo, FontWeight.normal)
                           ],
                         ),
                         Row(
                           children: [
-                            coustomTextWidgets.coustomText("Shipped By ", 14.0, AppColors.kPrimaryTwo, FontWeight.normal),
+                            CustomTextWidgets.customText("Shipped By ", 14.0, AppColors.kPrimaryTwo, FontWeight.normal),
                             Padding(
                               padding: const EdgeInsets.all(5.0),
-                              child: coustomTextWidgets.coustomText("Ahmad Khan", 12.0, AppColors.greyColor, FontWeight.normal),
+                              child: CustomTextWidgets.customText("Ahmad Khan", 12.0, AppColors.greyColor, FontWeight.normal),
                             )
                           ],
                         )
@@ -100,7 +100,7 @@ class _CheckOutState extends State<CheckOut> {
                     SizedBox(height: 10),
                     Container(
                       padding: const EdgeInsets.all(10.0),
-                      child: coustomTextWidgets.coustomText("Delivery Option", 18.0, Colors.black, FontWeight.bold),
+                      child: CustomTextWidgets.customText("Delivery Option", 18.0, Colors.black, FontWeight.bold),
                     ),
                     Container(
                       margin: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
@@ -118,7 +118,7 @@ class _CheckOutState extends State<CheckOut> {
                                   Icon(Icons.receipt, color: AppColors.kPrimaryTwo),
                                   Padding(
                                     padding: const EdgeInsets.all(5.0),
-                                    child: coustomTextWidgets.coustomText("\$${5.99}", 16.0, AppColors.kPrimaryTwo, FontWeight.w600),
+                                    child: CustomTextWidgets.customText("\$${5.99}", 16.0, AppColors.kPrimaryTwo, FontWeight.w600),
                                   )
                                 ],
                               ),
@@ -135,10 +135,10 @@ class _CheckOutState extends State<CheckOut> {
                                 child: Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
-                                    coustomTextWidgets.coustomText("Home Delivery", 16.0, Colors.black, FontWeight.w600),
+                                    CustomTextWidgets.customText("Home Delivery", 16.0, Colors.black, FontWeight.w600),
                                     Padding(
                                       padding: EdgeInsets.only(bottom: 5.0),
-                                      child: coustomTextWidgets.detailsText("HIST School and college, Muslim Abad, Hangu", TextStyle(fontSize: 12.0, color: Colors.black), 3),
+                                      child: CustomTextWidgets.detailsText("HIST School and college, Muslim Abad, Hangu", TextStyle(fontSize: 12.0, color: Colors.black), 3),
                                     ),
                                   ],
                                 ),
@@ -165,7 +165,7 @@ class _CheckOutState extends State<CheckOut> {
               ),
               Container(
                 padding: const EdgeInsets.all(10.0),
-                child: coustomTextWidgets.coustomText("Product", 18.0, Colors.black, FontWeight.bold),
+                child: CustomTextWidgets.customText("Product", 18.0, Colors.black, FontWeight.bold),
               ),
               Container(
                 margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 10.0),
@@ -196,11 +196,11 @@ class _CheckOutState extends State<CheckOut> {
                           children: [
                             Padding(
                               padding: const EdgeInsets.symmetric(vertical: 5.0),
-                              child: coustomTextWidgets.myCustomText("Nike NH3 (Summer Collection)", 15.0, Colors.black, FontWeight.bold),
+                              child: CustomTextWidgets.myCustomText("Nike NH3 (Summer Collection)", 15.0, Colors.black, FontWeight.bold),
                             ),
                             Padding(
                                 padding: const EdgeInsets.symmetric(horizontal: 0.0),
-                                child: coustomTextWidgets.detailsText("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore", TextStyle(
+                                child: CustomTextWidgets.detailsText("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore", TextStyle(
                                     color: Colors.black), 2
                                 )
                             ),
@@ -209,18 +209,18 @@ class _CheckOutState extends State<CheckOut> {
                               children: [
                                 Padding(
                                   padding: const EdgeInsets.all(5.0),
-                                  child: coustomTextWidgets.coustomText("\$${347}", 18.0, AppColors.kPrimaryTwo, FontWeight.bold),
+                                  child: CustomTextWidgets.customText("\$${347}", 18.0, AppColors.kPrimaryTwo, FontWeight.bold),
                                 ),
                                 Row(
                                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                                   children: [
                                     Padding(
                                       padding: const EdgeInsets.only(left: 5.0, right: 5.0),
-                                      child: coustomTextWidgets.defaultText("item: ${1}", TextStyle(color: AppColors.greyColor, fontSize: 14.0), TextAlign.start),
+                                      child: CustomTextWidgets.defaultText("item: ${1}", TextStyle(color: AppColors.greyColor, fontSize: 14.0), TextAlign.start),
                                     ),
                                     Padding(
                                       padding: const EdgeInsets.only(left: 5.0, right: 10.0),
-                                      child: coustomTextWidgets.defaultText("Qty: ${1}", TextStyle(color: AppColors.greyColor, fontSize: 14.0), TextAlign.start),
+                                      child: CustomTextWidgets.defaultText("Qty: ${1}", TextStyle(color: AppColors.greyColor, fontSize: 14.0), TextAlign.start),
                                     ),
                                   ],
                                 )
@@ -244,8 +244,8 @@ class _CheckOutState extends State<CheckOut> {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          coustomTextWidgets.coustomText("Subtotal (1 item)", 16.0, Colors.black, FontWeight.normal),
-                          coustomTextWidgets.coustomText("\$${347}", 16.0, Colors.black, FontWeight.bold)
+                          CustomTextWidgets.customText("Subtotal (1 item)", 16.0, Colors.black, FontWeight.normal),
+                          CustomTextWidgets.customText("\$${347}", 16.0, Colors.black, FontWeight.bold)
                         ],
                       ),
                     ),
@@ -254,14 +254,14 @@ class _CheckOutState extends State<CheckOut> {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          coustomTextWidgets.coustomText("Shipping Fee", 16.0, Colors.black, FontWeight.normal),
-                          coustomTextWidgets.coustomText("\$${5.99}", 16.0, Colors.black, FontWeight.bold)
+                          CustomTextWidgets.customText("Shipping Fee", 16.0, Colors.black, FontWeight.normal),
+                          CustomTextWidgets.customText("\$${5.99}", 16.0, Colors.black, FontWeight.bold)
                         ],
                       ),
                     ),
                     Container(
                         margin: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 5.0),
-                        child: coustomTextWidgets.coustomText("Total : \$${352.99}", 16.0, AppColors.kPrimaryTwo, FontWeight.w600)),
+                        child: CustomTextWidgets.customText("Total : \$${352.99}", 16.0, AppColors.kPrimaryTwo, FontWeight.w600)),
                   ],
                 ),
               ),

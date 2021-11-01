@@ -8,7 +8,7 @@ import 'package:workour/ui/dashboard/profile.dart';
 import 'package:workour/ui/dashboard/purchase_products.dart';
 import 'package:workour/ui/dashboard/subscription.dart';
 import 'package:workour/widgets/cardWidgets.dart';
-import 'package:workour/widgets/coustomTextWidgets.dart';
+import 'package:workour/widgets/customTextWidgets.dart';
 import 'package:workour/widgets/iconWidgets.dart';
 import 'package:workour/widgets/imageWidgets.dart';
 import 'package:workour/widgets/statefulWidgets.dart';
@@ -80,15 +80,15 @@ class _mainProfileDashboardState extends State<mainProfileDashboard> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    imageWidgets.circularImage(imageAssets.profileImage, 120.0, 120.0),
+                    ImageWidgets.circularImage(imageAssets.profileImage, 120.0, 120.0),
                     const SizedBox(
                       height: 10.0,
                     ),
-                    coustomTextWidgets.coustomText("John Doe", 24.0, Colors.white, FontWeight.bold),
+                    CustomTextWidgets.customText("John Doe", 24.0, Colors.white, FontWeight.bold),
                     const SizedBox(
                       height: 5.0,
                     ),
-                    coustomTextWidgets.coustomText("Doejohn1234@gmail.com", 16.0, Colors.white, FontWeight.normal),
+                    CustomTextWidgets.customText("Doejohn1234@gmail.com", 16.0, Colors.white, FontWeight.normal),
                   ],
                 ),
               ),
