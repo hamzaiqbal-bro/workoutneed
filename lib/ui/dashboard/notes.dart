@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:workour/constants/app_colors.dart';
 import 'package:workour/constants/imageAssets.dart';
 import 'package:workour/methods/json_method.dart';
@@ -85,7 +84,7 @@ class _NotesState extends State<Notes> {
         ),
         child: Row(
           children: [
-            SvgPicture.asset(notes.icon),
+            IconWidgets.sizedIcon(Icons.sticky_note_2_rounded, AppColors.black[100]!, 30.0),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 5.0),
               child: coustomTextWidgets.coustomText(notes.label, 16.0, AppColors.greyColor, FontWeight.normal),
@@ -95,7 +94,7 @@ class _NotesState extends State<Notes> {
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               crossAxisAlignment: CrossAxisAlignment.end,
               children: [
-                SvgPicture.asset(imageAssets.circularCheckIcon, color: AppColors.kPrimaryTwo),
+                IconWidgets.customIcon(Icons.check_circle_outline, AppColors.kPrimaryTwo),
                 coustomTextWidgets.coustomText(notes.date, 12.0, AppColors.greyColor, FontWeight.normal),
               ],
             )

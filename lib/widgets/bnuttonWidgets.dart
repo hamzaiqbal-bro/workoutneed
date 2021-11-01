@@ -32,6 +32,30 @@ class buttonWidgets{
     );
   }
 
+  static Widget darkGreyButton(String text, double fontSize, FontWeight fontWeight, context) {
+    return Container(
+      height: 50.0,
+      width: MediaQuery.of(context).size.width,
+      alignment: Alignment.center,
+      padding: EdgeInsets.all(AppStyles.fivenumber),
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(8.0),
+        gradient: LinearGradient(
+            begin: FractionalOffset.centerLeft,
+            end: FractionalOffset.centerRight,
+            colors: [
+              Colors.black54,
+              Colors.black54,
+            ],
+            stops: [
+              0.0,
+              0.6
+            ]),
+      ),
+      child:coustomTextWidgets.coustomText(text, fontSize, AppColors.whiteColor, fontWeight) ,
+    );
+  }
+
   static Widget customIconTextButton(String text, double fontSize, FontWeight fontWeight, IconData iconData, context) {
     return Container(
       height: 50.0,

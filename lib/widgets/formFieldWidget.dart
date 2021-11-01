@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:workour/constants/app_colors.dart';
@@ -24,10 +23,6 @@ class InputField extends StatelessWidget {
       this.textEditingController,
       this.textInputType,
       this.isIcon);
-
-
-
-
 
   @override
   Widget build(BuildContext context) {
@@ -97,6 +92,133 @@ class InputField extends StatelessWidget {
       onFieldSubmitted: (_) {
         // fieldFocusChange(context, currentFocusNode, nextFocusNode);
       },
+    );
+  }
+}
+
+class GreyInputField extends StatelessWidget {
+
+  final String hintText;
+  final TextEditingController textEditingController;
+  final TextInputAction inputAction;
+  final TextInputType textInputType;
+
+  GreyInputField({
+      required this.hintText,
+      required this.textEditingController,
+      required this.inputAction,
+      required this.textInputType});
+
+  @override
+  Widget build(BuildContext context) {
+    return TextFormField(
+      controller: textEditingController,
+      textInputAction: inputAction,
+      autofocus: false,
+      keyboardType: textInputType,
+      decoration: InputDecoration(
+        hintText: hintText,
+        hintStyle: AppStyles.hintStyle,
+      ),
+      onFieldSubmitted: (_) {},
+    );
+  }
+}
+
+class BackgroundInputField extends StatelessWidget {
+
+  final TextEditingController textEditingController;
+
+  BackgroundInputField({required this.textEditingController});
+
+  @override
+  Widget build(BuildContext context) {
+    return TextFormField(
+      controller: textEditingController,
+      textInputAction: TextInputAction.done,
+      autofocus: false,
+      keyboardType: TextInputType.phone,
+      decoration: InputDecoration(
+        fillColor: AppColors.backgroubdGrye,
+        filled: true,
+        focusedBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.all(Radius.circular(10.0)),
+          borderSide: BorderSide(
+            color: AppColors.backgroubdGrye,
+          ),
+        ),
+        border: OutlineInputBorder(
+          borderRadius: BorderRadius.all(Radius.circular(10.0)),
+          borderSide: BorderSide(
+            color: AppColors.backgroubdGrye,
+          ),
+        ),
+        hintText: "Enter your account number",
+        hintStyle: AppStyles.khintStyle,
+      ),
+      onFieldSubmitted: (_) {},
+    );
+  }
+}
+
+class PostReviewInputField extends StatelessWidget {
+
+  final TextEditingController textEditingController;
+
+  PostReviewInputField({required this.textEditingController});
+
+  @override
+  Widget build(BuildContext context) {
+    return TextFormField(
+      controller: textEditingController,
+      textInputAction: TextInputAction.done,
+      autofocus: false,
+      keyboardType: TextInputType.text,
+      decoration: InputDecoration(
+        fillColor: Colors.white,
+        filled: true,
+        border: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(40.0),
+          borderSide: BorderSide(
+            width: 0,
+            style: BorderStyle.none,
+          ),
+        ),
+        hintText: "Post your review...",
+        //hintStyle: AppStyles.khintStyle,
+      ),
+      onFieldSubmitted: (_) {},
+    );
+  }
+}
+
+class MessageInputField extends StatelessWidget {
+
+  final TextEditingController textEditingController;
+
+  MessageInputField({required this.textEditingController});
+
+  @override
+  Widget build(BuildContext context) {
+    return TextFormField(
+      controller: textEditingController,
+      textInputAction: TextInputAction.done,
+      autofocus: false,
+      keyboardType: TextInputType.text,
+      decoration: InputDecoration(
+        fillColor: AppColors.black[400],
+        filled: true,
+        border: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(20.0),
+          borderSide: BorderSide(
+            width: 0,
+            style: BorderStyle.none,
+          ),
+        ),
+        hintText: "Text message here...",
+        hintStyle: AppStyles.hintStyle,
+      ),
+      onFieldSubmitted: (_) {},
     );
   }
 }

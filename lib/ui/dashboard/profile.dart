@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
+//import 'package:flutter_svg/svg.dart';
 import 'package:workour/constants/app_colors.dart';
 import 'package:workour/constants/imageAssets.dart';
 import 'package:workour/widgets/coustomTextWidgets.dart';
@@ -41,16 +41,7 @@ class _ProfileState extends State<Profile> {
                       SizedBox(width: 5.0),
                       coustomTextWidgets.coustomText("John Doe", 16.0, AppColors.kPrimaryTwo, FontWeight.w600),
                       Spacer(),
-                      DecoratedContainerWidgets.decoratedContainer(
-                          Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: [
-                          SvgPicture.asset(imageAssets.cameraIcon, color: AppColors.kPrimaryTwo),
-                          SizedBox(width: 10.0),
-                          Text("Change Picture")
-                        ],
-                      )
-                      )
+                      DecoratedContainerWidgets.decoratedContainer("Change Picture", Icons.camera_alt, AppColors.kPrimaryTwo)
                     ],
                   )
               ),
@@ -79,16 +70,7 @@ class _ProfileState extends State<Profile> {
                           ),
                         ),
                         Spacer(),
-                        DecoratedContainerWidgets.decoratedContainer(
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                              children: [
-                                SvgPicture.asset(imageAssets.editIcon, color: AppColors.kPrimaryTwo),
-                                SizedBox(width: 10.0),
-                                Text("Edit Data")
-                              ],
-                            )
-                        )
+                        DecoratedContainerWidgets.decoratedContainer("Edit Data", Icons.edit, AppColors.kPrimaryTwo)
                       ],
                     ),
                     Container(

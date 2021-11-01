@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:workour/constants/app_colors.dart';
 import 'package:workour/constants/imageAssets.dart';
+import 'package:workour/ui/market/add_address.dart';
 import 'package:workour/ui/market/payment_method_screen.dart';
 import 'package:workour/widgets/coustomTextWidgets.dart';
 import 'package:workour/widgets/iconWidgets.dart';
@@ -51,9 +52,10 @@ class _CheckOutState extends State<CheckOut> {
                         fontSize: 16.0,
                         fontWeight: FontWeight.bold,
                         iconData: Icons.add,
+                        iconSize: 40.0,
                         alignment: MainAxisAlignment.center,
                         onPress: () {
-                          //Navigator.push(context, MaterialPageRoute(builder: (context) => CheckOut()));
+                          Navigator.push(context, MaterialPageRoute(builder: (context) => AddAddress()));
                         },
                       ),
                     ),
@@ -146,7 +148,7 @@ class _CheckOutState extends State<CheckOut> {
                               checkColor: Colors.white,
                               fillColor: MaterialStateProperty.all<Color>(AppColors.kPrimaryTwo),
                               value: isChecked,
-                              shape: CircleBorder(),
+                              //shape: CircleBorder(),
                               onChanged: (bool? value) {
                                 setState(() {
                                   isChecked = !isChecked;
@@ -194,25 +196,7 @@ class _CheckOutState extends State<CheckOut> {
                           children: [
                             Padding(
                               padding: const EdgeInsets.symmetric(vertical: 5.0),
-                              child: Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                children: [
-                                  Expanded(
-                                      child: coustomTextWidgets.myCustomText("Nike NH3 (Summer Colletion)", 15.0, Colors.black, FontWeight.bold)
-                                  ),
-                                  Checkbox(
-                                    checkColor: Colors.white,
-                                    fillColor: MaterialStateProperty.all<Color>(AppColors.kPrimaryTwo),
-                                    value: isChecked,
-                                    shape: CircleBorder(),
-                                    onChanged: (bool? value) {
-                                      setState(() {
-                                        isChecked = !isChecked;
-                                      });
-                                    },
-                                  )
-                                ],
-                              ),
+                              child: coustomTextWidgets.myCustomText("Nike NH3 (Summer Collection)", 15.0, Colors.black, FontWeight.bold),
                             ),
                             Padding(
                                 padding: const EdgeInsets.symmetric(horizontal: 0.0),

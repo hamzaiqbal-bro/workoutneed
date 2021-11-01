@@ -9,7 +9,9 @@ import 'package:workour/models/CategoryModel.dart';
 import 'package:workour/models/ProductsModel.dart';
 import 'package:workour/ui/market/cart_screen.dart';
 import 'package:workour/ui/market/category_products.dart';
+import 'package:workour/ui/market/messaging.dart';
 import 'package:workour/ui/market/product_details.dart';
+import 'package:workour/ui/market/seller_profile.dart';
 import 'package:workour/widgets/coustomTextWidgets.dart';
 import 'package:workour/widgets/iconWidgets.dart';
 import 'package:workour/widgets/imageWidgets.dart';
@@ -43,15 +45,21 @@ class _MarketBodyState extends State<MarketBody> with SingleTickerProviderStateM
       appBar: AppBar(
         backgroundColor: Colors.white,
         elevation: 1.0,
-        leading: Padding(
-          padding: const EdgeInsets.all(10.0),
-          child: imageWidgets.circularImage(imageAssets.profileImage, 60.0, 60.0),
+        leading: InkWell(
+          child: Padding(
+            padding: const EdgeInsets.all(10.0),
+            child: imageWidgets.circularImage(imageAssets.profileImage, 60.0, 60.0),
+          ),
+          onTap: () {
+            Navigator.of(context).push(MaterialPageRoute(builder: (_) => SellerProfile()));
+          },
         ),
         actions: [
           IconButton(
               padding: EdgeInsets.all(5.0),
               icon: IconWidgets.customIcon(Icons.message, AppColors.kPrimaryOne),
               onPressed: () {
+                Navigator.of(context).push(MaterialPageRoute(builder: (_) => Messaging()));
               }
           ),
           IconButton(
@@ -64,8 +72,7 @@ class _MarketBodyState extends State<MarketBody> with SingleTickerProviderStateM
           IconButton(
               padding: EdgeInsets.all(5.0),
               icon: IconWidgets.customIcon(Icons.search, AppColors.kPrimaryOne),
-              onPressed: () {
-              }
+              onPressed: () {}
           )
         ],
       ),

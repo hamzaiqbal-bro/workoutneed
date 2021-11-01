@@ -12,6 +12,8 @@ class imageAssets{
   static String marketMainImage = 'assets/images/market_main_image.png';
   static String categoryMainImage = 'assets/images/categories_main_image.png';
   static String yellowShoesImage = 'assets/images/shoes_yellow.png';
+  static String paymentSuccessImage = 'assets/images/payment_success.png';
+  static String paymentFailedImage = 'assets/images/payment_failed.png';
   static String cameraIcon = 'assets/icons/camera.svg';
   static String editIcon = 'assets/icons/edit.svg';
   static String pencilIcon = 'assets/icons/pencil.png';
@@ -23,4 +25,12 @@ class imageAssets{
   static String uploadIcon = 'assets/images/uploadIcon.png';
   static String viewIcon = 'assets/images/viewIcon.png';
   static String backGroundImage = 'assets/images/backImage.png';
+  // static String jazzCashIcon = 'assets/icons/jazzcash_icon.svg';
+  // static String easyPaisaIcon = 'assets/icons/easypaisa_icon.svg';
+  // static String bankAccountIcon = 'assets/icons/bank_account_icon.svg';
+
+  static String jazzCashIcon = 'assets/icons/jazz_cash.png';
+  static String easyPaisaIcon = 'assets/icons/easy_paisa.png';
+  static String cashPaymentIcon = 'assets/icons/cash_payment.png';
+  static String bankAccountIcon = 'assets/icons/bank_account.png';
 }

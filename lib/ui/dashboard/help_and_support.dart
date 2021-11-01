@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:workour/constants/app_colors.dart';
 import 'package:workour/constants/imageAssets.dart';
 import 'package:workour/constants/stringAssets.dart';
@@ -113,7 +112,7 @@ class _HelpAndSupportState extends State<HelpAndSupport> {
       ),
       child: Row(
         children: [
-          SvgPicture.asset(imageAssets.documentIcon),
+          IconWidgets.sizedIcon(Icons.sticky_note_2_rounded, AppColors.black[100]!, 30.0),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 5.0),
             child: coustomTextWidgets.coustomText("Profile Signup", 16.0, Colors.black, FontWeight.normal),
