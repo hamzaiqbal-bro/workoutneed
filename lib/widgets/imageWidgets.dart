@@ -13,7 +13,7 @@ class ImageWidgets{
   }
 
   static Widget coustomImageWithHeightWidthWidgets(String imagePath,height,width) {
-    return Image.asset(imagePath,height: height,width: width,);
+    return Image.asset(imagePath,height: height,width: width, fit: BoxFit.fill,);
   }
 
   static Widget circularImage(String imagePath, double _height, double _width) {

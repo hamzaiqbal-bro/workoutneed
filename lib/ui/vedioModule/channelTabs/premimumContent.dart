@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:workour/constants/app_colors.dart';
-import 'package:workour/widgets/coustomTextWidgets.dart';
+import 'package:workour/widgets/customTextWidgets.dart';
 import 'package:workour/methods/json_method.dart';
 import 'package:workour/models/DownloadsModel.dart';
 
@@ -28,7 +28,7 @@ class _PremiumContentState extends State<PremiumContent> {
                 });
           }
           else if(snapshot.hasError) {
-            return coustomTextWidgets.centeredText("Error while fetching data..!", 18.0, AppColors.kPrimaryOne, FontWeight.normal);
+            return CustomTextWidgets.centeredText("Error while fetching data..!", 18.0, AppColors.kPrimaryOne, FontWeight.normal);
           }
           return CircularProgressIndicator();
         },
@@ -71,14 +71,14 @@ class _PremiumContentState extends State<PremiumContent> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      coustomTextWidgets.detailsText(download.text, TextStyle(
+                      CustomTextWidgets.detailsText(download.text, TextStyle(
                           letterSpacing: 0.2,
                           // overflow: TextOverflow.ellipsis,
                           color: Colors.black
                       ), 3),
                       Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 2.0),
-                        child: coustomTextWidgets.defaultText(download.views, TextStyle(
+                        child: CustomTextWidgets.defaultText(download.views, TextStyle(
                             color: AppColors.greyColor, fontWeight: FontWeight.w600
                         ), TextAlign.start),
                       ),
@@ -86,7 +86,7 @@ class _PremiumContentState extends State<PremiumContent> {
                         children: [
                           Padding(
                             padding: const EdgeInsets.all(5.0),
-                            child: coustomTextWidgets.defaultText(download.channelName, TextStyle(
+                            child: CustomTextWidgets.defaultText(download.channelName, TextStyle(
                                 color: AppColors.greyColor,
                                 fontSize: 12.0,
                                 fontWeight: FontWeight.w600

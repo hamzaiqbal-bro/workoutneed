@@ -117,7 +117,7 @@ class ButtonWidgets{
           ),
         ],
       ),
-      child:coustomTextWidgets.coustomText(text, fontSize, AppColors.darkBlack, fontWeight) ,
+      child: CustomTextWidgets.customText(text, fontSize, AppColors.darkBlack, fontWeight) ,
     );
   }
 

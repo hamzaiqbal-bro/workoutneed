@@ -4,7 +4,7 @@ import 'package:workour/constants/app_styles.dart';
 import 'package:workour/constants/imageAssets.dart';
 import 'package:workour/ui/vedioModule/channelTabs/channelTabs.dart';
 import 'package:workour/widgets/imageWidgets.dart';
-import 'package:workour/widgets/coustomTextWidgets.dart';
+import 'package:workour/widgets/customTextWidgets.dart';
 import 'package:workour/widgets/bnuttonWidgets.dart';
 
 class ProfilePlusVedio extends StatefulWidget {
@@ -30,7 +30,7 @@ class _ProfilePlusVedioState extends State<ProfilePlusVedio> {
                     Container(
                         height:120.0,
                         alignment: Alignment.topCenter,
-                        child: imageWidgets.coustomImageWidgets(imageAssets.backGroundImage)),
+                        child: ImageWidgets.customImageWidgets(imageAssets.backGroundImage)),
                     Container(
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(50.0),
@@ -51,7 +51,7 @@ class _ProfilePlusVedioState extends State<ProfilePlusVedio> {
                             child: Stack(
                               alignment: Alignment.bottomCenter,
                               children: [
-                                imageWidgets.circularImage(imageAssets.personImages, 40.0, 40.0),
+                                ImageWidgets.circularImage(imageAssets.personImages, 40.0, 40.0),
                               ],
                             )
 
@@ -59,14 +59,14 @@ class _ProfilePlusVedioState extends State<ProfilePlusVedio> {
                   ],
                 ),
               ),
-              coustomTextWidgets.coustomText( 'Lorem Ipsum',16.0,AppColors.darkBlack,FontWeight.bold),
+              CustomTextWidgets.customText( 'Lorem Ipsum',16.0,AppColors.darkBlack,FontWeight.bold),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Column(
                     children: [
-                      coustomTextWidgets.coustomText( '148K',14.0,AppColors.darkBlack,FontWeight.bold),
-                      coustomTextWidgets.coustomText( 'Subscribe',14.0,AppColors.backgroubdGrye,FontWeight.bold),
+                      CustomTextWidgets.customText( '148K',14.0,AppColors.darkBlack,FontWeight.bold),
+                      CustomTextWidgets.customText( 'Subscribe',14.0,AppColors.backgroubdGrye,FontWeight.bold),
                     ],
                   ),
                   SizedBox(width: 10.0,),
@@ -78,8 +78,8 @@ class _ProfilePlusVedioState extends State<ProfilePlusVedio> {
                   SizedBox(width: 10.0,),
                   Column(
                     children: [
-                      coustomTextWidgets.coustomText( '18K',14.0,AppColors.darkBlack,FontWeight.bold),
-                      coustomTextWidgets.coustomText( 'Vedios',14.0,AppColors.backgroubdGrye,FontWeight.bold),
+                      CustomTextWidgets.customText( '18K',14.0,AppColors.darkBlack,FontWeight.bold),
+                      CustomTextWidgets.customText( 'Vedios',14.0,AppColors.backgroubdGrye,FontWeight.bold),
                     ],
                   ),
                   SizedBox(width: 10.0,),
@@ -91,8 +91,8 @@ class _ProfilePlusVedioState extends State<ProfilePlusVedio> {
                   SizedBox(width: 10.0,),
                   Column(
                     children: [
-                      coustomTextWidgets.coustomText( 'Jan 2000',14.0,AppColors.darkBlack,FontWeight.bold),
-                      coustomTextWidgets.coustomText( 'Joined',14.0,AppColors.backgroubdGrye,FontWeight.bold),
+                      CustomTextWidgets.customText( 'Jan 2000',14.0,AppColors.darkBlack,FontWeight.bold),
+                      CustomTextWidgets.customText( 'Joined',14.0,AppColors.backgroubdGrye,FontWeight.bold),
                     ],
                   ),
                 ],
@@ -101,7 +101,7 @@ class _ProfilePlusVedioState extends State<ProfilePlusVedio> {
               SizedBox(height: AppStyles.fifteennumber,),
               Padding(
                   padding:EdgeInsets.all(20.0),
-                  child: buttonWidgets.whiteTextButton('Subscribe',16.0,FontWeight.bold,context)),
+                  child: ButtonWidgets.whiteTextButton('Subscribe',16.0,FontWeight.bold,context)),
 
               channelTabs()
 
