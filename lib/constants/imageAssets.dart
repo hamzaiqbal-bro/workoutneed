@@ -29,6 +29,7 @@ class imageAssets{
   static String premiumBackground = 'assets/images/premium_background.png';
   static String premiumBackgroundImage = 'assets/images/premium_bg_image.png';
   static String premiumPlanImage = 'assets/images/premium_plan.png';
+  static String bestDealImage = 'assets/images/best_deal.png';
 
   static String checkIcon = 'assets/icons/check.png';
 

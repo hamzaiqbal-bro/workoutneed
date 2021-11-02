@@ -41,7 +41,7 @@ class _ProfileState extends State<Profile> {
                       SizedBox(width: 5.0),
                       CustomTextWidgets.customText("John Doe", 16.0, AppColors.kPrimaryTwo, FontWeight.w600),
                       Spacer(),
-                      DecoratedContainerWidgets.decoratedContainer("Change Picture", Icons.camera_alt, AppColors.kPrimaryTwo)
+                      DecoratedContainerWidgets.decoratedIconTextContainer("Change Picture", Icons.camera_alt, AppColors.kPrimaryTwo)
                     ],
                   )
               ),
@@ -70,7 +70,7 @@ class _ProfileState extends State<Profile> {
                           ),
                         ),
                         Spacer(),
-                        DecoratedContainerWidgets.decoratedContainer("Edit Data", Icons.edit, AppColors.kPrimaryTwo)
+                        DecoratedContainerWidgets.decoratedIconTextContainer("Edit Data", Icons.edit, AppColors.kPrimaryTwo)
                       ],
                     ),
                     Container(
