@@ -5,10 +5,10 @@ import 'package:workour/constants/app_colors.dart';
 import 'package:workour/constants/imageAssets.dart';
 import 'package:workour/models/SubscriptionModel.dart';
 import 'package:workour/ui/vedioModule/nowPlaying.dart';
+import 'package:workour/ui/vedioModule/video_premium.dart';
 import 'package:workour/widgets/imageWidgets.dart';
 import 'package:workour/methods/json_method.dart';
-import 'package:workour/widgets/coustomTextWidgets.dart';
-
+import 'package:workour/widgets/customTextWidgets.dart';
 
 class browsingScreen extends StatefulWidget {
   const browsingScreen({Key? key}) : super(key: key);
@@ -44,15 +44,20 @@ class _browsingScreenState extends State<browsingScreen> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween ,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    imageWidgets.circularImage(imageAssets.personImages,40.0,40.0),
+                    InkWell(
+                        child: ImageWidgets.circularImage(imageAssets.personImages,40.0,40.0),
+                      onTap: () {
+                          Navigator.of(context).push(MaterialPageRoute(builder: (_) => VideoPremium()));
+                      },
+                    ),
                     Container(
                       child: Row(
                         children: [
-                          imageWidgets.coustomImageWithHeightWidthWidgets(imageAssets.viewIcon,40.0,40.0),
+                          ImageWidgets.coustomImageWithHeightWidthWidgets(imageAssets.viewIcon,40.0,40.0),
                           SizedBox(width: 5.0,),
-                          imageWidgets.coustomImageWithHeightWidthWidgets(imageAssets.uploadIcon,40.0,40.0),
+                          ImageWidgets.coustomImageWithHeightWidthWidgets(imageAssets.uploadIcon,40.0,40.0),
                           SizedBox(width: 5.0,),
-                          imageWidgets.coustomImageWithHeightWidthWidgets(imageAssets.searchIcon,40.0,40.0),
+                          ImageWidgets.coustomImageWithHeightWidthWidgets(imageAssets.searchIcon,40.0,40.0),
                         ],
                       ),
                     )
@@ -91,7 +96,7 @@ class _browsingScreenState extends State<browsingScreen> {
                                 children: [
                                   Padding(
                                     padding: EdgeInsets.all(5.0),
-                                    child: coustomTextWidgets.detailsText('Explore', TextStyle(
+                                    child: CustomTextWidgets.detailsText('Explore', TextStyle(
                                         letterSpacing: 0.05,
                                         color: AppColors.whiteColor,
                                         fontWeight: FontWeight.bold
@@ -127,7 +132,7 @@ class _browsingScreenState extends State<browsingScreen> {
                                 });
                           }
                           else if(snapshot.hasError) {
-                            return coustomTextWidgets.centeredText("Error while fetching data..!", 18.0, AppColors.kPrimaryOne, FontWeight.normal);
+                            return CustomTextWidgets.centeredText("Error while fetching data..!", 18.0, AppColors.kPrimaryOne, FontWeight.normal);
                           }
                           return CircularProgressIndicator();
                         },
@@ -139,7 +144,7 @@ class _browsingScreenState extends State<browsingScreen> {
               ),
                  Padding(
                      padding: EdgeInsets.all(5.0),
-                     child: coustomTextWidgets.coustomText('Trending', 16.0, AppColors.darkBlack, FontWeight.bold)),
+                     child: CustomTextWidgets.customText('Trending', 16.0, AppColors.darkBlack, FontWeight.bold)),
               Container(
                 height: 120.0,
                 child: FutureBuilder(
@@ -157,7 +162,7 @@ class _browsingScreenState extends State<browsingScreen> {
                           });
                     }
                     else if(snapshot.hasError) {
-                      return coustomTextWidgets.centeredText("Error while fetching data..!", 18.0, AppColors.kPrimaryOne, FontWeight.normal);
+                      return CustomTextWidgets.centeredText("Error while fetching data..!", 18.0, AppColors.kPrimaryOne, FontWeight.normal);
                     }
                     return CircularProgressIndicator();
                   },
@@ -167,7 +172,7 @@ class _browsingScreenState extends State<browsingScreen> {
 
               Padding(
                   padding: EdgeInsets.all(5.0),
-                  child: coustomTextWidgets.coustomText('Popular', 16.0, AppColors.darkBlack, FontWeight.bold)),
+                  child: CustomTextWidgets.customText('Popular', 16.0, AppColors.darkBlack, FontWeight.bold)),
 
               Container(
                 height: 120.0,
@@ -186,7 +191,7 @@ class _browsingScreenState extends State<browsingScreen> {
                           });
                     }
                     else if(snapshot.hasError) {
-                      return coustomTextWidgets.centeredText("Error while fetching data..!", 18.0, AppColors.kPrimaryOne, FontWeight.normal);
+                      return CustomTextWidgets.centeredText("Error while fetching data..!", 18.0, AppColors.kPrimaryOne, FontWeight.normal);
                     }
                     return CircularProgressIndicator();
                   },
@@ -196,7 +201,7 @@ class _browsingScreenState extends State<browsingScreen> {
 
               Padding(
                   padding: EdgeInsets.all(5.0),
-                  child: coustomTextWidgets.coustomText('Random Tv', 16.0, AppColors.darkBlack, FontWeight.bold)),
+                  child: CustomTextWidgets.customText('Random Tv', 16.0, AppColors.darkBlack, FontWeight.bold)),
 
               Container(
                 child: FutureBuilder(
@@ -214,7 +219,7 @@ class _browsingScreenState extends State<browsingScreen> {
                           });
                     }
                     else if(snapshot.hasError) {
-                      return coustomTextWidgets.centeredText("Error while fetching data..!", 18.0, AppColors.kPrimaryOne, FontWeight.normal);
+                      return CustomTextWidgets.centeredText("Error while fetching data..!", 18.0, AppColors.kPrimaryOne, FontWeight.normal);
                     }
                     return CircularProgressIndicator();
                   },
@@ -260,7 +265,7 @@ class _browsingScreenState extends State<browsingScreen> {
                     children: [
                       Padding(
                         padding: EdgeInsets.all(5.0),
-                        child: coustomTextWidgets.detailsText(notification.channelName, TextStyle(
+                        child: CustomTextWidgets.detailsText(notification.channelName, TextStyle(
                             letterSpacing: 0.05,
                             color:positon == 0 ? AppColors.whiteColor : AppColors.black[100],
                             fontWeight: FontWeight.bold
@@ -304,14 +309,14 @@ class _browsingScreenState extends State<browsingScreen> {
                mainAxisAlignment: MainAxisAlignment.end,
                crossAxisAlignment: CrossAxisAlignment.end,
                children: [
-                 imageWidgets.circularImage(imageAssets.personImages, 30.0, 30.0),
+                 ImageWidgets.circularImage(imageAssets.personImages, 30.0, 30.0),
                ],
              ),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  coustomTextWidgets.coustomText('21 Day Sweate', 13.0, AppColors.whiteColor, FontWeight.bold),
-                  coustomTextWidgets.coustomText('Logan Brain', 11.0, AppColors.whiteColor, FontWeight.normal),
+                  CustomTextWidgets.customText('21 Day Sweate', 13.0, AppColors.whiteColor, FontWeight.bold),
+                  CustomTextWidgets.customText('Logan Brain', 11.0, AppColors.whiteColor, FontWeight.normal),
                 ],
               )
             ],
@@ -350,7 +355,7 @@ class _browsingScreenState extends State<browsingScreen> {
               children: [
                 Row(
                   children: [
-                    imageWidgets.circularImage(imageAssets.personImages, 30.0, 30.0),
+                    ImageWidgets.circularImage(imageAssets.personImages, 30.0, 30.0),
                   ],
                 ),
 
@@ -358,12 +363,12 @@ class _browsingScreenState extends State<browsingScreen> {
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    coustomTextWidgets.coustomText('21 Day Sweate', 13.0, AppColors.whiteColor, FontWeight.bold),
+                    CustomTextWidgets.customText('21 Day Sweate', 13.0, AppColors.whiteColor, FontWeight.bold),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        coustomTextWidgets.coustomText('Logan Brain', 11.0, AppColors.whiteColor, FontWeight.normal),
-                        coustomTextWidgets.coustomText('5.00', 11.0, AppColors.whiteColor, FontWeight.normal),
+                        CustomTextWidgets.customText('Logan Brain', 11.0, AppColors.whiteColor, FontWeight.normal),
+                        CustomTextWidgets.customText('5.00', 11.0, AppColors.whiteColor, FontWeight.normal),
                       ],
                     )
                   ],

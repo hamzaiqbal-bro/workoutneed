@@ -3,12 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:workour/constants/app_colors.dart';
 import 'package:workour/constants/imageAssets.dart';
 import 'package:workour/ui/vedioModule/profilePlusVedio.dart';
-import 'package:workour/widgets/coustomTextWidgets.dart';
+import 'package:workour/widgets/customTextWidgets.dart';
 import 'package:workour/widgets/imageWidgets.dart';
 import 'package:workour/methods/json_method.dart';
 import 'package:workour/models/DownloadsModel.dart';
-
-
 
 class nowPlaying extends StatefulWidget {
   const nowPlaying({Key? key}) : super(key: key);
@@ -43,9 +41,9 @@ class _nowPlayingState extends State<nowPlaying> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  coustomTextWidgets.coustomText( 'Latest Babar Azam batting Highlights',16.0,AppColors.darkBlack,FontWeight.bold),
+                  CustomTextWidgets.customText( 'Latest Babar Azam batting Highlights',16.0,AppColors.darkBlack,FontWeight.bold),
                   SizedBox(height: 5.0,),
-                  coustomTextWidgets.coustomText( '148K Views 5 hours ago',12.0,AppColors.backgroubdGrye,FontWeight.bold),
+                  CustomTextWidgets.customText( '148K Views 5 hours ago',12.0,AppColors.backgroubdGrye,FontWeight.bold),
                   SizedBox(height: 5.0,),
                    Row(
                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -53,14 +51,14 @@ class _nowPlayingState extends State<nowPlaying> {
                        Column(
                          children: [
                            Icon(Icons.whatshot,size: 35.0,),
-                           coustomTextWidgets.coustomText( '148K',12.0,AppColors.backgroubdGrye,FontWeight.bold),
+                           CustomTextWidgets.customText( '148K',12.0,AppColors.backgroubdGrye,FontWeight.bold),
                          ],
                        ),
 
                        Column(
                          children: [
                            Icon(Icons.volunteer_activism,size: 35.0,),
-                           coustomTextWidgets.coustomText( '18K',12.0,AppColors.backgroubdGrye,FontWeight.bold),
+                           CustomTextWidgets.customText( '18K',12.0,AppColors.backgroubdGrye,FontWeight.bold),
                          ],
                        ),
 
@@ -88,7 +86,7 @@ class _nowPlayingState extends State<nowPlaying> {
                                  child: Stack(
                                    alignment: Alignment.bottomCenter,
                                    children: [
-                                     imageWidgets.circularImage(imageAssets.personImages, 40.0, 40.0),
+                                     ImageWidgets.circularImage(imageAssets.personImages, 40.0, 40.0),
                                      CircleAvatar(
                                          radius: 8.0,
                                          backgroundColor: AppColors.whiteColor,
@@ -104,14 +102,14 @@ class _nowPlayingState extends State<nowPlaying> {
                        Column(
                          children: [
                            Icon(Icons.whatshot,size: 35.0,),
-                           coustomTextWidgets.coustomText( '148K',12.0,AppColors.backgroubdGrye,FontWeight.bold),
+                           CustomTextWidgets.customText( '148K',12.0,AppColors.backgroubdGrye,FontWeight.bold),
                          ],
                        ),
 
                        Column(
                          children: [
                            Icon(Icons.share,size: 35.0,),
-                           coustomTextWidgets.coustomText( '18K',12.0,AppColors.backgroubdGrye,FontWeight.bold),
+                           CustomTextWidgets.customText('18K',12.0,AppColors.backgroubdGrye,FontWeight.bold),
                          ],
                        ),
                      ],
@@ -132,7 +130,7 @@ class _nowPlayingState extends State<nowPlaying> {
                               });
                         }
                         else if(snapshot.hasError) {
-                          return coustomTextWidgets.centeredText("Error while fetching data..!", 18.0, AppColors.kPrimaryOne, FontWeight.normal);
+                          return CustomTextWidgets.centeredText("Error while fetching data..!", 18.0, AppColors.kPrimaryOne, FontWeight.normal);
                         }
                         return CircularProgressIndicator();
                       },
@@ -174,14 +172,14 @@ class _nowPlayingState extends State<nowPlaying> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      coustomTextWidgets.detailsText(download.text, TextStyle(
+                      CustomTextWidgets.detailsText(download.text, TextStyle(
                           letterSpacing: 0.2,
                           // overflow: TextOverflow.ellipsis,
                           color: Colors.black
                       ), 3),
                       Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 2.0),
-                        child: coustomTextWidgets.defaultText(download.views, TextStyle(
+                        child: CustomTextWidgets.defaultText(download.views, TextStyle(
                             color: AppColors.greyColor, fontWeight: FontWeight.w600
                         ), TextAlign.start),
                       ),
@@ -189,7 +187,7 @@ class _nowPlayingState extends State<nowPlaying> {
                         children: [
                           Padding(
                             padding: const EdgeInsets.all(5.0),
-                            child: coustomTextWidgets.defaultText(download.channelName, TextStyle(
+                            child: CustomTextWidgets.defaultText(download.channelName, TextStyle(
                                 color: AppColors.greyColor,
                                 fontSize: 12.0,
                                 fontWeight: FontWeight.w600

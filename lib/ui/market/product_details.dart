@@ -260,11 +260,11 @@ class _ProductDetailsState extends State<ProductDetails> {
                                   children: [
                                     Padding(
                                       padding: const EdgeInsets.all(10.0),
-                                      child: DecoratedContainerWidgets.decoratedContainer("Buy Now", Icons.shopping_bag, AppColors.kPrimaryTwo),
+                                      child: DecoratedContainerWidgets.decoratedIconTextContainer("Buy Now", Icons.shopping_bag, AppColors.kPrimaryTwo),
                                     ),
                                     Padding(
                                       padding: const EdgeInsets.all(10.0),
-                                      child: DecoratedContainerWidgets.decoratedContainer("Add to Cart", Icons.add_shopping_cart, AppColors.kPrimaryTwo),
+                                      child: DecoratedContainerWidgets.decoratedIconTextContainer("Add to Cart", Icons.add_shopping_cart, AppColors.kPrimaryTwo),
                                     ),
                                   ],
                                 ),

@@ -25,6 +25,14 @@ class imageAssets{
   static String uploadIcon = 'assets/images/uploadIcon.png';
   static String viewIcon = 'assets/images/viewIcon.png';
   static String backGroundImage = 'assets/images/backImage.png';
+
+  static String premiumBackground = 'assets/images/premium_background.png';
+  static String premiumBackgroundImage = 'assets/images/premium_bg_image.png';
+  static String premiumPlanImage = 'assets/images/premium_plan.png';
+  static String bestDealImage = 'assets/images/best_deal.png';
+
+  static String checkIcon = 'assets/icons/check.png';
+
   // static String jazzCashIcon = 'assets/icons/jazzcash_icon.svg';
   // static String easyPaisaIcon = 'assets/icons/easypaisa_icon.svg';
   // static String bankAccountIcon = 'assets/icons/bank_account_icon.svg';

@@ -4,7 +4,7 @@ import 'package:workour/ui/vedioModule/channelTabs/Stores.dart';
 import 'package:workour/ui/vedioModule/channelTabs/playlist.dart';
 import 'package:workour/ui/vedioModule/channelTabs/premimumContent.dart';
 import 'package:workour/ui/vedioModule/channelTabs/vedio.dart';
-import 'package:workour/widgets/coustomTextWidgets.dart';
+import 'package:workour/widgets/customTextWidgets.dart';
 
 class channelTabs extends StatefulWidget {
   const channelTabs({Key? key}) : super(key: key);
@@ -33,10 +33,10 @@ class _channelTabsState extends State<channelTabs> {
                       labelColor: AppColors.kPrimaryTwo,
                       indicatorSize: TabBarIndicatorSize.tab,
                       tabs: [
-                        coustomTextWidgets.coustomText( 'Vedio',12.0,AppColors.backgroubdGrye,FontWeight.bold),
-                        coustomTextWidgets.coustomText( 'Playlist',12.0,AppColors.backgroubdGrye,FontWeight.bold),
-                        coustomTextWidgets.coustomText( 'Premium',12.0,AppColors.backgroubdGrye,FontWeight.bold),
-                        coustomTextWidgets.coustomText( 'Store',12.0,AppColors.backgroubdGrye,FontWeight.bold),
+                        CustomTextWidgets.customText( 'Vedio',12.0,AppColors.backgroubdGrye,FontWeight.bold),
+                        CustomTextWidgets.customText( 'Playlist',12.0,AppColors.backgroubdGrye,FontWeight.bold),
+                        CustomTextWidgets.customText( 'Premium',12.0,AppColors.backgroubdGrye,FontWeight.bold),
+                        CustomTextWidgets.customText( 'Store',12.0,AppColors.backgroubdGrye,FontWeight.bold),
 
                       ],
                     ),

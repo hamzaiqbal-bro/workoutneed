@@ -5,7 +5,22 @@ import 'package:workour/widgets/iconWidgets.dart';
 class DecoratedContainerWidgets{
   DecoratedContainerWidgets._();
 
-  static Widget decoratedContainer(String text, IconData iconData, Color iconColor) {
+  static Widget decoratedContainer(Widget _child) {
+    return Container(
+        margin: EdgeInsets.all(20.0),
+      padding: EdgeInsets.symmetric(horizontal: 10.0, vertical: 5.0),
+      decoration: new BoxDecoration(
+        borderRadius: BorderRadius.circular(10),
+        color: Colors.white,
+        boxShadow: [
+          BoxShadow(color: AppColors.kPrimaryTwo, spreadRadius: 1.5),
+        ],
+      ),
+      child: _child
+    );
+  }
+
+  static Widget decoratedIconTextContainer(String text, IconData iconData, Color iconColor) {
     return Container(
       padding: EdgeInsets.symmetric(horizontal: 10.0, vertical: 5.0),
       decoration: new BoxDecoration(
