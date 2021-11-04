@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:workour/constants/app_colors.dart';
-import 'package:workour/constants/imageAssets.dart';
+import 'package:workour/constants/image_assets.dart';
 import 'package:workour/ui/market/add_address.dart';
 import 'package:workour/ui/market/payment_method_screen.dart';
-import 'package:workour/widgets/customTextWidgets.dart';
-import 'package:workour/widgets/iconWidgets.dart';
+import 'package:workour/widgets/custom_text_widgets.dart';
+import 'package:workour/widgets/icon_widgets.dart';
 import 'package:workour/widgets/stateless_widgets.dart';
 
 class CheckOut extends StatefulWidget {
@@ -39,7 +39,7 @@ class _CheckOutState extends State<CheckOut> {
               Container(
                 width: MediaQuery.of(context).size.width,
                 decoration: BoxDecoration(
-                  color: AppColors.backgroubdGrye,
+                  color: AppColors.backgroundGrey,
                   borderRadius: BorderRadius.only(bottomRight: Radius.circular(10.0), bottomLeft: Radius.circular(10.0)),
                 ),
                 child: Column(
@@ -184,7 +184,7 @@ class _CheckOutState extends State<CheckOut> {
                         margin: EdgeInsets.only(right: 10.0),
                         decoration: BoxDecoration(
                           image: DecorationImage(
-                            fit: BoxFit.cover, image: AssetImage(imageAssets.yellowShoesImage),
+                            fit: BoxFit.cover, image: AssetImage(ImageAssets.yellowShoesImage),
                           ),
                           borderRadius: BorderRadius.only(bottomLeft: Radius.circular(10.0), topLeft: Radius.circular(10.0)),
                           color: Colors.redAccent,
@@ -235,7 +235,7 @@ class _CheckOutState extends State<CheckOut> {
               ),
               Container(
                 width: MediaQuery.of(context).size.width,
-                color: AppColors.backgroubdGrye,
+                color: AppColors.backgroundGrey,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [

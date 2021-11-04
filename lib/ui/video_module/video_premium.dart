@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:workour/constants/app_colors.dart';
-import 'package:workour/constants/imageAssets.dart';
-import 'package:workour/constants/stringAssets.dart';
-import 'package:workour/ui/vedioModule/premium_video_payment_method.dart';
-import 'package:workour/widgets/bnuttonWidgets.dart';
-import 'package:workour/widgets/customTextWidgets.dart';
-import 'package:workour/widgets/decoratedContainerWidgets.dart';
-import 'package:workour/widgets/imageWidgets.dart';
+import 'package:workour/constants/image_assets.dart';
+import 'package:workour/constants/string_assets.dart';
+import 'package:workour/ui/video_module/premium_video_payment_method.dart';
+import 'package:workour/widgets/button_widgets.dart';
+import 'package:workour/widgets/custom_text_widgets.dart';
+import 'package:workour/widgets/decorated_container_widgets.dart';
+import 'package:workour/widgets/image_widgets.dart';
 
 class VideoPremium extends StatefulWidget {
   const VideoPremium({Key? key}) : super(key: key);
@@ -25,8 +25,8 @@ class _VideoPremiumState extends State<VideoPremium> {
           child: Stack(
             alignment: Alignment.center,
             children: [
-              ImageWidgets.coustomImageWidget(imageAssets.premiumBackgroundImage, MediaQuery.of(context).size.height, MediaQuery.of(context).size.width),
-              ImageWidgets.coustomImageWidget(imageAssets.premiumBackground, MediaQuery.of(context).size.height, MediaQuery.of(context).size.width),
+              ImageWidgets.coustomImageWidget(ImageAssets.premiumBackgroundImage, MediaQuery.of(context).size.height, MediaQuery.of(context).size.width),
+              ImageWidgets.coustomImageWidget(ImageAssets.premiumBackground, MediaQuery.of(context).size.height, MediaQuery.of(context).size.width),
               SingleChildScrollView(
                 child: Column(
                   children: [
@@ -48,7 +48,7 @@ class _VideoPremiumState extends State<VideoPremium> {
                         children: [
                           ClipRRect(
                               borderRadius: BorderRadius.only(topLeft: Radius.circular(15.0), topRight: Radius.circular(15.0)),
-                              child: ImageWidgets.coustomImageWidget(imageAssets.premiumPlanImage, 150.0, double.infinity)),
+                              child: ImageWidgets.coustomImageWidget(ImageAssets.premiumPlanImage, 150.0, double.infinity)),
                           SizedBox(height: 20.0),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.center,

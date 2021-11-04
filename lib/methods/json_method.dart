@@ -1,6 +1,6 @@
 import 'dart:convert';
 import 'package:flutter/services.dart';
-import 'package:workour/constants/stringAssets.dart';
+import 'package:workour/constants/string_assets.dart';
 import 'package:workour/models/CartModel.dart';
 import 'package:workour/models/CategoryModel.dart';
 import 'package:workour/models/DownloadsModel.dart';

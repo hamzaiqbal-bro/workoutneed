@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:workour/constants/app_colors.dart';
 import 'package:workour/constants/app_styles.dart';
-import 'package:workour/ui/loginSignUp/newPasswordScreen.dart';
-import 'package:workour/widgets/customTextWidgets.dart';
-import 'package:workour/widgets/formFieldWidget.dart';
-import 'package:workour/widgets/bnuttonWidgets.dart';
+import 'package:workour/ui/login_signup/new_password_screen.dart';
+import 'package:workour/widgets/custom_text_widgets.dart';
+import 'package:workour/widgets/form_field_widget.dart';
+import 'package:workour/widgets/button_widgets.dart';
 
-class confirmResetPassword extends StatefulWidget {
-  const confirmResetPassword({Key? key}) : super(key: key);
+class ConfirmResetPassword extends StatefulWidget {
+  const ConfirmResetPassword({Key? key}) : super(key: key);
 
   @override
-  _confirmResetPasswordState createState() => _confirmResetPasswordState();
+  _ConfirmResetPasswordState createState() => _ConfirmResetPasswordState();
 }
 
-class _confirmResetPasswordState extends State<confirmResetPassword> {
+class _ConfirmResetPasswordState extends State<ConfirmResetPassword> {
   TextEditingController emial = TextEditingController();
   @override
   Widget build(BuildContext context) {
@@ -21,7 +21,7 @@ class _confirmResetPasswordState extends State<confirmResetPassword> {
     return Scaffold(
       body: SafeArea(
         child: Container(
-          color: AppColors.backgroubdGrye,
+          color: AppColors.backgroundGrey,
           alignment: Alignment.center,
           child:   Padding(
             padding: EdgeInsets.all(AppStyles.teennumber),
@@ -56,7 +56,7 @@ class _confirmResetPasswordState extends State<confirmResetPassword> {
                         SizedBox(height: AppStyles.fifteennumber,),
                         InkWell(
                             onTap: (){
-                              Navigator.push(context, MaterialPageRoute(builder: (context) => newPasswordScreen()));
+                              Navigator.push(context, MaterialPageRoute(builder: (context) => NewPasswordScreen()));
                             },
                             child: ButtonWidgets.coustomButton('Reset Password',16.0,FontWeight.bold,context)),
                       ],

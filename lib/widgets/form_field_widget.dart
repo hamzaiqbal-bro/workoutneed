@@ -3,16 +3,15 @@ import 'package:flutter/services.dart';
 import 'package:workour/constants/app_colors.dart';
 import 'package:workour/constants/app_styles.dart';
 
-// ignore: must_be_immutable
 class InputField extends StatelessWidget {
-  String inputAction;
-  String hintText;
-  String labelText;
-  IconData icon;
+  final String inputAction;
+  final String hintText;
+  final String labelText;
+  final IconData icon;
   // FormFieldValidator<String> validator;
-  TextEditingController textEditingController;
-  TextInputType textInputType;
-  bool isIcon;
+  final TextEditingController textEditingController;
+  final TextInputType textInputType;
+  final bool isIcon;
 
   InputField(
       this.inputAction,
@@ -38,14 +37,14 @@ class InputField extends StatelessWidget {
             borderRadius: BorderRadius.all(Radius.circular(10.0)),
             borderSide: BorderSide(
               width: 1.0,
-              color: AppColors.backgroubdGrye,
+              color: AppColors.backgroundGrey,
             ),
           ),
           errorBorder: OutlineInputBorder(
             borderRadius: BorderRadius.all(Radius.circular(10.0)),
             borderSide: BorderSide(
               width: 1.0,
-              color: AppColors.backgroubdGrye,
+              color: AppColors.backgroundGrey,
             ),
           ),
           focusedErrorBorder: OutlineInputBorder(
@@ -85,7 +84,7 @@ class InputField extends StatelessWidget {
           suffixIcon: isIcon ? Icon(
             icon,
             size: 24.0,
-            color: AppColors.backgroubdGrye,
+            color: AppColors.backgroundGrey,
           ) : null
       ),
       // validator: validator,
@@ -139,18 +138,18 @@ class BackgroundInputField extends StatelessWidget {
       autofocus: false,
       keyboardType: TextInputType.phone,
       decoration: InputDecoration(
-        fillColor: AppColors.backgroubdGrye,
+        fillColor: AppColors.backgroundGrey,
         filled: true,
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.all(Radius.circular(10.0)),
           borderSide: BorderSide(
-            color: AppColors.backgroubdGrye,
+            color: AppColors.backgroundGrey,
           ),
         ),
         border: OutlineInputBorder(
           borderRadius: BorderRadius.all(Radius.circular(10.0)),
           borderSide: BorderSide(
-            color: AppColors.backgroubdGrye,
+            color: AppColors.backgroundGrey,
           ),
         ),
         hintText: "Enter your account number",

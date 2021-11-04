@@ -2,22 +2,23 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:workour/constants/app_colors.dart';
-import 'package:workour/constants/imageAssets.dart';
+import 'package:workour/constants/image_assets.dart';
 import 'package:workour/models/SubscriptionModel.dart';
-import 'package:workour/ui/vedioModule/nowPlaying.dart';
-import 'package:workour/ui/vedioModule/video_premium.dart';
-import 'package:workour/widgets/imageWidgets.dart';
+import 'package:workour/ui/video_module/now_playing.dart';
+import 'package:workour/ui/video_module/video_premium.dart';
+import 'package:workour/widgets/image_widgets.dart';
 import 'package:workour/methods/json_method.dart';
-import 'package:workour/widgets/customTextWidgets.dart';
+import 'package:workour/widgets/custom_text_widgets.dart';
 
-class browsingScreen extends StatefulWidget {
-  const browsingScreen({Key? key}) : super(key: key);
+class BrowsingScreen extends StatefulWidget {
+  const BrowsingScreen({Key? key}) : super(key: key);
 
   @override
-  _browsingScreenState createState() => _browsingScreenState();
+  _BrowsingScreenState createState() => _BrowsingScreenState();
 }
 
-class _browsingScreenState extends State<browsingScreen> {
+class _BrowsingScreenState extends State<BrowsingScreen> {
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -45,7 +46,7 @@ class _browsingScreenState extends State<browsingScreen> {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     InkWell(
-                        child: ImageWidgets.circularImage(imageAssets.personImages,40.0,40.0),
+                        child: ImageWidgets.circularImage(ImageAssets.personProfileImage,40.0,40.0),
                       onTap: () {
                           Navigator.of(context).push(MaterialPageRoute(builder: (_) => VideoPremium()));
                       },
@@ -53,11 +54,11 @@ class _browsingScreenState extends State<browsingScreen> {
                     Container(
                       child: Row(
                         children: [
-                          ImageWidgets.coustomImageWithHeightWidthWidgets(imageAssets.viewIcon,40.0,40.0),
+                          ImageWidgets.coustomImageWithHeightWidthWidgets(ImageAssets.viewIcon,40.0,40.0),
                           SizedBox(width: 5.0,),
-                          ImageWidgets.coustomImageWithHeightWidthWidgets(imageAssets.uploadIcon,40.0,40.0),
+                          ImageWidgets.coustomImageWithHeightWidthWidgets(ImageAssets.uploadIcon,40.0,40.0),
                           SizedBox(width: 5.0,),
-                          ImageWidgets.coustomImageWithHeightWidthWidgets(imageAssets.searchIcon,40.0,40.0),
+                          ImageWidgets.coustomImageWithHeightWidthWidgets(ImageAssets.searchIcon,40.0,40.0),
                         ],
                       ),
                     )
@@ -104,9 +105,7 @@ class _browsingScreenState extends State<browsingScreen> {
                                         3
                                     ),
                                   ),
-
                                   SizedBox(width: 8.0,),
-
                                   Icon(Icons.ac_unit_sharp,color: AppColors.whiteColor,)
                                 ],
                               )
@@ -116,7 +115,7 @@ class _browsingScreenState extends State<browsingScreen> {
                     ),
                   ),
                   Expanded(
-                    child:Container(
+                    child: Container(
                       height: 50.0,
                       child: FutureBuilder(
                         future: readSubscriptionChannelsJSONData(),
@@ -155,10 +154,9 @@ class _browsingScreenState extends State<browsingScreen> {
                           itemCount: snapshot.data.length,
                           scrollDirection: Axis.horizontal,
                           shrinkWrap: true,
-                          physics: NeverScrollableScrollPhysics(),
                           itemBuilder: (BuildContext bContext, int index) {
                             SubscriptionModel notification = snapshot.data[index];
-                            return _TrendingPosts(notification);
+                            return _trendingPosts(notification);
                           });
                     }
                     else if(snapshot.hasError) {
@@ -184,10 +182,9 @@ class _browsingScreenState extends State<browsingScreen> {
                           itemCount: snapshot.data.length,
                           scrollDirection: Axis.horizontal,
                           shrinkWrap: true,
-                          physics: NeverScrollableScrollPhysics(),
                           itemBuilder: (BuildContext bContext, int index) {
                             SubscriptionModel notification = snapshot.data[index];
-                            return _TrendingPosts(notification);
+                            return _trendingPosts(notification);
                           });
                     }
                     else if(snapshot.hasError) {
@@ -234,7 +231,7 @@ class _browsingScreenState extends State<browsingScreen> {
     );
   }
 
-  Widget _buildDNotification(SubscriptionModel notification,positon) {
+  Widget _buildDNotification(SubscriptionModel notification, position) {
     return Padding(
       padding: EdgeInsets.only(left: 5.0),
       child: Container(
@@ -249,7 +246,7 @@ class _browsingScreenState extends State<browsingScreen> {
                   padding: EdgeInsets.only(left: 5.0, right: 2.0),
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(8.0),
-                    color:  positon == 0 ? AppColors.kPrimaryTwo : AppColors.whiteColor,
+                    color: position == 0 ? AppColors.kPrimaryTwo : AppColors.whiteColor,
                     boxShadow: [
                       BoxShadow(
                         color: Colors.grey.withOpacity(0.2),
@@ -267,7 +264,7 @@ class _browsingScreenState extends State<browsingScreen> {
                         padding: EdgeInsets.all(5.0),
                         child: CustomTextWidgets.detailsText(notification.channelName, TextStyle(
                             letterSpacing: 0.05,
-                            color:positon == 0 ? AppColors.whiteColor : AppColors.black[100],
+                            color: position == 0 ? AppColors.whiteColor : AppColors.black[100],
                             fontWeight: FontWeight.bold
                         ),
                             3
@@ -283,7 +280,7 @@ class _browsingScreenState extends State<browsingScreen> {
     );
   }
 
-  Widget _TrendingPosts(SubscriptionModel notification) {
+  Widget _trendingPosts(SubscriptionModel notification) {
     return Container(
       margin: EdgeInsets.symmetric(horizontal: 5.0, vertical: 5.0),
       child: Stack(
@@ -309,7 +306,7 @@ class _browsingScreenState extends State<browsingScreen> {
                mainAxisAlignment: MainAxisAlignment.end,
                crossAxisAlignment: CrossAxisAlignment.end,
                children: [
-                 ImageWidgets.circularImage(imageAssets.personImages, 30.0, 30.0),
+                 ImageWidgets.circularImage(ImageAssets.personImages, 30.0, 30.0),
                ],
              ),
               Column(
@@ -334,7 +331,7 @@ class _browsingScreenState extends State<browsingScreen> {
         children: [
           InkWell(
             onTap: (){
-              Navigator.push(context, MaterialPageRoute(builder: (context) => nowPlaying()));
+              Navigator.push(context, MaterialPageRoute(builder: (context) => NowPlaying()));
             },
             child: Container(
               height: 200,
@@ -355,7 +352,7 @@ class _browsingScreenState extends State<browsingScreen> {
               children: [
                 Row(
                   children: [
-                    ImageWidgets.circularImage(imageAssets.personImages, 30.0, 30.0),
+                    ImageWidgets.circularImage(ImageAssets.personImages, 30.0, 30.0),
                   ],
                 ),
 

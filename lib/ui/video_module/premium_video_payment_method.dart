@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:workour/constants/app_colors.dart';
-import 'package:workour/constants/imageAssets.dart';
+import 'package:workour/constants/image_assets.dart';
 import 'package:workour/ui/market/payment_screen.dart';
-import 'package:workour/widgets/customTextWidgets.dart';
-import 'package:workour/widgets/decoratedContainerWidgets.dart';
-import 'package:workour/widgets/iconWidgets.dart';
-import 'package:workour/widgets/imageWidgets.dart';
+import 'package:workour/widgets/custom_text_widgets.dart';
+import 'package:workour/widgets/decorated_container_widgets.dart';
+import 'package:workour/widgets/icon_widgets.dart';
+import 'package:workour/widgets/image_widgets.dart';
 import 'package:workour/widgets/stateless_widgets.dart';
 
 class PremiumVideoPaymentMethod extends StatefulWidget {
@@ -29,7 +29,7 @@ class _PremiumVideoPaymentMethodState extends State<PremiumVideoPaymentMethod> {
           onPressed: () => Navigator.pop(context, false),
         ),
       ),
-      backgroundColor: AppColors.backgroubdGrye,
+      backgroundColor: AppColors.backgroundGrey,
       body: SingleChildScrollView(
         child: Container(
           child: Column(
@@ -59,7 +59,7 @@ class _PremiumVideoPaymentMethodState extends State<PremiumVideoPaymentMethod> {
                           ),
                         ],
                       ),
-                      ImageWidgets.customImageWidgets(imageAssets.bestDealImage)
+                      ImageWidgets.customImageWidgets(ImageAssets.bestDealImage)
                     ],
                   )
               ),
@@ -69,7 +69,7 @@ class _PremiumVideoPaymentMethodState extends State<PremiumVideoPaymentMethod> {
               ),
               DefImageTextButton(
                 text: "JazzCash",
-                imageUrl: imageAssets.jazzCashIcon,
+                imageUrl: ImageAssets.jazzCashIcon,
                 fontSize: 16.0,
                 fontWeight: FontWeight.normal,
                 onPress: () {
@@ -78,7 +78,7 @@ class _PremiumVideoPaymentMethodState extends State<PremiumVideoPaymentMethod> {
               ),
               DefImageTextButton(
                 text: "EasyPaisa",
-                imageUrl: imageAssets.easyPaisaIcon,
+                imageUrl: ImageAssets.easyPaisaIcon,
                 fontSize: 16.0,
                 fontWeight: FontWeight.normal,
                 onPress: () {
@@ -87,7 +87,7 @@ class _PremiumVideoPaymentMethodState extends State<PremiumVideoPaymentMethod> {
               ),
               DefImageTextButton(
                 text: "Bank Account",
-                imageUrl: imageAssets.bankAccountIcon,
+                imageUrl: ImageAssets.bankAccountIcon,
                 fontSize: 16.0,
                 fontWeight: FontWeight.normal,
                 onPress: () {
@@ -96,7 +96,7 @@ class _PremiumVideoPaymentMethodState extends State<PremiumVideoPaymentMethod> {
               ),
               DefImageTextButton(
                 text: "Cash on Delivery",
-                imageUrl: imageAssets.cashPaymentIcon,
+                imageUrl: ImageAssets.cashPaymentIcon,
                 fontSize: 16.0,
                 fontWeight: FontWeight.normal,
                 onPress: () {

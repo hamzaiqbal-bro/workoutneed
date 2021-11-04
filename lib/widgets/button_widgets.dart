@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:workour/constants/app_colors.dart';
 import 'package:workour/constants/app_styles.dart';
-import 'package:workour/widgets/customTextWidgets.dart';
+import 'package:workour/widgets/custom_text_widgets.dart';
 
-import 'iconWidgets.dart';
+import 'icon_widgets.dart';
 
 class ButtonWidgets{
   ButtonWidgets._();

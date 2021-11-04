@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:workour/constants/app_colors.dart';
-import 'package:workour/widgets/customTextWidgets.dart';
-import 'package:workour/widgets/iconWidgets.dart';
+import 'package:workour/widgets/custom_text_widgets.dart';
+import 'package:workour/widgets/icon_widgets.dart';
 
 class Settings extends StatefulWidget {
   const Settings({Key? key}) : super(key: key);
@@ -26,13 +26,15 @@ class _SettingsState extends State<Settings> {
       ),
       body: SingleChildScrollView(
         child: Container(
+          height: MediaQuery.of(context).size.height,
           child: Column(
+            mainAxisSize: MainAxisSize.max,
             children: [
               Divider(
                 thickness: 1.5,
                 indent: 0,
                 endIndent: 0,
-                color: AppColors.backgroubdGrye,
+                color: AppColors.backgroundGrey,
                 height: 10,
               ),
               Container(
@@ -45,7 +47,7 @@ class _SettingsState extends State<Settings> {
                 thickness: 1.5,
                 indent: 0,
                 endIndent: 0,
-                color: AppColors.backgroubdGrye,
+                color: AppColors.backgroundGrey,
                 height: 10,
               ),
               Container(
@@ -58,7 +60,7 @@ class _SettingsState extends State<Settings> {
                 thickness: 1.5,
                 indent: 0,
                 endIndent: 0,
-                color: AppColors.backgroubdGrye,
+                color: AppColors.backgroundGrey,
                 height: 10,
               ),
               Container(
@@ -71,7 +73,7 @@ class _SettingsState extends State<Settings> {
                 thickness: 1.5,
                 indent: 0,
                 endIndent: 0,
-                color: AppColors.backgroubdGrye,
+                color: AppColors.backgroundGrey,
                 height: 10,
               ),
             ],

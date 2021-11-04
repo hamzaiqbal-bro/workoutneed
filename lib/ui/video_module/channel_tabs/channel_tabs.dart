@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:workour/constants/app_colors.dart';
-import 'package:workour/ui/vedioModule/channelTabs/Stores.dart';
-import 'package:workour/ui/vedioModule/channelTabs/playlist.dart';
-import 'package:workour/ui/vedioModule/channelTabs/premimumContent.dart';
-import 'package:workour/ui/vedioModule/channelTabs/vedio.dart';
-import 'package:workour/widgets/customTextWidgets.dart';
+import 'package:workour/ui/video_module/channel_tabs/stores.dart';
+import 'package:workour/ui/video_module/channel_tabs/playlist.dart';
+import 'package:workour/ui/video_module/channel_tabs/premium_content.dart';
+import 'package:workour/ui/video_module/channel_tabs/video.dart';
+import 'package:workour/widgets/custom_text_widgets.dart';
 
-class channelTabs extends StatefulWidget {
-  const channelTabs({Key? key}) : super(key: key);
+class ChannelTabs extends StatefulWidget {
+  const ChannelTabs({Key? key}) : super(key: key);
 
   @override
-  _channelTabsState createState() => _channelTabsState();
+  _ChannelTabsState createState() => _ChannelTabsState();
 }
 
-class _channelTabsState extends State<channelTabs> {
+class _ChannelTabsState extends State<ChannelTabs> {
   @override
   Widget build(BuildContext context) {
     return  Container(
@@ -33,10 +33,10 @@ class _channelTabsState extends State<channelTabs> {
                       labelColor: AppColors.kPrimaryTwo,
                       indicatorSize: TabBarIndicatorSize.tab,
                       tabs: [
-                        CustomTextWidgets.customText( 'Vedio',12.0,AppColors.backgroubdGrye,FontWeight.bold),
-                        CustomTextWidgets.customText( 'Playlist',12.0,AppColors.backgroubdGrye,FontWeight.bold),
-                        CustomTextWidgets.customText( 'Premium',12.0,AppColors.backgroubdGrye,FontWeight.bold),
-                        CustomTextWidgets.customText( 'Store',12.0,AppColors.backgroubdGrye,FontWeight.bold),
+                        CustomTextWidgets.customText( 'Vedio',12.0,AppColors.backgroundGrey,FontWeight.bold),
+                        CustomTextWidgets.customText( 'Playlist',12.0,AppColors.backgroundGrey,FontWeight.bold),
+                        CustomTextWidgets.customText( 'Premium',12.0,AppColors.backgroundGrey,FontWeight.bold),
+                        CustomTextWidgets.customText( 'Store',12.0,AppColors.backgroundGrey,FontWeight.bold),
 
                       ],
                     ),
@@ -47,10 +47,10 @@ class _channelTabsState extends State<channelTabs> {
           ),
           body: new TabBarView(
             children: <Widget>[
-              new VedioTab(),
-              playList(),
+              new VideoTab(),
+              PlayList(),
               PremiumContent(),
-              stores(),
+              Stores(),
             ],
           ),
         ),

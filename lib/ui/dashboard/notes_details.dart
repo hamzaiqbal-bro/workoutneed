@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:workour/constants/app_colors.dart';
-import 'package:workour/constants/stringAssets.dart';
-import 'package:workour/widgets/customTextWidgets.dart';
-import 'package:workour/widgets/iconWidgets.dart';
+import 'package:workour/constants/string_assets.dart';
+import 'package:workour/widgets/custom_text_widgets.dart';
+import 'package:workour/widgets/icon_widgets.dart';
 
 class NotesDetails extends StatefulWidget {
   const NotesDetails({Key? key}) : super(key: key);

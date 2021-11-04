@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:workour/constants/app_colors.dart';
-import 'package:workour/constants/imageAssets.dart';
-import 'package:workour/widgets/bnuttonWidgets.dart';
-import 'package:workour/widgets/customTextWidgets.dart';
-import 'package:workour/widgets/iconWidgets.dart';
-import 'package:workour/widgets/imageWidgets.dart';
+import 'package:workour/constants/image_assets.dart';
+import 'package:workour/widgets/button_widgets.dart';
+import 'package:workour/widgets/custom_text_widgets.dart';
+import 'package:workour/widgets/icon_widgets.dart';
+import 'package:workour/widgets/image_widgets.dart';
 
 class PaymentConfirm extends StatefulWidget {
   const PaymentConfirm({Key? key, required this.paymentMethod, required this.headingText, required this.detailsText}) : super(key: key);
@@ -44,7 +44,7 @@ class _PaymentConfirmState extends State<PaymentConfirm> {
           children: [
             Container(
               padding: const EdgeInsets.all(10.0),
-              child: ImageWidgets.customImageWidgets(paymentMethod == "JazzCash" ? imageAssets.paymentSuccessImage : imageAssets.paymentFailedImage),
+              child: ImageWidgets.customImageWidgets(paymentMethod == "JazzCash" ? ImageAssets.paymentSuccessImage : ImageAssets.paymentFailedImage),
             ),
             Container(
               padding: const EdgeInsets.symmetric(horizontal: 10.0),

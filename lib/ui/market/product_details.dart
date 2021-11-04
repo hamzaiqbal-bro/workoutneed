@@ -3,16 +3,16 @@ import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
 import 'package:workour/constants/app_colors.dart';
-import 'package:workour/constants/imageAssets.dart';
-import 'package:workour/constants/stringAssets.dart';
+import 'package:workour/constants/image_assets.dart';
+import 'package:workour/constants/string_assets.dart';
 import 'package:workour/methods/json_method.dart';
 import 'package:workour/models/ProductsModel.dart';
 import 'package:workour/models/ReviewsModel.dart';
-import 'package:workour/widgets/customTextWidgets.dart';
-import 'package:workour/widgets/decoratedContainerWidgets.dart';
-import 'package:workour/widgets/formFieldWidget.dart';
-import 'package:workour/widgets/iconWidgets.dart';
-import 'package:workour/widgets/imageWidgets.dart';
+import 'package:workour/widgets/custom_text_widgets.dart';
+import 'package:workour/widgets/decorated_container_widgets.dart';
+import 'package:workour/widgets/form_field_widget.dart';
+import 'package:workour/widgets/icon_widgets.dart';
+import 'package:workour/widgets/image_widgets.dart';
 
 import 'messaging.dart';
 
@@ -41,7 +41,7 @@ class _ProductDetailsState extends State<ProductDetails> {
         title: CustomTextWidgets.appBarTextWidget("Store"),
         leading: Padding(
           padding: const EdgeInsets.all(10.0),
-          child: ImageWidgets.circularImage(imageAssets.profileImage, 60.0, 60.0),
+          child: ImageWidgets.circularImage(ImageAssets.personProfileImage, 60.0, 60.0),
         ),
         actions: [
           IconButton(
@@ -64,12 +64,12 @@ class _ProductDetailsState extends State<ProductDetails> {
                       Container(
                         width: MediaQuery.of(context).size.width,
                         height: 200.0,
-                        child: ImageWidgets.imageWidget(imageAssets.productImage, BoxFit.fitWidth),
+                        child: ImageWidgets.imageWidget(ImageAssets.productImage, BoxFit.fitWidth),
                       ),
                       Container(
                         width: MediaQuery.of(context).size.width,
                         decoration: BoxDecoration(
-                            color: AppColors.backgroubdGrye,
+                            color: AppColors.backgroundGrey,
                             borderRadius: BorderRadius.only(bottomLeft: Radius.circular(15.0), bottomRight: Radius.circular(15.0))
                         ),
                         child: Column(
@@ -102,7 +102,7 @@ class _ProductDetailsState extends State<ProductDetails> {
                                         itemBuilder: (BuildContext bContext, int position) {
                                           return Container(
                                               margin: EdgeInsets.symmetric(horizontal: 10.0, vertical: 5.0),
-                                              child: ImageWidgets.circleAvatar(imageAssets.profileImage, 18.0, 20.0));
+                                              child: ImageWidgets.circleAvatar(ImageAssets.personProfileImage, 18.0, 20.0));
                                         }),
                                   ),
                                 ],
@@ -180,7 +180,7 @@ class _ProductDetailsState extends State<ProductDetails> {
                               children: [
                                 Padding(
                                   padding: const EdgeInsets.all(8.0),
-                                  child: ImageWidgets.circleAvatar(imageAssets.profileImage, 18, 20),
+                                  child: ImageWidgets.circleAvatar(ImageAssets.personProfileImage, 18, 20),
                                 ),
                                 Expanded(
                                     child: Container(
@@ -249,7 +249,7 @@ class _ProductDetailsState extends State<ProductDetails> {
                               thickness: 1.5,
                               indent: 0,
                               endIndent: 0,
-                              color: AppColors.backgroubdGrye,
+                              color: AppColors.backgroundGrey,
                               height: 5,
                             ),
                             Row(
@@ -354,7 +354,7 @@ class _ProductDetailsState extends State<ProductDetails> {
               Container(
                 width: MediaQuery.of(context).size.width,
                 margin: EdgeInsets.only(top: 15.0),
-                color: AppColors.backgroubdGrye,
+                color: AppColors.backgroundGrey,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -368,7 +368,7 @@ class _ProductDetailsState extends State<ProductDetails> {
                       children: [
                         Padding(
                             padding: EdgeInsets.symmetric(horizontal: 5.0, vertical: 10.0),
-                            child: ImageWidgets.circleAvatar(imageAssets.profileImage, 28.0, 30.0)),
+                            child: ImageWidgets.circleAvatar(ImageAssets.personProfileImage, 28.0, 30.0)),
                         Expanded(
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,

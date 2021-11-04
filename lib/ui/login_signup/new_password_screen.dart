@@ -1,28 +1,29 @@
 import 'package:flutter/material.dart';
 import 'package:workour/constants/app_colors.dart';
 import 'package:workour/constants/app_styles.dart';
-import 'package:workour/ui/loginSignUp/confirmResetPassword.dart';
-import 'package:workour/ui/loginSignUp/loginSignUp.dart';
-import 'package:workour/widgets/customTextWidgets.dart';
-import 'package:workour/widgets/formFieldWidget.dart';
-import 'package:workour/widgets/bnuttonWidgets.dart';
+import 'package:workour/ui/login_signup/login_signup.dart';
+import 'package:workour/widgets/custom_text_widgets.dart';
+import 'package:workour/widgets/form_field_widget.dart';
+import 'package:workour/widgets/button_widgets.dart';
 
-class newPasswordScreen extends StatefulWidget {
-  const newPasswordScreen({Key? key}) : super(key: key);
+class NewPasswordScreen extends StatefulWidget {
+  const NewPasswordScreen({Key? key}) : super(key: key);
 
   @override
-  _newPasswordScreenState createState() => _newPasswordScreenState();
+  _NewPasswordScreenState createState() => _NewPasswordScreenState();
 }
 
-class _newPasswordScreenState extends State<newPasswordScreen> {
-  TextEditingController emial = TextEditingController();
+class _NewPasswordScreenState extends State<NewPasswordScreen> {
+
+  TextEditingController email = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
     return Scaffold(
       body: SafeArea(
         child: Container(
-          color: AppColors.backgroubdGrye,
+          color: AppColors.backgroundGrey,
           alignment: Alignment.center,
           child:   Padding(
             padding: EdgeInsets.all(AppStyles.teennumber),
@@ -45,7 +46,7 @@ class _newPasswordScreenState extends State<newPasswordScreen> {
                             'Enter password',
                             'password',
                             Icons.remove_red_eye,
-                            emial,
+                            email,
                             TextInputType.emailAddress,
                             true
                         ),
@@ -57,7 +58,7 @@ class _newPasswordScreenState extends State<newPasswordScreen> {
                             'confirm password',
                             'confirm Password',
                             Icons.remove_red_eye,
-                            emial,
+                            email,
                             TextInputType.emailAddress,
                             true
                         ),
@@ -65,7 +66,7 @@ class _newPasswordScreenState extends State<newPasswordScreen> {
                         SizedBox(height: AppStyles.fifteennumber,),
                         InkWell(
                             onTap: (){
-                              Navigator.push(context, MaterialPageRoute(builder: (context) => loginSignUp()));
+                              Navigator.push(context, MaterialPageRoute(builder: (context) => LoginSignUp()));
                             },
                             child: ButtonWidgets.coustomButton('Change Password',16.0,FontWeight.bold,context)),
                       ],

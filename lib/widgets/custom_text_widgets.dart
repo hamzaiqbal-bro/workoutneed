@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:workour/constants/app_styles.dart';
 
@@ -67,7 +66,6 @@ class CustomTextWidgets {
     );
   }
 
-  //static Widget customText(String text, double fontSize, Color textColor, FontWeight fontWeight) {
   static Widget customStyledText(String text, double fontSize, Color textColor, FontWeight fontWeight) {
     return Text(
       text,

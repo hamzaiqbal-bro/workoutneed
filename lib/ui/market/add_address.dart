@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:workour/constants/app_colors.dart';
-import 'package:workour/constants/app_styles.dart';
 import 'package:workour/ui/market/checkout_screen.dart';
-import 'package:workour/widgets/customTextWidgets.dart';
-import 'package:workour/widgets/formFieldWidget.dart';
-import 'package:workour/widgets/iconWidgets.dart';
+import 'package:workour/widgets/custom_text_widgets.dart';
+import 'package:workour/widgets/form_field_widget.dart';
+import 'package:workour/widgets/icon_widgets.dart';
 import 'package:workour/widgets/stateless_widgets.dart';
 
 class AddAddress extends StatefulWidget {
@@ -119,7 +118,7 @@ class _AddAddressState extends State<AddAddress> {
                     )),
               ),
               Container(
-                color: AppColors.backgroubdGrye,
+                color: AppColors.backgroundGrey,
                 padding: EdgeInsets.symmetric(horizontal: 10.0, vertical: 10.0),
                 child: Column(
                   children: [
@@ -232,7 +231,7 @@ class _AddAddressState extends State<AddAddress> {
                                             padding: EdgeInsets.symmetric(vertical: 5.0, horizontal: 10.0),
                                             decoration: BoxDecoration(
                                               borderRadius: BorderRadius.all(Radius.circular(30.0)),
-                                              color: AppColors.backgroubdGrye,
+                                              color: AppColors.backgroundGrey,
                                             ),
                                               child: CustomTextWidgets.myCustomText("Default shipping address", 12.0, Colors.black, FontWeight.normal)
                                           ),

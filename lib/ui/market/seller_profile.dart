@@ -3,14 +3,14 @@ import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
 import 'package:workour/constants/app_colors.dart';
 import 'package:workour/constants/app_styles.dart';
-import 'package:workour/constants/imageAssets.dart';
-import 'package:workour/constants/stringAssets.dart';
+import 'package:workour/constants/image_assets.dart';
+import 'package:workour/constants/string_assets.dart';
 import 'package:workour/methods/json_method.dart';
 import 'package:workour/models/ProductsModel.dart';
 import 'package:workour/models/ReviewsModel.dart';
-import 'package:workour/widgets/customTextWidgets.dart';
-import 'package:workour/widgets/iconWidgets.dart';
-import 'package:workour/widgets/imageWidgets.dart';
+import 'package:workour/widgets/custom_text_widgets.dart';
+import 'package:workour/widgets/icon_widgets.dart';
+import 'package:workour/widgets/image_widgets.dart';
 
 class SellerProfile extends StatefulWidget {
   const SellerProfile({Key? key}) : super(key: key);
@@ -35,7 +35,7 @@ class _SellerProfileState extends State<SellerProfile> {
                 Container(
                   width: MediaQuery.of(context).size.width,
                   decoration: BoxDecoration(
-                    color: AppColors.backgroubdGrye,
+                    color: AppColors.backgroundGrey,
                     borderRadius: BorderRadius.only(bottomRight: Radius.circular(10.0), bottomLeft: Radius.circular(10.0)),
                   ),
                   child: Column(
@@ -46,7 +46,7 @@ class _SellerProfileState extends State<SellerProfile> {
                         children: [
                           Padding(
                             padding: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 20.0),
-                            child: ImageWidgets.circleAvatar(imageAssets.profileImage, 32.0, 35.0),
+                            child: ImageWidgets.circleAvatar(ImageAssets.personProfileImage, 32.0, 35.0),
                           ),
                           Expanded(
                             child: Column(
@@ -127,11 +127,11 @@ class _SellerProfileState extends State<SellerProfile> {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           mainAxisAlignment: MainAxisAlignment.start,
                           children: [
-                            ImageWidgets.customImageWidgets(imageAssets.googleIcon),
+                            ImageWidgets.customImageWidgets(ImageAssets.googleIcon),
                             SizedBox(width: AppStyles.tweentynumber,),
-                            ImageWidgets.customImageWidgets(imageAssets.facebookIcon),
+                            ImageWidgets.customImageWidgets(ImageAssets.facebookIcon),
                             SizedBox(width: AppStyles.tweentynumber,),
-                            ImageWidgets.customImageWidgets(imageAssets.twitterIcon),
+                            ImageWidgets.customImageWidgets(ImageAssets.twitterIcon),
                           ],
                         ),
                       ),

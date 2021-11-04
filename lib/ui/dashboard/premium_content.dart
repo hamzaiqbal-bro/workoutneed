@@ -6,10 +6,9 @@ import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
 import 'package:workour/constants/app_colors.dart';
 import 'package:workour/methods/json_method.dart';
 import 'package:workour/models/DownloadsModel.dart';
-import 'package:workour/models/PurchaseProductsModel.dart';
-import 'package:workour/widgets/customTextWidgets.dart';
-import 'package:workour/widgets/iconWidgets.dart';
-import 'package:workour/widgets/imageWidgets.dart';
+import 'package:workour/widgets/custom_text_widgets.dart';
+import 'package:workour/widgets/icon_widgets.dart';
+import 'package:workour/widgets/image_widgets.dart';
 
 class PremiumContent extends StatefulWidget {
   const PremiumContent({Key? key}) : super(key: key);
@@ -40,7 +39,7 @@ class _PremiumContentState extends State<PremiumContent> with SingleTickerProvid
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: AppColors.backgroubdGrye,
+        backgroundColor: AppColors.backgroundGrey,
         elevation: 0,
         leading: IconButton(
           icon: IconWidgets.customIcon(Icons.arrow_back, AppColors.kPrimaryTwo),
@@ -59,7 +58,7 @@ class _PremiumContentState extends State<PremiumContent> with SingleTickerProvid
                 height: 250.0,
                 width: MediaQuery.of(context).size.width,
                 decoration: BoxDecoration(
-                  color: AppColors.backgroubdGrye,
+                  color: AppColors.backgroundGrey,
                   borderRadius: BorderRadius.only(
                       bottomLeft: Radius.circular(15.0),
                       bottomRight: Radius.circular(15.0)),

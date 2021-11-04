@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:workour/constants/app_colors.dart';
-import 'package:workour/constants/imageAssets.dart';
-import 'package:workour/constants/stringAssets.dart';
-import 'package:workour/widgets/customTextWidgets.dart';
-import 'package:workour/widgets/iconWidgets.dart';
+import 'package:workour/widgets/custom_text_widgets.dart';
+import 'package:workour/widgets/icon_widgets.dart';
 
 class HelpAndSupport extends StatefulWidget {
   const HelpAndSupport({Key? key}) : super(key: key);
@@ -26,7 +24,7 @@ class _HelpAndSupportState extends State<HelpAndSupport> {
           onPressed: () => Navigator.pop(context, false),
         ),
       ),
-      backgroundColor: AppColors.backgroubdGrye,
+      backgroundColor: AppColors.backgroundGrey,
       body: SingleChildScrollView(
         child: Container(
           child: Column(
@@ -107,7 +105,7 @@ class _HelpAndSupportState extends State<HelpAndSupport> {
         borderRadius: BorderRadius.circular(10.0),
         color: Colors.white,
         boxShadow: [
-          BoxShadow(color: AppColors.backgroubdGrye, spreadRadius: 1.5),
+          BoxShadow(color: AppColors.backgroundGrey, spreadRadius: 1.5),
         ],
       ),
       child: Row(

@@ -1,28 +1,29 @@
 import 'package:flutter/material.dart';
 import 'package:workour/constants/app_colors.dart';
 import 'package:workour/constants/app_styles.dart';
-import 'package:workour/ui/loginSignUp/confirmResetPassword.dart';
-import 'package:workour/widgets/customTextWidgets.dart';
-import 'package:workour/widgets/formFieldWidget.dart';
-import 'package:workour/widgets/bnuttonWidgets.dart';
+import 'package:workour/ui/login_signup/confirm_reset_password.dart';
+import 'package:workour/widgets/custom_text_widgets.dart';
+import 'package:workour/widgets/form_field_widget.dart';
+import 'package:workour/widgets/button_widgets.dart';
 
-
-class forgetScreen extends StatefulWidget {
-  const forgetScreen({Key? key}) : super(key: key);
+class ForgetScreen extends StatefulWidget {
+  const ForgetScreen({Key? key}) : super(key: key);
 
   @override
-  _forgetScreenState createState() => _forgetScreenState();
+  _ForgetScreenState createState() => _ForgetScreenState();
 }
 
-class _forgetScreenState extends State<forgetScreen> {
-  TextEditingController emial = TextEditingController();
+class _ForgetScreenState extends State<ForgetScreen> {
+
+  TextEditingController email = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
     return Scaffold(
       body: SafeArea(
         child: Container(
-            color: AppColors.backgroubdGrye,
+            color: AppColors.backgroundGrey,
             alignment: Alignment.center,
             child:   Padding(
               padding: EdgeInsets.all(AppStyles.teennumber),
@@ -45,7 +46,7 @@ class _forgetScreenState extends State<forgetScreen> {
                               'Enter Email',
                               'Email',
                               Icons.email,
-                              emial,
+                              email,
                               TextInputType.emailAddress,
                               true
                           ),
@@ -53,7 +54,7 @@ class _forgetScreenState extends State<forgetScreen> {
                           SizedBox(height: AppStyles.fifteennumber,),
                           InkWell(
                               onTap: (){
-                                Navigator.push(context, MaterialPageRoute(builder: (context) => confirmResetPassword()));
+                                Navigator.push(context, MaterialPageRoute(builder: (context) => ConfirmResetPassword()));
                               },
                               child: ButtonWidgets.coustomButton('Send Code',16.0,FontWeight.bold,context)),
                         ],

@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:workour/constants/app_colors.dart';
-import 'package:workour/constants/app_styles.dart';
-import 'package:workour/widgets/customTextWidgets.dart';
-import 'package:workour/widgets/iconWidgets.dart';
-import 'package:workour/widgets/imageWidgets.dart';
+import 'package:workour/widgets/custom_text_widgets.dart';
+import 'package:workour/widgets/icon_widgets.dart';
+import 'package:workour/widgets/image_widgets.dart';
 
 class DefIconTextButton extends StatelessWidget {
 
@@ -67,48 +66,6 @@ class DefImageTextButton extends StatelessWidget {
   final VoidCallback onPress;
 
   DefImageTextButton({required this.text, required this.fontSize, required this.fontWeight, required this.imageUrl, required this.onPress});
-
-  // @override
-  // Widget build(BuildContext context) {
-  //   return Container(
-  //     alignment: Alignment.center,
-  //     height: 50.0,
-  //     margin: EdgeInsets.symmetric(horizontal: 20.0, vertical: 5.0),
-  //     child: RaisedButton(
-  //       onPressed: onPress,
-  //       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0)),
-  //       padding: EdgeInsets.all(0.0),
-  //       child: Ink(
-  //         decoration: BoxDecoration(
-  //             gradient: LinearGradient(
-  //                 begin: FractionalOffset.centerLeft,
-  //                 end: FractionalOffset.centerRight,
-  //                 colors: [
-  //                   AppColors.kPrimaryOne.withOpacity(0.8),
-  //                   AppColors.kPrimaryTwo,
-  //                 ],
-  //                 stops: [
-  //                   0.0,
-  //                   0.6
-  //                 ]
-  //             ),
-  //             borderRadius: BorderRadius.circular(10.0)
-  //         ),
-  //         child: Container(
-  //           alignment: Alignment.centerLeft,
-  //           child: Row(
-  //             mainAxisAlignment: MainAxisAlignment.start,
-  //             children: [
-  //               ImageWidgets.coustomImageWidgets(imageUrl),
-  //               SizedBox(width: 10.0),
-  //               CustomTextWidgets.customText(text, fontSize, AppColors.whiteColor, fontWeight)
-  //             ],
-  //           ),
-  //         ),
-  //       ),
-  //     ),
-  //   );
-  // }
 
   @override
   Widget build(BuildContext context) {

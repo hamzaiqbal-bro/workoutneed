@@ -1,20 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:workour/constants/app_colors.dart';
 import 'package:workour/constants/app_styles.dart';
-import 'package:workour/ui/loginSignUp/loginWidget.dart';
-import 'package:workour/ui/loginSignUp/signUpWidget.dart';
-import 'package:workour/widgets/customTextWidgets.dart';
+import 'package:workour/ui/login_signup/login_widget.dart';
+import 'package:workour/ui/login_signup/signup_widget.dart';
+import 'package:workour/widgets/custom_text_widgets.dart';
 
-class loginSignUp extends StatefulWidget {
-  const loginSignUp({Key? key}) : super(key: key);
+class LoginSignUp extends StatefulWidget {
+  const LoginSignUp({Key? key}) : super(key: key);
 
   @override
-  _loginSignUpState createState() => _loginSignUpState();
+  _LoginSignUpState createState() => _LoginSignUpState();
 }
 
-class _loginSignUpState extends State<loginSignUp> {
-  bool signUpLoginCheck = true;
+class _LoginSignUpState extends State<LoginSignUp> {
 
+  bool signUpLoginCheck = true;
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +22,7 @@ class _loginSignUpState extends State<loginSignUp> {
     return Scaffold(
       body: SafeArea(
         child: Container(
-            color: AppColors.backgroubdGrye,
+            color: AppColors.backgroundGrey,
             alignment: Alignment.center,
             child:  SingleChildScrollView(
               child: Padding(
@@ -114,7 +114,7 @@ class _loginSignUpState extends State<loginSignUp> {
                           ),
                         ),
                         SizedBox(height: AppStyles.fourtynumber,),
-                        signUpLoginCheck  ?  loginWidget() : signUpWidget(),
+                        signUpLoginCheck  ?  LoginWidget() : SignUpWidget(),
                       ],
                     ),
                   ),

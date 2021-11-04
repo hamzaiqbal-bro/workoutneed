@@ -1,28 +1,29 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:workour/constants/app_colors.dart';
-import 'package:workour/constants/imageAssets.dart';
+import 'package:workour/constants/image_assets.dart';
 import 'package:workour/ui/dashboard/downloads.dart';
 import 'package:workour/ui/dashboard/notes.dart';
 import 'package:workour/ui/dashboard/premium_content.dart';
 import 'package:workour/ui/dashboard/profile.dart';
 import 'package:workour/ui/dashboard/purchase_products.dart';
 import 'package:workour/ui/dashboard/subscription.dart';
-import 'package:workour/widgets/cardWidgets.dart';
-import 'package:workour/widgets/customTextWidgets.dart';
-import 'package:workour/widgets/iconWidgets.dart';
-import 'package:workour/widgets/imageWidgets.dart';
-import 'package:workour/widgets/statefulWidgets.dart';
+import 'package:workour/widgets/card_widgets.dart';
+import 'package:workour/widgets/custom_text_widgets.dart';
+import 'package:workour/widgets/icon_widgets.dart';
+import 'package:workour/widgets/image_widgets.dart';
+import 'package:workour/widgets/stateful_widgets.dart';
 
 import 'notifications.dart';
 
-class mainProfileDashboard extends StatefulWidget {
-  const mainProfileDashboard({Key? key}) : super(key: key);
+class MainProfileDashboard extends StatefulWidget {
+  const MainProfileDashboard({Key? key}) : super(key: key);
 
   @override
-  _mainProfileDashboardState createState() => _mainProfileDashboardState();
+  _MainProfileDashboardState createState() => _MainProfileDashboardState();
 }
 
-class _mainProfileDashboardState extends State<mainProfileDashboard> {
+class _MainProfileDashboardState extends State<MainProfileDashboard> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -80,7 +81,7 @@ class _mainProfileDashboardState extends State<mainProfileDashboard> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    ImageWidgets.circularImage(imageAssets.profileImage, 120.0, 120.0),
+                    ImageWidgets.circularImage(ImageAssets.personProfileImage, 120.0, 120.0),
                     const SizedBox(
                       height: 10.0,
                     ),
@@ -100,14 +101,14 @@ class _mainProfileDashboardState extends State<mainProfileDashboard> {
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         InkWell(
-                          child: CardWidgets.customCardWidget(context, "Download", Icons.download_rounded),
+                          child: CardWidgets.customCardWidget(context, "Download", Icons.file_download),
                           onTap: () {
                             Navigator.push(context, MaterialPageRoute(builder: (context) =>
                                 Downloads()));
                           },
                         ),
                         InkWell(
-                          child: CardWidgets.customCardWidget(context, "Premium Content", Icons.ac_unit_sharp),
+                          child: CardWidgets.customCardWidget(context, "Premium Content", CupertinoIcons.money_dollar),
                           onTap: () {
                             Navigator.push(context, MaterialPageRoute(builder: (context) =>
                                 PremiumContent()));
@@ -120,7 +121,7 @@ class _mainProfileDashboardState extends State<mainProfileDashboard> {
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         InkWell(
-                            child: CardWidgets.customCardWidget(context, "Purchase", Icons.account_balance_sharp),
+                            child: CardWidgets.customCardWidget(context, "Purchase", Icons.shopping_bag),
                           onTap: () {
                             Navigator.push(context, MaterialPageRoute(builder: (context) => PurchaseProducts()));
                           },
@@ -138,14 +139,14 @@ class _mainProfileDashboardState extends State<mainProfileDashboard> {
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         InkWell(
-                          child: CardWidgets.customCardWidget(context, "Notes", Icons.date_range),
+                          child: CardWidgets.customCardWidget(context, "Notes", Icons.note),
                           onTap: () {
                             Navigator.push(context, MaterialPageRoute(builder: (context) =>
                                 Notes()));
                           },
                         ),
                         InkWell(
-                          child: CardWidgets.customCardWidget(context, "Profile", Icons.person),
+                          child: CardWidgets.customCardWidget(context, "Profile", CupertinoIcons.profile_circled),
                           onTap: () {
                             Navigator.push(context, MaterialPageRoute(builder: (context) => Profile()));
                             },
