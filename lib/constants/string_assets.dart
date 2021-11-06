@@ -37,4 +37,6 @@ class StringAssets{
       "totam ratione voluptas quod exercitationem fuga. Possimus quis earum veniam"
       "quasi aliquam eligendi, placeat qui corporis!";
 
+  static int timeoutCode = 207;
+
 }

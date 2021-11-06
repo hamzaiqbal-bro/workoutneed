@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:workour/AlertDialouges/coustomAlerts.dart';
+import 'package:workour/Controllers/loginController.dart';
 import 'package:workour/constants/app_colors.dart';
 import 'package:workour/constants/app_styles.dart';
 import 'package:workour/constants/image_assets.dart';
@@ -16,9 +19,10 @@ class LoginWidget extends StatefulWidget {
   _LoginWidgetState createState() => _LoginWidgetState();
 }
 
-class _LoginWidgetState extends State<LoginWidget> {
 
-  TextEditingController email = TextEditingController();
+class _loginWidgetState extends State<loginWidget> {
+
+  LoginController loginController = Get.put(LoginController());
 
   @override
   Widget build(BuildContext context) {
@@ -31,7 +35,7 @@ class _LoginWidgetState extends State<LoginWidget> {
             'Enter Email',
             'Email',
             Icons.email,
-            email,
+            loginController.emailTextController,
             TextInputType.emailAddress,
             true
         ),
@@ -43,9 +47,9 @@ class _LoginWidgetState extends State<LoginWidget> {
             'Enter Password',
             'Password',
             Icons.lock,
-            email,
+            loginController.passwordTextController,
             TextInputType.visiblePassword,
-            true
+            false
         ),
         SizedBox(height: AppStyles.teennumber,),
         Align(
@@ -54,11 +58,14 @@ class _LoginWidgetState extends State<LoginWidget> {
                 onTap: (){
                   Navigator.push(context, MaterialPageRoute(builder: (context) => ForgetScreen()));
                 },
-                child: CustomTextWidgets.customText( 'Forget Password',16.0,AppColors.backgroundGrey,FontWeight.bold))),
+
+                child: coustomTextWidgets.coustomText( 'Forget Password',16.0,AppColors.kPrimaryTwo,FontWeight.bold))),
         SizedBox(height: AppStyles.fifteennumber,),
         InkWell(
             onTap: (){
-              Navigator.push(context, MaterialPageRoute(builder: (context) => DashBoard()));
+              waitingdialouge(context,'please wait');
+
+             loginController.apiLogin(context);
             },
             child: ButtonWidgets.coustomButton('Login',16.0,FontWeight.bold,context)),
         SizedBox(height: AppStyles.fourtynumber,),
