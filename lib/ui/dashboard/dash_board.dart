@@ -1,7 +1,8 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:workour/constants/app_colors.dart';
-import 'package:workour/ui/dashboard/video_body.dart';
+import 'package:workour/ui/video_module/browsing.dart';
 import 'home_body.dart';
 import '../market/market_body.dart';
 
@@ -18,8 +19,8 @@ class _DashBoardState extends State<DashBoard> with SingleTickerProviderStateMix
   var _bottomNavIndex = 0;
 
   List<Widget> bottomNavList = <Widget>[
-    mainProfileDashboard(),
-    VideoBody(),
+    MainProfileDashboard(),
+    BrowsingScreen(),
     MarketBody(),
   ];
 
@@ -51,11 +52,11 @@ class _DashBoardState extends State<DashBoard> with SingleTickerProviderStateMix
           text: "Home",
         ),
         GButton(
-          icon: Icons.favorite,
+          icon: Icons.video_collection_rounded,
           text: "Videos",
         ),
         GButton(
-          icon: Icons.shopping_basket,
+          icon: Icons.shopping_basket_sharp,
           text: "Market",
         ),
       ],

@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
 import 'package:workour/constants/app_colors.dart';
-import 'package:workour/constants/imageAssets.dart';
 import 'package:workour/methods/json_method.dart';
 import 'package:workour/models/NotesModel.dart';
 import 'package:workour/ui/dashboard/notes_details.dart';
-import 'package:workour/widgets/customTextWidgets.dart';
-import 'package:workour/widgets/iconWidgets.dart';
+import 'package:workour/widgets/custom_text_widgets.dart';
+import 'package:workour/widgets/icon_widgets.dart';
 
 class Notes extends StatefulWidget {
   const Notes({Key? key}) : super(key: key);
@@ -79,7 +78,7 @@ class _NotesState extends State<Notes> {
           borderRadius: BorderRadius.circular(10),
           color: Colors.white,
           boxShadow: [
-            BoxShadow(color: AppColors.backgroubdGrye, spreadRadius: 1.5),
+            BoxShadow(color: AppColors.backgroundGrey, spreadRadius: 1.5),
           ],
         ),
         child: Row(

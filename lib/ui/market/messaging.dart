@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:workour/constants/app_colors.dart';
-import 'package:workour/constants/imageAssets.dart';
-import 'package:workour/constants/stringAssets.dart';
-import 'package:workour/widgets/customTextWidgets.dart';
-import 'package:workour/widgets/decoratedContainerWidgets.dart';
-import 'package:workour/widgets/formFieldWidget.dart';
-import 'package:workour/widgets/iconWidgets.dart';
-import 'package:workour/widgets/imageWidgets.dart';
+import 'package:workour/constants/image_assets.dart';
+import 'package:workour/constants/string_assets.dart';
+import 'package:workour/widgets/custom_text_widgets.dart';
+import 'package:workour/widgets/decorated_container_widgets.dart';
+import 'package:workour/widgets/form_field_widget.dart';
+import 'package:workour/widgets/icon_widgets.dart';
+import 'package:workour/widgets/image_widgets.dart';
 
 class Messaging extends StatefulWidget {
   const Messaging({Key? key}) : super(key: key);
@@ -32,7 +32,7 @@ class _MessagingState extends State<Messaging> {
           onPressed: () => Navigator.pop(context, false),
         ),
       ),
-      backgroundColor: AppColors.backgroubdGrye,
+      backgroundColor: AppColors.backgroundGrey,
       body: SingleChildScrollView(
         child: Container(
           child: Column(
@@ -54,7 +54,7 @@ class _MessagingState extends State<Messaging> {
                         margin: EdgeInsets.only(right: 10.0),
                         decoration: BoxDecoration(
                           image: DecorationImage(
-                            fit: BoxFit.cover, image: AssetImage(imageAssets.yellowShoesImage),
+                            fit: BoxFit.cover, image: AssetImage(ImageAssets.yellowShoesImage),
                           ),
                           borderRadius: BorderRadius.only(bottomLeft: Radius.circular(10.0), topLeft: Radius.circular(10.0)),
                           color: Colors.redAccent,
@@ -116,7 +116,7 @@ class _MessagingState extends State<Messaging> {
                 children: [
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 10.0),
-                    child: ImageWidgets.circleAvatar(imageAssets.profileImage, 20.0, 22.0),
+                    child: ImageWidgets.circleAvatar(ImageAssets.personProfileImage, 20.0, 22.0),
                   ),
                   DecoratedContainerWidgets.messagingContainer(
                       AppColors.black[300]!,
@@ -157,7 +157,7 @@ class _MessagingState extends State<Messaging> {
                   ),
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 10.0),
-                    child: ImageWidgets.circleAvatar(imageAssets.profileImage, 20.0, 22.0),
+                    child: ImageWidgets.circleAvatar(ImageAssets.personProfileImage, 20.0, 22.0),
                   ),
                 ],
               ),

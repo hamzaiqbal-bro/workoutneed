@@ -4,8 +4,8 @@ import 'package:workour/constants/app_colors.dart';
 import 'package:workour/methods/json_method.dart';
 import 'package:workour/models/CartModel.dart';
 import 'package:workour/ui/market/checkout_screen.dart';
-import 'package:workour/widgets/customTextWidgets.dart';
-import 'package:workour/widgets/iconWidgets.dart';
+import 'package:workour/widgets/custom_text_widgets.dart';
+import 'package:workour/widgets/icon_widgets.dart';
 import 'package:workour/widgets/stateless_widgets.dart';
 
 class CartScreen extends StatefulWidget {

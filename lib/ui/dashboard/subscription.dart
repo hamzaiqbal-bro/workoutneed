@@ -3,9 +3,9 @@ import 'package:workour/constants/app_colors.dart';
 import 'package:workour/methods/json_method.dart';
 import 'package:workour/models/DownloadsModel.dart';
 import 'package:workour/models/SubscriptionModel.dart';
-import 'package:workour/widgets/customTextWidgets.dart';
-import 'package:workour/widgets/iconWidgets.dart';
-import 'package:workour/widgets/imageWidgets.dart';
+import 'package:workour/widgets/custom_text_widgets.dart';
+import 'package:workour/widgets/icon_widgets.dart';
+import 'package:workour/widgets/image_widgets.dart';
 
 class Subscription extends StatefulWidget {
   const Subscription({Key? key}) : super(key: key);
@@ -41,7 +41,7 @@ class _SubscriptionState extends State<Subscription> {
             children: [
               Container(
                 height: 100,
-                color: AppColors.backgroubdGrye,
+                color: AppColors.backgroundGrey,
                 child: FutureBuilder(
                   future: readSubscriptionChannelsJSONData(),
                   builder: (BuildContext context, AsyncSnapshot<dynamic> snapshot) {

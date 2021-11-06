@@ -1,18 +1,17 @@
 import 'dart:async';
-import 'package:workour/ui/loginSignUp/loginSignUp.dart';
+import 'package:workour/ui/login_signup/login_signup.dart';
 import 'package:flutter/material.dart';
 import 'package:workour/constants/app_colors.dart';
-import 'package:workour/constants/imageAssets.dart';
+import 'package:workour/constants/image_assets.dart';
 
-
-class splashScreen extends StatefulWidget {
-  const splashScreen({Key? key}) : super(key: key);
+class SplashScreen extends StatefulWidget {
+  const SplashScreen({Key? key}) : super(key: key);
 
   @override
-  _splashScreenState createState() => _splashScreenState();
+  _SplashScreenState createState() => _SplashScreenState();
 }
 
-class _splashScreenState extends State<splashScreen> {
+class _SplashScreenState extends State<SplashScreen> {
   
   
   @override
@@ -20,7 +19,7 @@ class _splashScreenState extends State<splashScreen> {
     // TODO: implement initState
     super.initState();
     Timer(Duration(seconds: 5),
-            () => Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => loginSignUp())));
+            () => Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => LoginSignUp())));
   }
   @override
   Widget build(BuildContext context) {
@@ -40,7 +39,7 @@ class _splashScreenState extends State<splashScreen> {
                   0.7
                 ]),
         ),
-        child: Image.asset(imageAssets.applogo,
+        child: Image.asset(ImageAssets.applogo,
         ),
       ),
     );

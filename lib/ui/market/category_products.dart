@@ -4,13 +4,13 @@ import 'package:flutter/painting.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
 import 'package:workour/constants/app_colors.dart';
-import 'package:workour/constants/imageAssets.dart';
+import 'package:workour/constants/image_assets.dart';
 import 'package:workour/methods/json_method.dart';
 import 'package:workour/models/ProductsModel.dart';
 import 'package:workour/ui/market/store_popular_products.dart';
-import 'package:workour/widgets/customTextWidgets.dart';
-import 'package:workour/widgets/iconWidgets.dart';
-import 'package:workour/widgets/imageWidgets.dart';
+import 'package:workour/widgets/custom_text_widgets.dart';
+import 'package:workour/widgets/icon_widgets.dart';
+import 'package:workour/widgets/image_widgets.dart';
 
 class CategoryProducts extends StatefulWidget {
   const CategoryProducts({Key? key}) : super(key: key);
@@ -23,10 +23,10 @@ class _CategoryProductsState extends State<CategoryProducts> with SingleTickerPr
 
   late TabController tabController;
   final List<String> imgList = [
-    imageAssets.categoryMainImage,
-    imageAssets.categoryMainImage,
-    imageAssets.categoryMainImage,
-    imageAssets.categoryMainImage
+    ImageAssets.categoryMainImage,
+    ImageAssets.categoryMainImage,
+    ImageAssets.categoryMainImage,
+    ImageAssets.categoryMainImage
   ];
 
   @override
@@ -43,7 +43,7 @@ class _CategoryProductsState extends State<CategoryProducts> with SingleTickerPr
         elevation: 1.0,
         leading: Padding(
           padding: const EdgeInsets.all(10.0),
-          child: ImageWidgets.circularImage(imageAssets.profileImage, 60.0, 60.0),
+          child: ImageWidgets.circularImage(ImageAssets.personProfileImage, 60.0, 60.0),
         ),
         actions: [
           IconButton(

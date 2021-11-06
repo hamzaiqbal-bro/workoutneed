@@ -1,5 +1,5 @@
-class imageAssets{
-  imageAssets._();
+class ImageAssets{
+  ImageAssets._();
 
   static String applogo = 'assets/logo/logo.png';
   static String loginLogo = 'assets/logo/loginLogo.png';
@@ -7,7 +7,7 @@ class imageAssets{
   static String twitterIcon = 'assets/icons/twitter.png';
   static String facebookIcon = 'assets/icons/facebook.png';
   static String downloadImage = 'assets/images/download_image.jpg';
-  static String profileImage = 'assets/images/profile.png';
+  static String personProfileImage = 'assets/images/person_profile.png';
   static String productImage = 'assets/images/product.jpg';
   static String marketMainImage = 'assets/images/market_main_image.png';
   static String categoryMainImage = 'assets/images/categories_main_image.png';

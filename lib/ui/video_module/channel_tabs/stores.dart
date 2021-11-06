@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:workour/constants/app_colors.dart';
-import 'package:workour/widgets/customTextWidgets.dart';
+import 'package:workour/widgets/custom_text_widgets.dart';
 import 'package:workour/methods/json_method.dart';
 import 'package:workour/models/DownloadsModel.dart';
 
-class VedioTab extends StatefulWidget {
-  const VedioTab({Key? key}) : super(key: key);
+class Stores extends StatefulWidget {
+  const Stores({Key? key}) : super(key: key);
 
   @override
-  _VedioTabState createState() => _VedioTabState();
+  _StoresState createState() => _StoresState();
 }
 
-class _VedioTabState extends State<VedioTab> {
+class _StoresState extends State<Stores> {
   @override
   Widget build(BuildContext context) {
     return Container(

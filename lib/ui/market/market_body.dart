@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
 import 'package:workour/constants/app_colors.dart';
-import 'package:workour/constants/imageAssets.dart';
+import 'package:workour/constants/image_assets.dart';
 import 'package:workour/methods/json_method.dart';
 import 'package:workour/models/CategoryModel.dart';
 import 'package:workour/models/ProductsModel.dart';
@@ -12,9 +12,9 @@ import 'package:workour/ui/market/category_products.dart';
 import 'package:workour/ui/market/messaging.dart';
 import 'package:workour/ui/market/product_details.dart';
 import 'package:workour/ui/market/seller_profile.dart';
-import 'package:workour/widgets/customTextWidgets.dart';
-import 'package:workour/widgets/iconWidgets.dart';
-import 'package:workour/widgets/imageWidgets.dart';
+import 'package:workour/widgets/custom_text_widgets.dart';
+import 'package:workour/widgets/icon_widgets.dart';
+import 'package:workour/widgets/image_widgets.dart';
 
 class MarketBody extends StatefulWidget {
   const MarketBody({Key? key}) : super(key: key);
@@ -27,10 +27,10 @@ class _MarketBodyState extends State<MarketBody> with SingleTickerProviderStateM
 
   late TabController tabController;
   final List<String> imgList = [
-    imageAssets.marketMainImage,
-    imageAssets.marketMainImage,
-    imageAssets.marketMainImage,
-    imageAssets.marketMainImage
+    ImageAssets.marketMainImage,
+    ImageAssets.marketMainImage,
+    ImageAssets.marketMainImage,
+    ImageAssets.marketMainImage
   ];
 
   @override
@@ -48,7 +48,7 @@ class _MarketBodyState extends State<MarketBody> with SingleTickerProviderStateM
         leading: InkWell(
           child: Padding(
             padding: const EdgeInsets.all(10.0),
-            child: ImageWidgets.circularImage(imageAssets.profileImage, 60.0, 60.0),
+            child: ImageWidgets.circularImage(ImageAssets.personProfileImage, 60.0, 60.0),
           ),
           onTap: () {
             Navigator.of(context).push(MaterialPageRoute(builder: (_) => SellerProfile()));
@@ -100,7 +100,7 @@ class _MarketBodyState extends State<MarketBody> with SingleTickerProviderStateM
               ),
               Container(
                 width: MediaQuery.of(context).size.width,
-                color: AppColors.backgroubdGrye,
+                color: AppColors.backgroundGrey,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [

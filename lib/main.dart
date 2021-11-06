@@ -1,8 +1,7 @@
 // @dart = 2.8
-
 import 'package:flutter/material.dart';
 import 'package:workour/constants/app_theme.dart';
-import 'package:workour/ui/splashScreen/splashScreen.dart';
+import 'package:workour/ui/splash/splash_screen.dart';
 
 void main() {
   runApp(MyApp());
@@ -16,7 +15,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Work Out',
       theme: themeData,
-      home: splashScreen(),
+      home: SplashScreen(),
     );
   }
 }

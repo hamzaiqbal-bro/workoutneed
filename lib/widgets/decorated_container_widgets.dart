@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:workour/constants/app_colors.dart';
-import 'package:workour/widgets/iconWidgets.dart';
+import 'package:workour/widgets/icon_widgets.dart';
 
 class DecoratedContainerWidgets{
   DecoratedContainerWidgets._();
@@ -33,7 +33,7 @@ class DecoratedContainerWidgets{
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
-          //SvgPicture.asset(imageAssets.cameraIcon, color: AppColors.kPrimaryTwo),
+          //SvgPicture.asset(ImageAssets.cameraIcon, color: AppColors.kPrimaryTwo),
           IconWidgets.customIcon(iconData, iconColor),
           SizedBox(width: 10.0),
           Text(text)

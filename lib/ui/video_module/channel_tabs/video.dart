@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:workour/constants/app_colors.dart';
-import 'package:workour/widgets/customTextWidgets.dart';
+import 'package:workour/widgets/custom_text_widgets.dart';
 import 'package:workour/methods/json_method.dart';
 import 'package:workour/models/DownloadsModel.dart';
 
-class PremiumContent extends StatefulWidget {
-  const PremiumContent({Key? key}) : super(key: key);
+class VideoTab extends StatefulWidget {
+  const VideoTab({Key? key}) : super(key: key);
 
   @override
-  _PremiumContentState createState() => _PremiumContentState();
+  _VideoTabState createState() => _VideoTabState();
 }
 
-class _PremiumContentState extends State<PremiumContent> {
+class _VideoTabState extends State<VideoTab> {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -43,28 +43,17 @@ class _PremiumContentState extends State<PremiumContent> {
       child: IntrinsicHeight(
         child: Row(
           children: [
-          Stack(
-            alignment: Alignment.center,
-            children: [
-              Container(
-                width: 140.0,
-                height: 100.0,
-                margin: EdgeInsets.symmetric(vertical: 5.0),
-                decoration: BoxDecoration(
-                  image: DecorationImage(
-                      fit: BoxFit.cover, image: AssetImage(download.image)),
-                  borderRadius: BorderRadius.all(Radius.circular(10.0)),
-                  color: Colors.redAccent,
-                ),
+            Container(
+              width: 140.0,
+              height: 100.0,
+              margin: EdgeInsets.symmetric(vertical: 5.0),
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                    fit: BoxFit.cover, image: AssetImage(download.image)),
+                borderRadius: BorderRadius.all(Radius.circular(10.0)),
+                color: Colors.redAccent,
               ),
-
-              CircleAvatar(
-                radius: 20.0,
-                backgroundColor: AppColors.kPrimaryTwo,
-                child: Icon(Icons.lock,size: 20.0,color: AppColors.whiteColor,),
-              )
-            ],
-          ),
+            ),
             Expanded(
               child: Container(
                   padding: EdgeInsets.only(left: 5.0, top: 2.0),

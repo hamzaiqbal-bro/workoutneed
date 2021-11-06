@@ -2,8 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:workour/constants/app_colors.dart';
 import 'package:workour/ui/dashboard/help_and_support.dart';
 import 'package:workour/ui/dashboard/settings.dart';
-import 'package:workour/ui/vedioModule/browsing.dart';
-import 'package:workour/widgets/customTextWidgets.dart';
+import 'package:workour/widgets/custom_text_widgets.dart';
 
 class DrawerWidget extends StatefulWidget {
   const DrawerWidget({Key? key}) : super(key: key);
@@ -13,6 +12,7 @@ class DrawerWidget extends StatefulWidget {
 }
 
 class _DrawerWidgetState extends State<DrawerWidget> {
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -55,15 +55,6 @@ class _DrawerWidgetState extends State<DrawerWidget> {
                 trailing: Icon(Icons.arrow_forward_ios,color: AppColors.greyColor),
                 onTap: () {
                   Navigator.pop(context);
-                },
-              ),
-
-              ListTile(
-                leading: Icon(Icons.video_collection_rounded, color: AppColors.black[200]),
-                title: CustomTextWidgets.customText("Vedio Module", 16.0, AppColors.greyColor, FontWeight.normal),
-                trailing: Icon(Icons.arrow_forward_ios,color: AppColors.greyColor),
-                onTap: () {
-                  Navigator.push(context, MaterialPageRoute(builder: (context) => browsingScreen()));
                 },
               ),
             ]

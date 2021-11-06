@@ -1,36 +1,37 @@
 import 'package:flutter/material.dart';
 import 'package:workour/constants/app_colors.dart';
 import 'package:workour/constants/app_styles.dart';
-import 'package:workour/constants/imageAssets.dart';
+import 'package:workour/constants/image_assets.dart';
 import 'package:workour/ui/dashboard/dash_board.dart';
-import 'package:workour/ui/dashboard/home_body.dart';
-import 'package:workour/ui/loginSignUp/forgetScreen.dart';
-import 'package:workour/widgets/bnuttonWidgets.dart';
-import 'package:workour/widgets/formFieldWidget.dart';
-import 'package:workour/widgets/imageWidgets.dart';
-import 'package:workour/widgets/customTextWidgets.dart';
+import 'package:workour/ui/login_signup/forget_screen.dart';
+import 'package:workour/widgets/button_widgets.dart';
+import 'package:workour/widgets/form_field_widget.dart';
+import 'package:workour/widgets/image_widgets.dart';
+import 'package:workour/widgets/custom_text_widgets.dart';
 
-class loginWidget extends StatefulWidget {
-  const loginWidget({Key? key}) : super(key: key);
+class LoginWidget extends StatefulWidget {
+  const LoginWidget({Key? key}) : super(key: key);
 
   @override
-  _loginWidgetState createState() => _loginWidgetState();
+  _LoginWidgetState createState() => _LoginWidgetState();
 }
 
-class _loginWidgetState extends State<loginWidget> {
-  TextEditingController emial = TextEditingController();
+class _LoginWidgetState extends State<LoginWidget> {
+
+  TextEditingController email = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
-        ImageWidgets.customImageWidgets(imageAssets.loginLogo),
+        ImageWidgets.customImageWidgets(ImageAssets.loginLogo),
         SizedBox(height: AppStyles.fifteennumber,),
         InputField(
             'next',
             'Enter Email',
             'Email',
             Icons.email,
-            emial,
+            email,
             TextInputType.emailAddress,
             true
         ),
@@ -42,7 +43,7 @@ class _loginWidgetState extends State<loginWidget> {
             'Enter Password',
             'Password',
             Icons.lock,
-            emial,
+            email,
             TextInputType.visiblePassword,
             true
         ),
@@ -51,9 +52,9 @@ class _loginWidgetState extends State<loginWidget> {
             alignment: Alignment.centerRight,
             child: InkWell(
                 onTap: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (context) => forgetScreen()));
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => ForgetScreen()));
                 },
-                child: CustomTextWidgets.customText( 'Forget Password',16.0,AppColors.backgroubdGrye,FontWeight.bold))),
+                child: CustomTextWidgets.customText( 'Forget Password',16.0,AppColors.backgroundGrey,FontWeight.bold))),
         SizedBox(height: AppStyles.fifteennumber,),
         InkWell(
             onTap: (){
@@ -63,18 +64,18 @@ class _loginWidgetState extends State<loginWidget> {
         SizedBox(height: AppStyles.fourtynumber,),
         Align(
             alignment: Alignment.center,
-            child: CustomTextWidgets.customText( 'OR',19.0,AppColors.backgroubdGrye,FontWeight.bold)),
+            child: CustomTextWidgets.customText( 'OR',19.0,AppColors.backgroundGrey,FontWeight.bold)),
         SizedBox(height: AppStyles.thirtynumber,),
 
         Row(
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            ImageWidgets.customImageWidgets(imageAssets.googleIcon),
+            ImageWidgets.customImageWidgets(ImageAssets.googleIcon),
             SizedBox(width: AppStyles.tweentynumber,),
-            ImageWidgets.customImageWidgets(imageAssets.twitterIcon),
+            ImageWidgets.customImageWidgets(ImageAssets.twitterIcon),
             SizedBox(width: AppStyles.tweentynumber,),
-            ImageWidgets.customImageWidgets(imageAssets.facebookIcon),
+            ImageWidgets.customImageWidgets(ImageAssets.facebookIcon),
           ],
         ),
         SizedBox(height: AppStyles.teennumber,),

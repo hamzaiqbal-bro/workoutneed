@@ -3,9 +3,9 @@ import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
 import 'package:workour/constants/app_colors.dart';
 import 'package:workour/methods/json_method.dart';
 import 'package:workour/models/DownloadsModel.dart';
-import 'package:workour/widgets/customTextWidgets.dart';
-import 'package:workour/widgets/iconWidgets.dart';
-import 'package:workour/widgets/imageWidgets.dart';
+import 'package:workour/widgets/custom_text_widgets.dart';
+import 'package:workour/widgets/icon_widgets.dart';
+import 'package:workour/widgets/image_widgets.dart';
 
 class Downloads extends StatefulWidget {
   const Downloads({Key? key}) : super(key: key);

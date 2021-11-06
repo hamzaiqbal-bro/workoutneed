@@ -116,61 +116,61 @@
       "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
       "image": "assets/images/download_image.jpg",
       "time": "12 hours ago",
-      "channel_icon": "assets/images/profile.png"
+      "channel_icon": "assets/images/person_profile.png"
     },
     {
       "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
       "image": "assets/images/download_image.jpg",
       "time": "12 hours ago",
-      "channel_icon": "assets/images/profile.png"
+      "channel_icon": "assets/images/person_profile.png"
     },
     {
       "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
       "image": "assets/images/download_image.jpg",
       "time": "12 hours ago",
-      "channel_icon": "assets/images/profile.png"
+      "channel_icon": "assets/images/person_profile.png"
     },
     {
       "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
       "image": "assets/images/download_image.jpg",
       "time": "12 hours ago",
-      "channel_icon": "assets/images/profile.png"
+      "channel_icon": "assets/images/person_profile.png"
     },
     {
       "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
       "image": "assets/images/download_image.jpg",
       "time": "12 hours ago",
-      "channel_icon": "assets/images/profile.png"
+      "channel_icon": "assets/images/person_profile.png"
     },
     {
       "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
       "image": "assets/images/download_image.jpg",
       "time": "12 hours ago",
-      "channel_icon": "assets/images/profile.png"
+      "channel_icon": "assets/images/person_profile.png"
     },
     {
       "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
       "image": "assets/images/download_image.jpg",
       "time": "12 hours ago",
-      "channel_icon": "assets/images/profile.png"
+      "channel_icon": "assets/images/person_profile.png"
     },
     {
       "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
       "image": "assets/images/download_image.jpg",
       "time": "12 hours ago",
-      "channel_icon": "assets/images/profile.png"
+      "channel_icon": "assets/images/person_profile.png"
     },
     {
       "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
       "image": "assets/images/download_image.jpg",
       "time": "12 hours ago",
-      "channel_icon": "assets/images/profile.png"
+      "channel_icon": "assets/images/person_profile.png"
     },
     {
       "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
       "image": "assets/images/download_image.jpg",
       "time": "12 hours ago",
-      "channel_icon": "assets/images/profile.png"
+      "channel_icon": "assets/images/person_profile.png"
     }
   ],
   "Subscription": [
@@ -315,56 +315,56 @@
     {
       "name": "Nike NH3",
       "imageUrl": "assets/images/shoes_yellow.png",
-      "iconUrl": "assets/images/profile.png",
+      "iconUrl": "assets/images/person_profile.png",
       "rating": 4.0,
       "price": 347.0
     },
     {
       "name": "Nike NH3",
       "imageUrl": "assets/images/shoes_blue.png",
-      "iconUrl": "assets/images/profile.png",
+      "iconUrl": "assets/images/person_profile.png",
       "rating": 4.0,
       "price": 347.0
     },
     {
       "name": "Nike NH3",
       "imageUrl": "assets/images/shoes_fila.png",
-      "iconUrl": "assets/images/profile.png",
+      "iconUrl": "assets/images/person_profile.png",
       "rating": 4.0,
       "price": 347.0
     },
     {
       "name": "Nike NH3",
       "imageUrl": "assets/images/shoes_racebok.png",
-      "iconUrl": "assets/images/profile.png",
+      "iconUrl": "assets/images/person_profile.png",
       "rating": 4.0,
       "price": 347.0
     },
     {
       "name": "Nike NH3",
       "imageUrl": "assets/images/shoes_fila.png",
-      "iconUrl": "assets/images/profile.png",
+      "iconUrl": "assets/images/person_profile.png",
       "rating": 4.0,
       "price": 347.0
     },
     {
       "name": "Nike NH3",
       "imageUrl": "assets/images/shoes_racebok.png",
-      "iconUrl": "assets/images/profile.png",
+      "iconUrl": "assets/images/person_profile.png",
       "rating": 4.0,
       "price": 347.0
     },
     {
       "name": "Nike NH3",
       "imageUrl": "assets/images/shoes_yellow.png",
-      "iconUrl": "assets/images/profile.png",
+      "iconUrl": "assets/images/person_profile.png",
       "rating": 4.0,
       "price": 347.0
     },
     {
       "name": "Nike NH3",
       "imageUrl": "assets/images/shoes_blue.png",
-      "iconUrl": "assets/images/profile.png",
+      "iconUrl": "assets/images/person_profile.png",
       "rating": 4.0,
       "price": 347.0
     }
@@ -373,56 +373,56 @@
     {
       "name": "Nike NH3",
       "imageUrl": "assets/images/yellow_nike_shoes.png",
-      "iconUrl": "assets/images/profile.png",
+      "iconUrl": "assets/images/person_profile.png",
       "rating": 4.0,
       "price": 347.0
     },
     {
       "name": "Nike NH3",
       "imageUrl": "assets/images/yellow_nike_shoes.png",
-      "iconUrl": "assets/images/profile.png",
+      "iconUrl": "assets/images/person_profile.png",
       "rating": 4.0,
       "price": 347.0
     },
     {
       "name": "Nike NH3",
       "imageUrl": "assets/images/yellow_nike_shoes.png",
-      "iconUrl": "assets/images/profile.png",
+      "iconUrl": "assets/images/person_profile.png",
       "rating": 4.0,
       "price": 347.0
     },
     {
       "name": "Nike NH3",
       "imageUrl": "assets/images/yellow_nike_shoes.png",
-      "iconUrl": "assets/images/profile.png",
+      "iconUrl": "assets/images/person_profile.png",
       "rating": 4.0,
       "price": 347.0
     },
     {
       "name": "Nike NH3",
       "imageUrl": "assets/images/yellow_nike_shoes.png",
-      "iconUrl": "assets/images/profile.png",
+      "iconUrl": "assets/images/person_profile.png",
       "rating": 4.0,
       "price": 347.0
     },
     {
       "name": "Nike NH3",
       "imageUrl": "assets/images/yellow_nike_shoes.png",
-      "iconUrl": "assets/images/profile.png",
+      "iconUrl": "assets/images/person_profile.png",
       "rating": 4.0,
       "price": 347.0
     },
     {
       "name": "Nike NH3",
       "imageUrl": "assets/images/yellow_nike_shoes.png",
-      "iconUrl": "assets/images/profile.png",
+      "iconUrl": "assets/images/person_profile.png",
       "rating": 4.0,
       "price": 347.0
     },
     {
       "name": "Nike NH3",
       "imageUrl": "assets/images/yellow_nike_shoes.png",
-      "iconUrl": "assets/images/profile.png",
+      "iconUrl": "assets/images/person_profile.png",
       "rating": 4.0,
       "price": 347.0
     }
@@ -431,56 +431,56 @@
     {
       "name": "Nike NH3",
       "imageUrl": "assets/images/yellow_nike_shoes.png",
-      "iconUrl": "assets/images/profile.png",
+      "iconUrl": "assets/images/person_profile.png",
       "rating": 4.0,
       "price": 347.0
     },
     {
       "name": "Nike NH3",
       "imageUrl": "assets/images/yellow_nike_shoes.png",
-      "iconUrl": "assets/images/profile.png",
+      "iconUrl": "assets/images/person_profile.png",
       "rating": 4.0,
       "price": 347.0
     },
     {
       "name": "Nike NH3",
       "imageUrl": "assets/images/yellow_nike_shoes.png",
-      "iconUrl": "assets/images/profile.png",
+      "iconUrl": "assets/images/person_profile.png",
       "rating": 4.0,
       "price": 347.0
     },
     {
       "name": "Nike NH3",
       "imageUrl": "assets/images/yellow_nike_shoes.png",
-      "iconUrl": "assets/images/profile.png",
+      "iconUrl": "assets/images/person_profile.png",
       "rating": 4.0,
       "price": 347.0
     },
     {
       "name": "Nike NH3",
       "imageUrl": "assets/images/yellow_nike_shoes.png",
-      "iconUrl": "assets/images/profile.png",
+      "iconUrl": "assets/images/person_profile.png",
       "rating": 4.0,
       "price": 347.0
     },
     {
       "name": "Nike NH3",
       "imageUrl": "assets/images/yellow_nike_shoes.png",
-      "iconUrl": "assets/images/profile.png",
+      "iconUrl": "assets/images/person_profile.png",
       "rating": 4.0,
       "price": 347.0
     },
     {
       "name": "Nike NH3",
       "imageUrl": "assets/images/yellow_nike_shoes.png",
-      "iconUrl": "assets/images/profile.png",
+      "iconUrl": "assets/images/person_profile.png",
       "rating": 4.0,
       "price": 347.0
     },
     {
       "name": "Nike NH3",
       "imageUrl": "assets/images/yellow_nike_shoes.png",
-      "iconUrl": "assets/images/profile.png",
+      "iconUrl": "assets/images/person_profile.png",
       "rating": 4.0,
       "price": 347.0
     }
@@ -489,56 +489,56 @@
     {
       "name": "Nike NH3",
       "imageUrl": "assets/images/store_product_image.png",
-      "iconUrl": "assets/images/profile.png",
+      "iconUrl": "assets/images/person_profile.png",
       "rating": 4.0,
       "price": 347.0
     },
     {
       "name": "Nike NH3",
       "imageUrl": "assets/images/store_product_image.png",
-      "iconUrl": "assets/images/profile.png",
+      "iconUrl": "assets/images/person_profile.png",
       "rating": 4.0,
       "price": 347.0
     },
     {
       "name": "Nike NH3",
       "imageUrl": "assets/images/store_product_image.png",
-      "iconUrl": "assets/images/profile.png",
+      "iconUrl": "assets/images/person_profile.png",
       "rating": 4.0,
       "price": 347.0
     },
     {
       "name": "Nike NH3",
       "imageUrl": "assets/images/store_product_image.png",
-      "iconUrl": "assets/images/profile.png",
+      "iconUrl": "assets/images/person_profile.png",
       "rating": 4.0,
       "price": 347.0
     },
     {
       "name": "Nike NH3",
       "imageUrl": "assets/images/store_product_image.png",
-      "iconUrl": "assets/images/profile.png",
+      "iconUrl": "assets/images/person_profile.png",
       "rating": 4.0,
       "price": 347.0
     },
     {
       "name": "Nike NH3",
       "imageUrl": "assets/images/store_product_image.png",
-      "iconUrl": "assets/images/profile.png",
+      "iconUrl": "assets/images/person_profile.png",
       "rating": 4.0,
       "price": 347.0
     },
     {
       "name": "Nike NH3",
       "imageUrl": "assets/images/store_product_image.png",
-      "iconUrl": "assets/images/profile.png",
+      "iconUrl": "assets/images/person_profile.png",
       "rating": 4.0,
       "price": 347.0
     },
     {
       "name": "Nike NH3",
       "imageUrl": "assets/images/store_product_image.png",
-      "iconUrl": "assets/images/profile.png",
+      "iconUrl": "assets/images/person_profile.png",
       "rating": 4.0,
       "price": 347.0
     }
@@ -546,21 +546,21 @@
   "Rating_and_Reviews": [
     {
       "user_name": "User1234",
-      "user_image": "assets/images/profile.png",
+      "user_image": "assets/images/person_profile.png",
       "rating": 4.0,
       "review_text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
       "date": "08/06/2021"
     },
     {
       "user_name": "User1234",
-      "user_image": "assets/images/profile.png",
+      "user_image": "assets/images/person_profile.png",
       "rating": 4.0,
       "review_text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
       "date": "08/06/2021"
     },
     {
       "user_name": "User1234",
-      "user_image": "assets/images/profile.png",
+      "user_image": "assets/images/person_profile.png",
       "rating": 4.0,
       "review_text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
       "date": "08/06/2021"

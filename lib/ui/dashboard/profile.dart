@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 //import 'package:flutter_svg/svg.dart';
 import 'package:workour/constants/app_colors.dart';
-import 'package:workour/constants/imageAssets.dart';
-import 'package:workour/widgets/customTextWidgets.dart';
-import 'package:workour/widgets/decoratedContainerWidgets.dart';
-import 'package:workour/widgets/iconWidgets.dart';
-import 'package:workour/widgets/imageWidgets.dart';
+import 'package:workour/constants/image_assets.dart';
+import 'package:workour/widgets/custom_text_widgets.dart';
+import 'package:workour/widgets/decorated_container_widgets.dart';
+import 'package:workour/widgets/icon_widgets.dart';
+import 'package:workour/widgets/image_widgets.dart';
 
 class Profile extends StatefulWidget {
   const Profile({Key? key}) : super(key: key);
@@ -37,7 +37,7 @@ class _ProfileState extends State<Profile> {
                   color: AppColors.defaultColor,
                   child: Row(
                     children: [
-                      ImageWidgets.circularImage(imageAssets.profileImage, 80.0, 80.0),
+                      ImageWidgets.circularImage(ImageAssets.personProfileImage, 80.0, 80.0),
                       SizedBox(width: 5.0),
                       CustomTextWidgets.customText("John Doe", 16.0, AppColors.kPrimaryTwo, FontWeight.w600),
                       Spacer(),

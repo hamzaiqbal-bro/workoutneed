@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:workour/constants/app_colors.dart';
-import 'package:workour/widgets/customTextWidgets.dart';
+import 'package:workour/widgets/custom_text_widgets.dart';
 import 'package:workour/methods/json_method.dart';
 import 'package:workour/models/DownloadsModel.dart';
 
-class playList extends StatefulWidget {
-  const playList({Key? key}) : super(key: key);
+class PremiumContent extends StatefulWidget {
+  const PremiumContent({Key? key}) : super(key: key);
 
   @override
-  _playListState createState() => _playListState();
+  _PremiumContentState createState() => _PremiumContentState();
 }
 
-class _playListState extends State<playList> {
+class _PremiumContentState extends State<PremiumContent> {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -43,37 +43,28 @@ class _playListState extends State<playList> {
       child: IntrinsicHeight(
         child: Row(
           children: [
-            Stack(
-              alignment: Alignment.centerLeft,
-              children: [
-                Container(
-                  width: 140.0,
-                  height: 100.0,
-                  margin: EdgeInsets.symmetric(vertical: 5.0),
-                  decoration: BoxDecoration(
-                    image: DecorationImage(
-                        fit: BoxFit.cover, image: AssetImage(download.image)),
-                    borderRadius: BorderRadius.all(Radius.circular(10.0)),
-                    color: Colors.redAccent,
-                  ),
+          Stack(
+            alignment: Alignment.center,
+            children: [
+              Container(
+                width: 140.0,
+                height: 100.0,
+                margin: EdgeInsets.symmetric(vertical: 5.0),
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                      fit: BoxFit.cover, image: AssetImage(download.image)),
+                  borderRadius: BorderRadius.all(Radius.circular(10.0)),
+                  color: Colors.redAccent,
                 ),
+              ),
 
-                Container(
-                  color: AppColors.darkBlack.withOpacity(0.3),
-                  height: 80,
-                  width: 60.0,
-                  alignment: Alignment.center,
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      CustomTextWidgets.customText('12', 15.0, AppColors.whiteColor, FontWeight.bold),
-                      Icon(Icons.format_list_numbered,color: AppColors.whiteColor,)
-                    ],
-                  ),
-
-                )
-              ],
-            ),
+              CircleAvatar(
+                radius: 20.0,
+                backgroundColor: AppColors.kPrimaryTwo,
+                child: Icon(Icons.lock,size: 20.0,color: AppColors.whiteColor,),
+              )
+            ],
+          ),
             Expanded(
               child: Container(
                   padding: EdgeInsets.only(left: 5.0, top: 2.0),
