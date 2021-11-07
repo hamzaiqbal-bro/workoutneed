@@ -2,11 +2,10 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:get/get.dart';
-import 'package:workour/AlertDialouges/coustomAlerts.dart';
-import 'package:workour/Request/APiRequest.dart';
+import 'package:workour/alert_dialogs/custom_alerts.dart';
+import 'package:workour/Request/ApiRequest.dart';
 import 'package:workour/URL/ApiURl.dart';
 import 'package:workour/prefs/SharedPrefs.dart';
-import 'package:http/http.dart' as http;
 import 'package:workour/ui/dashboard/dash_board.dart';
 
 class LoginController extends GetxController {
@@ -33,7 +32,7 @@ class LoginController extends GetxController {
       print(value.body);
       if(value.statusCode == 200){
         final jsonData = jsonDecode(value.body);
-        sharedPrefs.saveUserId(jsonData['payload']['user']['uid']);
+        SharedPrefs.saveUserId(jsonData['payload']['user']['uid']);
         Navigator.of(context).pop(false);
         Fluttertoast.showToast(
             msg: "Successfully Login",

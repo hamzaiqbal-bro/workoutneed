@@ -1,8 +1,6 @@
-import 'dart:convert';
-import 'dart:io';
 import 'package:http/http.dart' as http;
 import 'package:workour/URL/ApiURl.dart';
-import 'package:workour/constants/stringAssets.dart';
+import 'package:workour/constants/string_assets.dart';
 import 'package:workour/prefs/SharedPrefs.dart';
 
 class Request {
@@ -12,7 +10,7 @@ class Request {
   Request({required this.url, this.body});
 
   Future<http.Response> post() async{
-    return await http.post(Uri.parse(URls.BaseUrl + url), body: body,headers: {
+    return await http.post(Uri.parse(URls.baseUrl + url), body: body,headers: {
       'Content-Type': 'application/json; '
           'charset=utf-8'
     }).timeout(Duration(minutes: 2),
@@ -22,7 +20,7 @@ class Request {
   }
 
   Future<http.Response> get() async {
-    return http.get(Uri.parse(URls.BaseUrl + url),
+    return http.get(Uri.parse(URls.baseUrl + url),
         headers: {
         }).timeout(Duration(minutes: 2),
         onTimeout: (){
@@ -32,16 +30,16 @@ class Request {
 
 
 
-  Future<http.Response> postApiwithId() async{
-    return await http.post(Uri.parse(URls.BaseUrl + url+await sharedPrefs.getUid()), body: body,headers: {
+  Future<http.Response> postApiWithId() async{
+    return await http.post(Uri.parse(URls.baseUrl + url+await SharedPrefs.getUid()), body: body,headers: {
       "Accept": "application/json",
       "content-type": "application/json"
     }).timeout(Duration(minutes: 2));
   }
 
 
-  Future<http.Response> getRequestWithid() async{
-    return http.get(Uri.parse(URls.BaseUrl + url+await sharedPrefs.getUid()),
+  Future<http.Response> getRequestWithId() async{
+    return http.get(Uri.parse(URls.baseUrl + url+await SharedPrefs.getUid()),
         headers: {
           "Accept": "application/json",
           "content-type": "application/json"
@@ -49,7 +47,7 @@ class Request {
   }
 
   Future<http.Response> put() async {
-    return http.put(Uri.parse(URls.BaseUrl + url), body: body,
+    return http.put(Uri.parse(URls.baseUrl + url), body: body,
         headers: {
           "content-type": "application/json"
         }).timeout(Duration(minutes: 2));

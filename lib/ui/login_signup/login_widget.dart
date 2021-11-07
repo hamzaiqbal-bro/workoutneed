@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:workour/AlertDialouges/coustomAlerts.dart';
-import 'package:workour/Controllers/loginController.dart';
+import 'package:workour/alert_dialogs/custom_alerts.dart';
+import 'package:workour/Controllers/login_controller.dart';
 import 'package:workour/constants/app_colors.dart';
 import 'package:workour/constants/app_styles.dart';
 import 'package:workour/constants/image_assets.dart';
-import 'package:workour/ui/dashboard/dash_board.dart';
 import 'package:workour/ui/login_signup/forget_screen.dart';
 import 'package:workour/widgets/button_widgets.dart';
 import 'package:workour/widgets/form_field_widget.dart';
@@ -20,7 +19,7 @@ class LoginWidget extends StatefulWidget {
 }
 
 
-class _loginWidgetState extends State<loginWidget> {
+class _LoginWidgetState extends State<LoginWidget> {
 
   LoginController loginController = Get.put(LoginController());
 
@@ -59,11 +58,11 @@ class _loginWidgetState extends State<loginWidget> {
                   Navigator.push(context, MaterialPageRoute(builder: (context) => ForgetScreen()));
                 },
 
-                child: coustomTextWidgets.coustomText( 'Forget Password',16.0,AppColors.kPrimaryTwo,FontWeight.bold))),
+                child: CustomTextWidgets.customText( 'Forget Password',16.0,AppColors.kPrimaryTwo,FontWeight.bold))),
         SizedBox(height: AppStyles.fifteennumber,),
         InkWell(
             onTap: (){
-              waitingdialouge(context,'please wait');
+              waitingDialog(context,'please wait');
 
              loginController.apiLogin(context);
             },

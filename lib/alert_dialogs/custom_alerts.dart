@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:workour/constants/app_colors.dart';
-import 'package:workour/constants/font_family.dart';
-import 'package:workour/widgets/coustomTextWidgets.dart';
+import 'package:workour/widgets/custom_text_widgets.dart';
 
-customAlert(context,text){
+customAlert(context, text){
   showDialog(
       barrierDismissible: false,
       context: context,
@@ -26,7 +25,7 @@ customAlert(context,text){
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            coustomTextWidgets.myCustomText(
+                            CustomTextWidgets.myCustomText(
                                 "Alert Message",
                                 16.0,
                                 AppColors.kPrimaryTwo,
@@ -37,7 +36,7 @@ customAlert(context,text){
                           height: 10.0,
                         ),
 
-                        coustomTextWidgets.myCustomText(
+                        CustomTextWidgets.centeredText(
                             text.toString(),
                             16.0,
                             AppColors.kPrimaryTwo,
@@ -66,7 +65,7 @@ customAlert(context,text){
                                     padding: const EdgeInsets.only(
                                         top: 12, bottom: 12, left: 18, right: 18),
                                     child: Center(
-                                      child: coustomTextWidgets.myCustomText(
+                                      child: CustomTextWidgets.myCustomText(
                                           "OK",
                                           16.0,
                                           AppColors.whiteColor,
@@ -88,9 +87,7 @@ customAlert(context,text){
       });
 }
 
-
-
-waitingdialouge(context,text){
+waitingDialog(context,text){
   showDialog(
       barrierDismissible: false,
       context: context,
